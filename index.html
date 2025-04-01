@@ -27,6 +27,9 @@ async function fetchReportsFromGitHub() {
             file.name.endsWith('.xml') && !file.name.includes('_junit') // Ignore invalid files
         );
 
+        let totalPassed = 0;
+        let totalFailed = 0;
+
         for (const file of xmlFiles) {
             const fileUrl = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/${reportsPath}/${file.name}`;
 
@@ -38,11 +41,19 @@ async function fetchReportsFromGitHub() {
                 const parser = new DOMParser();
                 const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
 
-                displayXml(xmlDoc, file.name, reportsContainer);
+                // Get counts of passed and failed tests
+                const [passed, failed] = displayXml(xmlDoc, file.name, reportsContainer);
+
+                totalPassed += passed;
+                totalFailed += failed;
             } catch (fileError) {
                 console.error(`Error fetching ${file.name}:`, fileError);
             }
         }
+
+        // Display the total count of passed and failed tests
+        const reportStats = document.getElementById('report-stats');
+        reportStats.innerHTML = `Total Passed: ${totalPassed} | Total Failed: ${totalFailed}`;
     } catch (error) {
         console.error("Error fetching reports list:", error);
         reportsContainer.innerHTML = `<p>Error fetching reports list: ${error.message}</p>`;
@@ -51,7 +62,10 @@ async function fetchReportsFromGitHub() {
 
 function displayXml(xmlDoc, headingText, reportsContainer) {
     console.log("displayXml called with:", xmlDoc, headingText);
-    
+
+    let passedCount = 0;
+    let failedCount = 0;
+
     const testSuites = xmlDoc.querySelectorAll('testsuite');
 
     if (testSuites.length > 0) {
@@ -62,7 +76,7 @@ function displayXml(xmlDoc, headingText, reportsContainer) {
 
     testSuites.forEach(suite => {
         const suiteName = suite.getAttribute('name');
-        
+
         if (suiteName) {  // Only show if suite has a name
             const suiteElement = document.createElement('p');
             suiteElement.textContent = `Test Suite: ${suiteName}`;
@@ -84,16 +98,23 @@ function displayXml(xmlDoc, headingText, reportsContainer) {
                 failureMessage.style.fontStyle = "italic";
                 reportsContainer.appendChild(caseElement);
                 reportsContainer.appendChild(failureMessage);
+
+                failedCount++; // Increment failed count
             } else {
                 caseElement.textContent = `✅ ${caseName} - PASSED`;
                 caseElement.style.color = "green"; // Green for passed tests
                 reportsContainer.appendChild(caseElement);
+
+                passedCount++; // Increment passed count
             }
         });
     });
+
+    return [passedCount, failedCount]; // Return counts
 }
 
 fetchReportsFromGitHub();
 </script>
+
 </body>
 </html>
