@@ -25,7 +25,7 @@
                 const links = reportsDirDoc.querySelectorAll('a');
                 links.forEach(link => {
                     const href = link.getAttribute('href');
-                    if (href.endsWith('/')) {
+                    if (href.endsWith('/') && href != "./") { //prevent adding the ./ to the list.
                         dirNames.push(href.slice(0, -1)); // Remove trailing slash
                     }
                 });
@@ -79,6 +79,49 @@
                         reportsContainer.innerHTML += `<p>Error loading directory ${dirName}.</p>`;
                     }
                 }
+
+                //Handle files directly in the reports folder.
+                try {
+                    const reportsContentResponse = await fetch(`reports/`);
+                    const reportsContentText = await reportsContentResponse.text();
+                    const reportsContentDoc = parser.parseFromString(reportsContentText, 'text/html');
+                    const xmlLinksReports = reportsContentDoc.querySelectorAll('a');
+
+                    xmlLinksReports.forEach(link=>{
+                        const href = link.getAttribute('href');
+                        if (href.endsWith('.xml')){
+                            const response = await fetch(`reports/${href}`);
+                            const xmlText = await response.text();
+                            const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+
+                            const testSuites = xmlDoc.querySelectorAll('testsuite');
+                            if(testSuites.length > 0){
+                                const reportHeading = document.createElement('h2');
+                                reportHeading.textContent = href;
+                                reportsContainer.appendChild(reportHeading);
+                            }
+
+                            testSuites.forEach(suite => {
+                                const suiteName = suite.getAttribute('name');
+                                const suiteElement = document.createElement('p');
+                                suiteElement.textContent = `Test Suite: ${suiteName}`;
+                                reportsContainer.appendChild(suiteElement);
+
+                                const testCases = suite.querySelectorAll('testcase');
+                                testCases.forEach(testCase => {
+                                    const caseName = testCase.getAttribute('name');
+                                    const caseElement = document.createElement('p');
+                                    caseElement.textContent = `  - Test Case: ${caseName}`;
+                                    reportsContainer.appendChild(caseElement);
+                                });
+                            });
+                        }
+                    })
+                }catch(e){
+                    console.error("Error loading reports directory files", e);
+                    reportsContainer.innerHTML += `<p>Error loading reports directory files.</p>`;
+                }
+
             } catch (reportsError) {
                 console.error('Error loading reports directory:', reportsError);
                 reportsContainer.innerHTML = '<p>Error loading test reports.</p>';
