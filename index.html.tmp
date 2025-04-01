@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>Test Reports</title>
+</head>
+<body>
+    <h1>Welcome to Test Reports</h1>
+    <div id="reports-container">
+        <p>Loading test reports...</p>
+    </div>
+
+    <script>
+        async function displayReports() {
+            const reportsContainer = document.getElementById('reports-container');
+            reportsContainer.innerHTML = '';
+
+            try {
+                const reportsDirResponse = await fetch('reports/');
+                if (!reportsDirResponse.ok) throw new Error(`HTTP error! status: ${reportsDirResponse.status}`);
+                const reportsDirText = await reportsDirResponse.text();
+                const parser = new DOMParser();
+                const reportsDirDoc = parser.parseFromString(reportsDirText, 'text/html');
+                const links = reportsDirDoc.querySelectorAll('a');
+                const dirNames = links.filter(link => link.getAttribute('href').endsWith('/') && link.getAttribute('href') !== './').map(link => link.getAttribute('href').slice(0, -1));
+
+                console.log("Directory Names:", dirNames); // Debugging
+
+                if (dirNames.length === 0) {
+                    console.log("Calling handleReportsFiles (no subdirectories)"); // Debugging
+                    await handleReportsFiles(reportsContainer); // handle files directly in reports folder
+                } else {
+                    for (const dirName of dirNames) {
+                        try {
+                            const dirContentResponse = await fetch(`reports/${dirName}/`);
+                            if (!dirContentResponse.ok) throw new Error(`HTTP error! status: ${dirContentResponse.status}`);
+                            const dirContentText = await dirContentResponse.text();
+                            const dirContentDoc = parser.parseFromString(dirContentText, 'text/html');
+                            const xmlLinks = dirContentDoc.querySelectorAll('a');
+                            const xmlFileName = xmlLinks.find(link => link.getAttribute('href').endsWith('.xml'))?.getAttribute('href');
+
+                            if (xmlFileName) {
+                                const xmlResponse = await fetch(`reports/${dirName}/${xmlFileName}`);
+                                if (!xmlResponse.ok) throw new Error(`HTTP error! status: ${xmlResponse.status}`);
+                                const xmlText = await xmlResponse.text();
+                                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+                                displayXml(xmlDoc, dirName, reportsContainer);
+                            }
+                        } catch (dirError) {
+                            console.error(`Error loading directory ${dirName}:`, dirError);
+                            reportsContainer.innerHTML += `<p>Error loading directory ${dirName}.</p>`;
+                        }
+                    }
+                    console.log("Calling handleReportsFiles (subdirectories present)"); // Debugging
+                    await handleReportsFiles(reportsContainer); // handle files directly in reports folder
+                }
+            } catch (reportsError) {
+                console.error('Error loading reports directory:', reportsError);
+                reportsContainer.innerHTML = '<p>Error loading test reports.</p>';
+            }
+        }
+
+        async function handleReportsFiles(reportsContainer) {
+            console.log("handleReportsFiles called"); // Debugging
+            try {
+                const reportsContentResponse = await fetch(`reports/`);
+                if (!reportsContentResponse.ok) throw new Error(`HTTP error! status: ${reportsContentResponse.status}`);
+                const reportsContentText = await reportsContentResponse.text();
+                const reportsContentDoc = parser.parseFromString(reportsContentText, 'text/html');
+                const xmlLinksReports = Array.from(reportsContentDoc.querySelectorAll('a')).filter(link => link.getAttribute('href').endsWith('.xml'));
+
+                for (const link of xmlLinksReports) {
+                    const href = link.getAttribute('href');
+                    const xmlResponse = await fetch(`reports/${href}`);
+                    if (!xmlResponse.ok) throw new Error(`HTTP error! status: ${xmlResponse.status}`);
+                    const xmlText = await xmlResponse.text();
+                    const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+                    displayXml(xmlDoc, href, reportsContainer);
+                }
+            } catch (e) {
+                console.error('Error loading reports directory files', e);
+                reportsContainer.innerHTML += `<p>Error loading reports directory files.</p>`;
+            }
+        }
+
+        function displayXml(xmlDoc, headingText, reportsContainer) {
+            console.log("displayXml called with:", xmlDoc, headingText); //debugging
+            const testSuites = xmlDoc.querySelectorAll('testsuite');
+            if (testSuites.length > 0) {
+                const reportHeading = document.createElement('h2');
+                reportHeading.textContent = headingText;
+                reportsContainer.appendChild(reportHeading);
+            }
+            testSuites.forEach(suite => {
+                const suiteName = suite.getAttribute('name');
+                const suiteElement = document.createElement('p');
+                suiteElement.textContent = `Test Suite: ${suiteName}`;
+                reportsContainer.appendChild(suiteElement);
+                const testCases = suite.querySelectorAll('testcase');
+                testCases.forEach(testCase => {
+                    const caseName = testCase.getAttribute('name');
+                    const caseElement = document.createElement('p');
+                    caseElement.textContent = `  - Test Case: ${caseName}`;
+                    reportsContainer.appendChild(caseElement);
+                });
+            });
+        }
+
+        displayReports();
+    </script>
+</body>
+</html>
