@@ -10,129 +10,95 @@
 
     <script>
         async function displayReports() {
-            const reportsContainer = document.getElementById('reports-container');
-            reportsContainer.innerHTML = ''; // Clear loading message
+    const reportsContainer = document.getElementById('reports-container');
+    reportsContainer.innerHTML = '';
 
-            try {
-                // Fetch the list of subdirectories within 'reports/'
-                const reportsDirResponse = await fetch('reports/');
-                const reportsDirText = await reportsDirResponse.text();
+    try {
+        const reportsDirResponse = await fetch('reports/');
+        if (!reportsDirResponse.ok) throw new Error(`HTTP error! status: ${reportsDirResponse.status}`);
+        const reportsDirText = await reportsDirResponse.text();
+        const parser = new DOMParser();
+        const reportsDirDoc = parser.parseFromString(reportsDirText, 'text/html');
+        const links = reportsDirDoc.querySelectorAll('a');
+        const dirNames = links.filter(link => link.getAttribute('href').endsWith('/') && link.getAttribute('href') !== './').map(link => link.getAttribute('href').slice(0, -1));
 
-                // Extract directory names from the HTML listing
-                const dirNames = [];
-                const parser = new DOMParser();
-                const reportsDirDoc = parser.parseFromString(reportsDirText, 'text/html');
-                const links = reportsDirDoc.querySelectorAll('a');
-                links.forEach(link => {
-                    const href = link.getAttribute('href');
-                    if (href.endsWith('/') && href != "./") { //prevent adding the ./ to the list.
-                        dirNames.push(href.slice(0, -1)); // Remove trailing slash
-                    }
-                });
+        if (dirNames.length === 0) {
+            await handleReportsFiles(reportsContainer); // handle files directly in reports folder
+        } else {
+            for (const dirName of dirNames) {
+                try {
+                    const dirContentResponse = await fetch(`reports/${dirName}/`);
+                    if (!dirContentResponse.ok) throw new Error(`HTTP error! status: ${dirContentResponse.status}`);
+                    const dirContentText = await dirContentResponse.text();
+                    const dirContentDoc = parser.parseFromString(dirContentText, 'text/html');
+                    const xmlLinks = dirContentDoc.querySelectorAll('a');
+                    const xmlFileName = xmlLinks.find(link => link.getAttribute('href').endsWith('.xml'))?.getAttribute('href');
 
-                for (const dirName of dirNames) {
-                    try {
-                        // Fetch the directory's content to find the XML file
-                        const dirContentResponse = await fetch(`reports/${dirName}/`);
-                        const dirContentText = await dirContentResponse.text();
-                        const dirContentDoc = parser.parseFromString(dirContentText, 'text/html');
-                        const xmlLinks = dirContentDoc.querySelectorAll('a');
-
-                        let xmlFileName = null;
-                        xmlLinks.forEach(link => {
-                            const href = link.getAttribute('href');
-                            if (href.endsWith('.xml')) {
-                                xmlFileName = href;
-                            }
-                        });
-
-                        if (xmlFileName) {
-                            const response = await fetch(`reports/${dirName}/${xmlFileName}`);
-                            const xmlText = await response.text();
-                            const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
-
-                            // Extract and display the relevant information from the XML
-                            const testSuites = xmlDoc.querySelectorAll('testsuite');
-                            if(testSuites.length > 0){
-                                const reportHeading = document.createElement('h2');
-                                reportHeading.textContent = dirName;
-                                reportsContainer.appendChild(reportHeading);
-                            }
-
-                            testSuites.forEach(suite => {
-                                const suiteName = suite.getAttribute('name');
-                                const suiteElement = document.createElement('p');
-                                suiteElement.textContent = `Test Suite: ${suiteName}`;
-                                reportsContainer.appendChild(suiteElement);
-
-                                const testCases = suite.querySelectorAll('testcase');
-                                testCases.forEach(testCase => {
-                                    const caseName = testCase.getAttribute('name');
-                                    const caseElement = document.createElement('p');
-                                    caseElement.textContent = `  - Test Case: ${caseName}`;
-                                    reportsContainer.appendChild(caseElement);
-                                });
-                            });
-                        }
-                    } catch (dirError) {
-                        console.error(`Error loading directory ${dirName}:`, dirError);
-                        reportsContainer.innerHTML += `<p>Error loading directory ${dirName}.</p>`;
-                    }
-                }
-
-                //Handle files directly in the reports folder.
-                await handleReportsFiles(reportsContainer); //Call the async function.
-
-            } catch (reportsError) {
-                console.error('Error loading reports directory:', reportsError);
-                reportsContainer.innerHTML = '<p>Error loading test reports.</p>';
-            }
-        }
-
-        async function handleReportsFiles(reportsContainer){ //Create the async function.
-            try {
-                const reportsContentResponse = await fetch(`reports/`);
-                const reportsContentText = await reportsContentResponse.text();
-                const reportsContentDoc = parser.parseFromString(reportsContentText, 'text/html');
-                const xmlLinksReports = reportsContentDoc.querySelectorAll('a');
-
-                xmlLinksReports.forEach(link=>{
-                    const href = link.getAttribute('href');
-                    if (href.endsWith('.xml')){
-                        const response = await fetch(`reports/${href}`);
-                        const xmlText = await response.text();
+                    if (xmlFileName) {
+                        const xmlResponse = await fetch(`reports/${dirName}/${xmlFileName}`);
+                        if (!xmlResponse.ok) throw new Error(`HTTP error! status: ${xmlResponse.status}`);
+                        const xmlText = await xmlResponse.text();
                         const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
-
-                        const testSuites = xmlDoc.querySelectorAll('testsuite');
-                        if(testSuites.length > 0){
-                            const reportHeading = document.createElement('h2');
-                            reportHeading.textContent = href;
-                            reportsContainer.appendChild(reportHeading);
-                        }
-
-                        testSuites.forEach(suite => {
-                            const suiteName = suite.getAttribute('name');
-                            const suiteElement = document.createElement('p');
-                            suiteElement.textContent = `Test Suite: ${suiteName}`;
-                            reportsContainer.appendChild(suiteElement);
-
-                            const testCases = suite.querySelectorAll('testcase');
-                            testCases.forEach(testCase => {
-                                const caseName = testCase.getAttribute('name');
-                                const caseElement = document.createElement('p');
-                                caseElement.textContent = `  - Test Case: ${caseName}`;
-                                reportsContainer.appendChild(caseElement);
-                            });
-                        }
-                    })
+                        displayXml(xmlDoc, dirName, reportsContainer);
+                    }
+                } catch (dirError) {
+                    console.error(`Error loading directory ${dirName}:`, dirError);
+                    reportsContainer.innerHTML += `<p>Error loading directory ${dirName}.</p>`;
                 }
-            }catch(e){
-                console.error("Error loading reports directory files", e);
-                reportsContainer.innerHTML += `<p>Error loading reports directory files.</p>`;
             }
+            await handleReportsFiles(reportsContainer); // handle files directly in reports folder
         }
+    } catch (reportsError) {
+        console.error('Error loading reports directory:', reportsError);
+        reportsContainer.innerHTML = '<p>Error loading test reports.</p>';
+    }
+}
 
-        displayReports();
+async function handleReportsFiles(reportsContainer) {
+    try {
+        const reportsContentResponse = await fetch(`reports/`);
+        if (!reportsContentResponse.ok) throw new Error(`HTTP error! status: ${reportsContentResponse.status}`);
+        const reportsContentText = await reportsContentResponse.text();
+        const reportsContentDoc = parser.parseFromString(reportsContentText, 'text/html');
+        const xmlLinksReports = Array.from(reportsContentDoc.querySelectorAll('a')).filter(link => link.getAttribute('href').endsWith('.xml'));
+
+        for (const link of xmlLinksReports) {
+            const href = link.getAttribute('href');
+            const xmlResponse = await fetch(`reports/${href}`);
+            if (!xmlResponse.ok) throw new Error(`HTTP error! status: ${xmlResponse.status}`);
+            const xmlText = await xmlResponse.text();
+            const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+            displayXml(xmlDoc, href, reportsContainer);
+        }
+    } catch (e) {
+        console.error('Error loading reports directory files', e);
+        reportsContainer.innerHTML += `<p>Error loading reports directory files.</p>`;
+    }
+}
+
+function displayXml(xmlDoc, headingText, reportsContainer){
+    const testSuites = xmlDoc.querySelectorAll('testsuite');
+    if (testSuites.length > 0) {
+        const reportHeading = document.createElement('h2');
+        reportHeading.textContent = headingText;
+        reportsContainer.appendChild(reportHeading);
+    }
+    testSuites.forEach(suite => {
+        const suiteName = suite.getAttribute('name');
+        const suiteElement = document.createElement('p');
+        suiteElement.textContent = `Test Suite: ${suiteName}`;
+        reportsContainer.appendChild(suiteElement);
+        const testCases = suite.querySelectorAll('testcase');
+        testCases.forEach(testCase => {
+            const caseName = testCase.getAttribute('name');
+            const caseElement = document.createElement('p');
+            caseElement.textContent = `  - Test Case: ${caseName}`;
+            reportsContainer.appendChild(caseElement);
+        });
+    });
+}
+
+displayReports();
     </script>
 </body>
 </html>
