@@ -9,72 +9,89 @@
     </div>
 
     <script>
-    async function fetchReportsFromGitHub() {
-        const repoOwner = "BogdanDucaBP";  // Replace with your GitHub username or org
-        const repoName = "BogdanDucaBP";   // Replace with your repository name
-        const reportsPath = "reports";     // The folder containing reports
-        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${reportsPath}`;
+async function fetchReportsFromGitHub() {
+    const repoOwner = "BogdanDucaBP";  // Replace with your GitHub username or org
+    const repoName = "BogdanDucaBP";   // Replace with your repository name
+    const reportsPath = "reports";     // The folder containing reports
+    const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${reportsPath}`;
 
-        const reportsContainer = document.getElementById('reports-container');
-        reportsContainer.innerHTML = '';
+    const reportsContainer = document.getElementById('reports-container');
+    reportsContainer.innerHTML = '';
 
-        try {
-            const response = await fetch(apiUrl);
-            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
-            const files = await response.json();
-            const xmlFiles = files.filter(file => file.name.endsWith('.xml'));
+        const files = await response.json();
+        const xmlFiles = files.filter(file => file.name.endsWith('.xml'));
 
-            for (const file of xmlFiles) {
-                const fileUrl = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/${reportsPath}/${file.name}`;
+        for (const file of xmlFiles) {
+            const fileUrl = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/${reportsPath}/${file.name}`;
 
-                try {
-                    const fileResponse = await fetch(fileUrl);
-                    if (!fileResponse.ok) throw new Error(`HTTP error! Status: ${fileResponse.status}`);
+            try {
+                const fileResponse = await fetch(fileUrl);
+                if (!fileResponse.ok) throw new Error(`HTTP error! Status: ${fileResponse.status}`);
 
-                    const xmlText = await fileResponse.text();
-                    const parser = new DOMParser();
-                    const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+                const xmlText = await fileResponse.text();
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
 
-                    displayXml(xmlDoc, file.name, reportsContainer);
-                } catch (fileError) {
-                    console.error(`Error fetching ${file.name}:`, fileError);
-                    reportsContainer.innerHTML += `<p>Error fetching ${file.name}: ${fileError.message}</p>`;
-                }
+                displayXml(xmlDoc, file.name, reportsContainer);
+            } catch (fileError) {
+                console.error(`Error fetching ${file.name}:`, fileError);
+                reportsContainer.innerHTML += `<p>Error fetching ${file.name}: ${fileError.message}</p>`;
             }
-        } catch (error) {
-            console.error("Error fetching reports list:", error);
-            reportsContainer.innerHTML = `<p>Error fetching reports list: ${error.message}</p>`;
         }
+    } catch (error) {
+        console.error("Error fetching reports list:", error);
+        reportsContainer.innerHTML = `<p>Error fetching reports list: ${error.message}</p>`;
+    }
+}
+
+// REPLACE YOUR OLD `displayXml()` FUNCTION WITH THIS:
+function displayXml(xmlDoc, headingText, reportsContainer) {
+    console.log("displayXml called with:", xmlDoc, headingText);
+    
+    const testSuites = xmlDoc.querySelectorAll('testsuite');
+
+    if (testSuites.length > 0) {
+        const reportHeading = document.createElement('h2');
+        reportHeading.textContent = headingText;
+        reportsContainer.appendChild(reportHeading);
     }
 
-    function displayXml(xmlDoc, headingText, reportsContainer) {
-        console.log("displayXml called with:", xmlDoc, headingText);
-        const testSuites = xmlDoc.querySelectorAll('testsuite');
+    testSuites.forEach(suite => {
+        const suiteName = suite.getAttribute('name') || "Unknown Suite";
+        const suiteElement = document.createElement('p');
+        suiteElement.textContent = `Test Suite: ${suiteName}`;
+        reportsContainer.appendChild(suiteElement);
 
-        if (testSuites.length > 0) {
-            const reportHeading = document.createElement('h2');
-            reportHeading.textContent = headingText;
-            reportsContainer.appendChild(reportHeading);
-        }
-
-        testSuites.forEach(suite => {
-            const suiteName = suite.getAttribute('name');
-            const suiteElement = document.createElement('p');
-            suiteElement.textContent = `Test Suite: ${suiteName}`;
-            reportsContainer.appendChild(suiteElement);
-
-            const testCases = suite.querySelectorAll('testcase');
-            testCases.forEach(testCase => {
-                const caseName = testCase.getAttribute('name');
-                const caseElement = document.createElement('p');
-                caseElement.textContent = `  - Test Case: ${caseName}`;
+        const testCases = suite.querySelectorAll('testcase');
+        testCases.forEach(testCase => {
+            const caseName = testCase.getAttribute('name');
+            const caseElement = document.createElement('p');
+            
+            // Check if the test case has a failure
+            const failure = testCase.querySelector('failure');
+            if (failure) {
+                caseElement.textContent = `❌ ${caseName} - FAILED`;
+                caseElement.style.color = "red"; // Red for failed tests
+                const failureMessage = document.createElement('p');
+                failureMessage.textContent = `  - Reason: ${failure.textContent}`;
+                failureMessage.style.fontStyle = "italic";
                 reportsContainer.appendChild(caseElement);
-            });
+                reportsContainer.appendChild(failureMessage);
+            } else {
+                caseElement.textContent = `✅ ${caseName} - PASSED`;
+                caseElement.style.color = "green"; // Green for passed tests
+                reportsContainer.appendChild(caseElement);
+            }
         });
-    }
+    });
+}
 
-    fetchReportsFromGitHub();
-    </script>
+// Run the script when the page loads
+fetchReportsFromGitHub();
+</script>
 </body>
 </html>
