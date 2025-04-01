@@ -1,7 +1,61 @@
 <html>
-<head><title>Test Reports</title></head>
+<head>
+    <title>Test Reports</title>
+</head>
 <body>
     <h1>Welcome to Test Reports</h1>
-    <p>test reports will be available here.</p>
+    <div id="reports-container">
+        <p>Loading test reports...</p>
+    </div>
+
+    <script>
+        async function displayReports() {
+            const reportsContainer = document.getElementById('reports-container');
+            reportsContainer.innerHTML = ''; // Clear loading message
+
+            // Replace with your XML file names or dynamically fetch them
+            const xmlFileNames = ['report1.xml', 'report2.xml']; // Example file names
+
+            for (const fileName of xmlFileNames) {
+                try {
+                    const response = await fetch(`reports/${fileName}`);
+                    const xmlText = await response.text();
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+
+                    // Extract and display the relevant information from the XML
+                    // Example: Extract test suite names
+                    const testSuites = xmlDoc.querySelectorAll('testsuite');
+                    if(testSuites.length > 0){
+                        const reportHeading = document.createElement('h2');
+                        reportHeading.textContent = fileName;
+                        reportsContainer.appendChild(reportHeading);
+                    }
+
+                    testSuites.forEach(suite => {
+                        const suiteName = suite.getAttribute('name');
+                        const suiteElement = document.createElement('p');
+                        suiteElement.textContent = `Test Suite: ${suiteName}`;
+                        reportsContainer.appendChild(suiteElement);
+
+                        // Example: Extract test case names
+                        const testCases = suite.querySelectorAll('testcase');
+                        testCases.forEach(testCase => {
+                            const caseName = testCase.getAttribute('name');
+                            const caseElement = document.createElement('p');
+                            caseElement.textContent = `  - Test Case: ${caseName}`;
+                            reportsContainer.appendChild(caseElement);
+                        });
+                    });
+
+                } catch (error) {
+                    console.error(`Error loading ${fileName}:`, error);
+                    reportsContainer.innerHTML += `<p>Error loading ${fileName}.</p>`;
+                }
+            }
+        }
+
+        displayReports();
+    </script>
 </body>
 </html>
