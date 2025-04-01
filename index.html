@@ -86,9 +86,9 @@
 
     testSuites.forEach(suite => {
         const suiteName = suite.getAttribute('name');
-        
-        // Skip adding "Test Suite: Unknown Suite" to the container
-        if (suiteName !== "Unknown Suite") {
+
+        // Only append "Test Suite" line if the suite name is valid
+        if (suiteName && suiteName !== "Unknown Suite") {
             const suiteElement = document.createElement('p');
             suiteElement.textContent = `Test Suite: ${suiteName}`;
             reportsContainer.appendChild(suiteElement);
@@ -122,6 +122,7 @@
     // Return the number of passed and failed tests for this report
     return { passed, failed };
 }
+
 
 
         fetchReportsFromGitHub();
