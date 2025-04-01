@@ -23,7 +23,9 @@ async function fetchReportsFromGitHub() {
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
         const files = await response.json();
-        const xmlFiles = files.filter(file => file.name.endsWith('.xml'));
+        const xmlFiles = files.filter(file => 
+            file.name.endsWith('.xml') && !file.name.includes('_junit') // Ignore invalid files
+        );
 
         for (const file of xmlFiles) {
             const fileUrl = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/${reportsPath}/${file.name}`;
@@ -39,7 +41,6 @@ async function fetchReportsFromGitHub() {
                 displayXml(xmlDoc, file.name, reportsContainer);
             } catch (fileError) {
                 console.error(`Error fetching ${file.name}:`, fileError);
-                reportsContainer.innerHTML += `<p>Error fetching ${file.name}: ${fileError.message}</p>`;
             }
         }
     } catch (error) {
@@ -48,7 +49,6 @@ async function fetchReportsFromGitHub() {
     }
 }
 
-// REPLACE YOUR OLD `displayXml()` FUNCTION WITH THIS:
 function displayXml(xmlDoc, headingText, reportsContainer) {
     console.log("displayXml called with:", xmlDoc, headingText);
     
@@ -61,10 +61,13 @@ function displayXml(xmlDoc, headingText, reportsContainer) {
     }
 
     testSuites.forEach(suite => {
-        const suiteName = suite.getAttribute('name') || "Unknown Suite";
-        const suiteElement = document.createElement('p');
-        suiteElement.textContent = `Test Suite: ${suiteName}`;
-        reportsContainer.appendChild(suiteElement);
+        const suiteName = suite.getAttribute('name');
+        
+        if (suiteName) {  // Only show if suite has a name
+            const suiteElement = document.createElement('p');
+            suiteElement.textContent = `Test Suite: ${suiteName}`;
+            reportsContainer.appendChild(suiteElement);
+        }
 
         const testCases = suite.querySelectorAll('testcase');
         testCases.forEach(testCase => {
@@ -90,7 +93,6 @@ function displayXml(xmlDoc, headingText, reportsContainer) {
     });
 }
 
-// Run the script when the page loads
 fetchReportsFromGitHub();
 </script>
 </body>
