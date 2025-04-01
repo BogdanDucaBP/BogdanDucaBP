@@ -4,107 +4,122 @@
 </head>
 <body>
     <h1>Welcome to Test Reports</h1>
+
+    <!-- Add a new container for displaying the test counts -->
+    <div id="report-stats">
+        <!-- Total Passed and Failed tests will be displayed here -->
+    </div>
+
     <div id="reports-container">
         <p>Loading test reports...</p>
     </div>
 
     <script>
-        async function displayReports() {
+        async function fetchReportsFromGitHub() {
+            const repoOwner = "BogdanDucaBP";  // Replace with your GitHub username or org
+            const repoName = "BogdanDucaBP";   // Replace with your repository name
+            const reportsPath = "reports";     // The folder containing reports
+            const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${reportsPath}`;
+
             const reportsContainer = document.getElementById('reports-container');
             reportsContainer.innerHTML = '';
 
             try {
-                const reportsDirResponse = await fetch('reports/');
-                if (!reportsDirResponse.ok) throw new Error(`HTTP error! status: ${reportsDirResponse.status}`);
-                const reportsDirText = await reportsDirResponse.text();
-                const parser = new DOMParser();
-                const reportsDirDoc = parser.parseFromString(reportsDirText, 'text/html');
-                const links = reportsDirDoc.querySelectorAll('a');
-                const dirNames = links.filter(link => link.getAttribute('href').endsWith('/') && link.getAttribute('href') !== './').map(link => link.getAttribute('href').slice(0, -1));
+                const response = await fetch(apiUrl);
+                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
-                console.log("Directory Names:", dirNames); // Debugging
+                const files = await response.json();
+                const xmlFiles = files.filter(file => 
+                    file.name.endsWith('.xml') && !file.name.includes('_junit') // Ignore invalid files
+                );
 
-                if (dirNames.length === 0) {
-                    console.log("Calling handleReportsFiles (no subdirectories)"); // Debugging
-                    await handleReportsFiles(reportsContainer); // handle files directly in reports folder
-                } else {
-                    for (const dirName of dirNames) {
-                        try {
-                            const dirContentResponse = await fetch(`reports/${dirName}/`);
-                            if (!dirContentResponse.ok) throw new Error(`HTTP error! status: ${dirContentResponse.status}`);
-                            const dirContentText = await dirContentResponse.text();
-                            const dirContentDoc = parser.parseFromString(dirContentText, 'text/html');
-                            const xmlLinks = dirContentDoc.querySelectorAll('a');
-                            const xmlFileName = xmlLinks.find(link => link.getAttribute('href').endsWith('.xml'))?.getAttribute('href');
+                let totalPassed = 0;
+                let totalFailed = 0;
 
-                            if (xmlFileName) {
-                                const xmlResponse = await fetch(`reports/${dirName}/${xmlFileName}`);
-                                if (!xmlResponse.ok) throw new Error(`HTTP error! status: ${xmlResponse.status}`);
-                                const xmlText = await xmlResponse.text();
-                                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
-                                displayXml(xmlDoc, dirName, reportsContainer);
-                            }
-                        } catch (dirError) {
-                            console.error(`Error loading directory ${dirName}:`, dirError);
-                            reportsContainer.innerHTML += `<p>Error loading directory ${dirName}.</p>`;
-                        }
+                for (const file of xmlFiles) {
+                    const fileUrl = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/${reportsPath}/${file.name}`;
+
+                    try {
+                        const fileResponse = await fetch(fileUrl);
+                        if (!fileResponse.ok) throw new Error(`HTTP error! Status: ${fileResponse.status}`);
+
+                        const xmlText = await fileResponse.text();
+                        const parser = new DOMParser();
+                        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+
+                        // Get counts of passed and failed tests
+                        const [passed, failed] = displayXml(xmlDoc, file.name, reportsContainer);
+
+                        totalPassed += passed;
+                        totalFailed += failed;
+                    } catch (fileError) {
+                        console.error(`Error fetching ${file.name}:`, fileError);
                     }
-                    console.log("Calling handleReportsFiles (subdirectories present)"); // Debugging
-                    await handleReportsFiles(reportsContainer); // handle files directly in reports folder
                 }
-            } catch (reportsError) {
-                console.error('Error loading reports directory:', reportsError);
-                reportsContainer.innerHTML = '<p>Error loading test reports.</p>';
-            }
-        }
 
-        async function handleReportsFiles(reportsContainer) {
-            console.log("handleReportsFiles called"); // Debugging
-            try {
-                const reportsContentResponse = await fetch(`reports/`);
-                if (!reportsContentResponse.ok) throw new Error(`HTTP error! status: ${reportsContentResponse.status}`);
-                const reportsContentText = await reportsContentResponse.text();
-                const reportsContentDoc = parser.parseFromString(reportsContentText, 'text/html');
-                const xmlLinksReports = Array.from(reportsContentDoc.querySelectorAll('a')).filter(link => link.getAttribute('href').endsWith('.xml'));
-
-                for (const link of xmlLinksReports) {
-                    const href = link.getAttribute('href');
-                    const xmlResponse = await fetch(`reports/${href}`);
-                    if (!xmlResponse.ok) throw new Error(`HTTP error! status: ${xmlResponse.status}`);
-                    const xmlText = await xmlResponse.text();
-                    const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
-                    displayXml(xmlDoc, href, reportsContainer);
-                }
-            } catch (e) {
-                console.error('Error loading reports directory files', e);
-                reportsContainer.innerHTML += `<p>Error loading reports directory files.</p>`;
+                // Display the total count of passed and failed tests
+                const reportStats = document.getElementById('report-stats');
+                reportStats.innerHTML = `Total Passed: ${totalPassed} | Total Failed: ${totalFailed}`;
+            } catch (error) {
+                console.error("Error fetching reports list:", error);
+                reportsContainer.innerHTML = `<p>Error fetching reports list: ${error.message}</p>`;
             }
         }
 
         function displayXml(xmlDoc, headingText, reportsContainer) {
-            console.log("displayXml called with:", xmlDoc, headingText); //debugging
+            console.log("displayXml called with:", xmlDoc, headingText);
+
+            let passedCount = 0;
+            let failedCount = 0;
+
             const testSuites = xmlDoc.querySelectorAll('testsuite');
+
             if (testSuites.length > 0) {
                 const reportHeading = document.createElement('h2');
                 reportHeading.textContent = headingText;
                 reportsContainer.appendChild(reportHeading);
             }
+
             testSuites.forEach(suite => {
                 const suiteName = suite.getAttribute('name');
-                const suiteElement = document.createElement('p');
-                suiteElement.textContent = `Test Suite: ${suiteName}`;
-                reportsContainer.appendChild(suiteElement);
+
+                if (suiteName) {  // Only show if suite has a name
+                    const suiteElement = document.createElement('p');
+                    suiteElement.textContent = `Test Suite: ${suiteName}`;
+                    reportsContainer.appendChild(suiteElement);
+                }
+
                 const testCases = suite.querySelectorAll('testcase');
                 testCases.forEach(testCase => {
                     const caseName = testCase.getAttribute('name');
                     const caseElement = document.createElement('p');
-                    caseElement.textContent = `  - Test Case: ${caseName}`;
-                    reportsContainer.appendChild(caseElement);
+                    
+                    // Check if the test case has a failure
+                    const failure = testCase.querySelector('failure');
+                    if (failure) {
+                        caseElement.textContent = `❌ ${caseName} - FAILED`;
+                        caseElement.style.color = "red"; // Red for failed tests
+                        const failureMessage = document.createElement('p');
+                        failureMessage.textContent = `  - Reason: ${failure.textContent}`;
+                        failureMessage.style.fontStyle = "italic";
+                        reportsContainer.appendChild(caseElement);
+                        reportsContainer.appendChild(failureMessage);
+
+                        failedCount++; // Increment failed count
+                    } else {
+                        caseElement.textContent = `✅ ${caseName} - PASSED`;
+                        caseElement.style.color = "green"; // Green for passed tests
+                        reportsContainer.appendChild(caseElement);
+
+                        passedCount++; // Increment passed count
+                    }
                 });
             });
+
+            return [passedCount, failedCount]; // Return counts
         }
 
-        displayReports();
+        fetchReportsFromGitHub();
     </script>
 </body>
 </html>
