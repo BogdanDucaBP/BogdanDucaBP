@@ -72,52 +72,57 @@
         }
 
         function displayXml(xmlDoc, headingText, reportsContainer) {
-            console.log("displayXml called with:", xmlDoc, headingText);
-            let passed = 0;
-            let failed = 0;
+    console.log("displayXml called with:", xmlDoc, headingText);
+    let passed = 0;
+    let failed = 0;
 
-            const testSuites = xmlDoc.querySelectorAll('testsuite');
+    const testSuites = xmlDoc.querySelectorAll('testsuite');
 
-            if (testSuites.length > 0) {
-                const reportHeading = document.createElement('h2');
-                reportHeading.textContent = headingText;
-                reportsContainer.appendChild(reportHeading);
-            }
+    if (testSuites.length > 0) {
+        const reportHeading = document.createElement('h2');
+        reportHeading.textContent = headingText;
+        reportsContainer.appendChild(reportHeading);
+    }
 
-            testSuites.forEach(suite => {
-                const suiteName = suite.getAttribute('name') || "Unknown Suite";
-                const suiteElement = document.createElement('p');
-                suiteElement.textContent = `Test Suite: ${suiteName}`;
-                reportsContainer.appendChild(suiteElement);
-
-                const testCases = suite.querySelectorAll('testcase');
-                testCases.forEach(testCase => {
-                    const caseName = testCase.getAttribute('name');
-                    const caseElement = document.createElement('p');
-                    
-                    // Check if the test case has a failure
-                    const failure = testCase.querySelector('failure');
-                    if (failure) {
-                        caseElement.textContent = `❌ ${caseName} - FAILED`;
-                        caseElement.style.color = "red"; // Red for failed tests
-                        const failureMessage = document.createElement('p');
-                        failureMessage.textContent = `  - Reason: ${failure.textContent}`;
-                        failureMessage.style.fontStyle = "italic";
-                        reportsContainer.appendChild(caseElement);
-                        reportsContainer.appendChild(failureMessage);
-                        failed++; // Count failed tests
-                    } else {
-                        caseElement.textContent = `✅ ${caseName} - PASSED`;
-                        caseElement.style.color = "green"; // Green for passed tests
-                        reportsContainer.appendChild(caseElement);
-                        passed++; // Count passed tests
-                    }
-                });
-            });
-
-            // Return the number of passed and failed tests for this report
-            return { passed, failed };
+    testSuites.forEach(suite => {
+        const suiteName = suite.getAttribute('name');
+        
+        // Skip adding "Test Suite: Unknown Suite" to the container
+        if (suiteName !== "Unknown Suite") {
+            const suiteElement = document.createElement('p');
+            suiteElement.textContent = `Test Suite: ${suiteName}`;
+            reportsContainer.appendChild(suiteElement);
         }
+
+        const testCases = suite.querySelectorAll('testcase');
+        testCases.forEach(testCase => {
+            const caseName = testCase.getAttribute('name');
+            const caseElement = document.createElement('p');
+            
+            // Check if the test case has a failure
+            const failure = testCase.querySelector('failure');
+            if (failure) {
+                caseElement.textContent = `❌ ${caseName} - FAILED`;
+                caseElement.style.color = "red"; // Red for failed tests
+                const failureMessage = document.createElement('p');
+                failureMessage.textContent = `  - Reason: ${failure.textContent}`;
+                failureMessage.style.fontStyle = "italic";
+                reportsContainer.appendChild(caseElement);
+                reportsContainer.appendChild(failureMessage);
+                failed++; // Count failed tests
+            } else {
+                caseElement.textContent = `✅ ${caseName} - PASSED`;
+                caseElement.style.color = "green"; // Green for passed tests
+                reportsContainer.appendChild(caseElement);
+                passed++; // Count passed tests
+            }
+        });
+    });
+
+    // Return the number of passed and failed tests for this report
+    return { passed, failed };
+}
+
 
         fetchReportsFromGitHub();
     </script>
