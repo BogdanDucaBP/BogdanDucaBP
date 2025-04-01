@@ -14,7 +14,7 @@
     reportsContainer.innerHTML = '';
 
     try {
-        const reportsDirResponse = await fetch('reports/');
+        const reportsDirResponse = await fetch('reports');
         if (!reportsDirResponse.ok) throw new Error(`HTTP error! status: ${reportsDirResponse.status}`);
         const reportsDirText = await reportsDirResponse.text();
         const parser = new DOMParser();
