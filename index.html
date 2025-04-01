@@ -47,6 +47,7 @@
                         const fileResponse = await fetch(fileUrl);
                         if (!fileResponse.ok) {
                             // Skip the file without showing error messages
+                            console.log(`Skipping missing file: ${file.name}`);
                             continue;
                         }
 
@@ -60,6 +61,7 @@
                         totalRun += passed + failed;
                     } catch (fileError) {
                         // Skip problematic files without error messages
+                        console.log(`Error fetching ${file.name}: ${fileError}`);
                         continue;
                     }
                 }
