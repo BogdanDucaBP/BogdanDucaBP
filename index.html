@@ -8,7 +8,7 @@
     <!-- Total Stats Section -->
     <div id="total-stats">
         <p>
-            Total run: <span id="total-run" style="color: black;">0</span> | 
+            Total run: <span id="total-run" style="color: blue;">0</span> | 
             Total Passed: <span id="total-passed" style="color: green;">0</span> | 
             Total Failed: <span id="total-failed" style="color: red;">0</span>
         </p>
@@ -45,7 +45,10 @@
 
                     try {
                         const fileResponse = await fetch(fileUrl);
-                        if (!fileResponse.ok) throw new Error(`HTTP error! Status: ${fileResponse.status}`);
+                        if (!fileResponse.ok) {
+                            // Skip the file without showing error messages
+                            continue;
+                        }
 
                         const xmlText = await fileResponse.text();
                         const parser = new DOMParser();
@@ -56,8 +59,8 @@
                         totalFailed += failed;
                         totalRun += passed + failed;
                     } catch (fileError) {
-                        console.error(`Error fetching ${file.name}:`, fileError);
-                        reportsContainer.innerHTML += `<p>Error fetching ${file.name}: ${fileError.message}</p>`;
+                        // Skip problematic files without error messages
+                        continue;
                     }
                 }
 
@@ -80,41 +83,40 @@
             const testSuites = xmlDoc.querySelectorAll('testsuite');
 
             if (testSuites.length > 0) {
-                const reportHeading = document.createElement('h2');
-                reportHeading.textContent = headingText;
-                reportsContainer.appendChild(reportHeading);
-            }
+                // Filter out 'Unknown Suite' and proceed with valid suites only
+                testSuites.forEach(suite => {
+                    const suiteName = suite.getAttribute('name');
+                    if (!suiteName || suiteName === "Unknown Suite") return; // Skip Unknown Suite
 
-            testSuites.forEach(suite => {
-                const suiteName = suite.getAttribute('name') || "Unknown Suite";
-                const suiteElement = document.createElement('p');
-                suiteElement.textContent = `Test Suite: ${suiteName}`;
-                reportsContainer.appendChild(suiteElement);
+                    const suiteElement = document.createElement('p');
+                    suiteElement.textContent = `Test Suite: ${suiteName}`;
+                    reportsContainer.appendChild(suiteElement);
 
-                const testCases = suite.querySelectorAll('testcase');
-                testCases.forEach(testCase => {
-                    const caseName = testCase.getAttribute('name');
-                    const caseElement = document.createElement('p');
-                    
-                    // Check if the test case has a failure
-                    const failure = testCase.querySelector('failure');
-                    if (failure) {
-                        caseElement.textContent = `❌ ${caseName} - FAILED`;
-                        caseElement.style.color = "red"; // Red for failed tests
-                        const failureMessage = document.createElement('p');
-                        failureMessage.textContent = `  - Reason: ${failure.textContent}`;
-                        failureMessage.style.fontStyle = "italic";
-                        reportsContainer.appendChild(caseElement);
-                        reportsContainer.appendChild(failureMessage);
-                        failed++; // Count failed tests
-                    } else {
-                        caseElement.textContent = `✅ ${caseName} - PASSED`;
-                        caseElement.style.color = "green"; // Green for passed tests
-                        reportsContainer.appendChild(caseElement);
-                        passed++; // Count passed tests
-                    }
+                    const testCases = suite.querySelectorAll('testcase');
+                    testCases.forEach(testCase => {
+                        const caseName = testCase.getAttribute('name');
+                        const caseElement = document.createElement('p');
+                        
+                        // Check if the test case has a failure
+                        const failure = testCase.querySelector('failure');
+                        if (failure) {
+                            caseElement.textContent = `❌ ${caseName} - FAILED`;
+                            caseElement.style.color = "red"; // Red for failed tests
+                            const failureMessage = document.createElement('p');
+                            failureMessage.textContent = `  - Reason: ${failure.textContent}`;
+                            failureMessage.style.fontStyle = "italic";
+                            reportsContainer.appendChild(caseElement);
+                            reportsContainer.appendChild(failureMessage);
+                            failed++; // Count failed tests
+                        } else {
+                            caseElement.textContent = `✅ ${caseName} - PASSED`;
+                            caseElement.style.color = "green"; // Green for passed tests
+                            reportsContainer.appendChild(caseElement);
+                            passed++; // Count passed tests
+                        }
+                    });
                 });
-            });
+            }
 
             // Return the number of passed and failed tests for this report
             return { passed, failed };
