@@ -5,9 +5,15 @@
 <body>
     <h1>Welcome to Test Reports</h1>
 
-    <!-- Add a new container for displaying the test counts -->
-    <div id="report-stats">
-        <!-- Total Passed and Failed tests will be displayed here -->
+    <!-- Total Stats Section -->
+    <div id="total-stats">
+        <p>
+            Total run: <span id="total-run" style="color: black;">0</span> | 
+            Total Passed: <span id="total-passed" style="color: green;">0</span> | 
+            Total Failed: <span id="total-failed" style="color: red;">0</span>
+        </p>
+        <!-- Link to pipeline summary -->
+        <p><a href="https://dev.azure.com/bebuse/ETM/_build?definitionId=1562&_a=summary" target="_blank">QA-E2E Test Run</a></p>
     </div>
 
     <div id="reports-container">
@@ -17,25 +23,23 @@
     <script>
         async function fetchReportsFromGitHub() {
             const repoOwner = "BogdanDucaBP";  // Replace with your GitHub username or org
-            const repoName = "BogdanDucaBP";   // Replace with your repository name
-            const reportsPath = "reports";     // The folder containing reports
+            const repoName = "BogdanDucaBP";         // Replace with your repository name
+            const reportsPath = "reports";            // The folder containing reports
             const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${reportsPath}`;
 
             const reportsContainer = document.getElementById('reports-container');
-            reportsContainer.innerHTML = '';
+            reportsContainer.innerHTML = ''; // Clear the reports container before displaying new data
+
+            let totalRun = 0, totalPassed = 0, totalFailed = 0;
 
             try {
                 const response = await fetch(apiUrl);
                 if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
                 const files = await response.json();
-                const xmlFiles = files.filter(file => 
-                    file.name.endsWith('.xml') && !file.name.includes('_junit') // Ignore invalid files
-                );
+                const xmlFiles = files.filter(file => file.name.endsWith('.xml'));
 
-                let totalPassed = 0;
-                let totalFailed = 0;
-
+                // Loop through each XML file and display its contents
                 for (const file of xmlFiles) {
                     const fileUrl = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/${reportsPath}/${file.name}`;
 
@@ -47,19 +51,21 @@
                         const parser = new DOMParser();
                         const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
 
-                        // Get counts of passed and failed tests
-                        const [passed, failed] = displayXml(xmlDoc, file.name, reportsContainer);
-
+                        const { passed, failed } = displayXml(xmlDoc, file.name, reportsContainer);
                         totalPassed += passed;
                         totalFailed += failed;
+                        totalRun += passed + failed;
                     } catch (fileError) {
                         console.error(`Error fetching ${file.name}:`, fileError);
+                        reportsContainer.innerHTML += `<p>Error fetching ${file.name}: ${fileError.message}</p>`;
                     }
                 }
 
-                // Display the total count of passed and failed tests
-                const reportStats = document.getElementById('report-stats');
-                reportStats.innerHTML = `Total Passed: ${totalPassed} | Total Failed: ${totalFailed}`;
+                // Update the total stats
+                document.getElementById('total-run').textContent = totalRun;
+                document.getElementById('total-passed').textContent = totalPassed;
+                document.getElementById('total-failed').textContent = totalFailed;
+
             } catch (error) {
                 console.error("Error fetching reports list:", error);
                 reportsContainer.innerHTML = `<p>Error fetching reports list: ${error.message}</p>`;
@@ -68,9 +74,8 @@
 
         function displayXml(xmlDoc, headingText, reportsContainer) {
             console.log("displayXml called with:", xmlDoc, headingText);
-
-            let passedCount = 0;
-            let failedCount = 0;
+            let passed = 0;
+            let failed = 0;
 
             const testSuites = xmlDoc.querySelectorAll('testsuite');
 
@@ -81,13 +86,10 @@
             }
 
             testSuites.forEach(suite => {
-                const suiteName = suite.getAttribute('name');
-
-                if (suiteName) {  // Only show if suite has a name
-                    const suiteElement = document.createElement('p');
-                    suiteElement.textContent = `Test Suite: ${suiteName}`;
-                    reportsContainer.appendChild(suiteElement);
-                }
+                const suiteName = suite.getAttribute('name') || "Unknown Suite";
+                const suiteElement = document.createElement('p');
+                suiteElement.textContent = `Test Suite: ${suiteName}`;
+                reportsContainer.appendChild(suiteElement);
 
                 const testCases = suite.querySelectorAll('testcase');
                 testCases.forEach(testCase => {
@@ -104,19 +106,18 @@
                         failureMessage.style.fontStyle = "italic";
                         reportsContainer.appendChild(caseElement);
                         reportsContainer.appendChild(failureMessage);
-
-                        failedCount++; // Increment failed count
+                        failed++; // Count failed tests
                     } else {
                         caseElement.textContent = `✅ ${caseName} - PASSED`;
                         caseElement.style.color = "green"; // Green for passed tests
                         reportsContainer.appendChild(caseElement);
-
-                        passedCount++; // Increment passed count
+                        passed++; // Count passed tests
                     }
                 });
             });
 
-            return [passedCount, failedCount]; // Return counts
+            // Return the number of passed and failed tests for this report
+            return { passed, failed };
         }
 
         fetchReportsFromGitHub();
