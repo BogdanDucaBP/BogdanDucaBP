@@ -1,27 +1,72 @@
 <html>
 <head>
     <title>Test Reports</title>
+    <style>
+        /* Basic styling for the accordion */
+        details {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        summary {
+            font-weight: bold;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ccc;
+            list-style: none; /* Hide default triangle/arrow */
+        }
+
+        /* Custom arrow for summary */
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::before {
+            content: '►'; /* Right-pointing triangle for closed state */
+            display: inline-block;
+            width: 1em;
+            margin-right: 5px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        details[open] summary::before {
+            content: '▼'; /* Down-pointing triangle for open state */
+            transform: rotate(90deg); /* Optional: Rotate for a smoother transition */
+        }
+
+        .test-content {
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .test-suite-name {
+            font-style: italic;
+            margin-left: 15px; /* Indent test suite names */
+            font-weight: normal;
+        }
+
+        p {
+            margin: 5px 0; /* Adjust spacing for test cases */
+            margin-left: 25px; /* Indent test cases */
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome to ETM Test Reports</h1>
-<!-- Click Here for Automation overview -->
-        <p><a href="https://dev.azure.com/bebuse/ETM/_dashboards/dashboard/96fd841f-fd31-42de-8e84-502472485591"_blank">Click Here for Automation overview</a></p>
-<!-- Click Here for analytics of QA - E2E Test Run -->
-        <p><a href="https://dev.azure.com/bebuse/ETM/_build?definitionId=1562&view=ms.vss-pipelineanalytics-web.new-build-definition-pipeline-analytics-view-cardmetrics"_blank">Click Here for analytics of QA - E2E Test Run</a></p>
-<!-- Click Here for pipeline summary of QA-E2E Test Run -->
-        <p><a href="https://dev.azure.com/bebuse/ETM/_build?definitionId=1562&_a=summary" target="_blank">Click Here for pipeline summary of QA-E2E Test Run</a></p>
-<!-- Click Here for Automation open BUG's -->
-        <p><a href="https://dev.azure.com/bebuse/ETM/_queries/query/d834a08f-9fa6-4810-9ec1-8f83ba1b2799/"_blank">Click Here for Automation open BUG's</a></p>
-<!-- Click Here for E2E Automated Test Cases List -->
-        <p><a href="https://dev.azure.com/bebuse/ETM/_queries/query/465b6a21-1aa0-44fc-88cc-6a60a939d880/"_blank">Click Here for E2E Automated Test Cases List</a></p>
-    <!-- Total Stats Section -->
+    <p><a href="https://dev.azure.com/bebuse/ETM/_dashboards/dashboard/96fd841f-fd31-42de-8e84-502472485591"_blank">Click Here for Automation overview</a></p>
+    <p><a href="https://dev.azure.com/bebuse/ETM/_build?definitionId=1562&view=ms.vss-pipelineanalytics-web.new-build-definition-pipeline-analytics-view-cardmetrics"_blank">Click Here for analytics of QA - E2E Test Run</a></p>
+    <p><a href="https://dev.azure.com/bebuse/ETM/_queries/query/d834a08f-9fa6-4810-9ec1-8f83ba1b2799/"_blank">Click Here for Automation open BUG's</a></p>
+    <p><a href="https://dev.azure.com/bebuse/ETM/_queries/query/465b6a21-1aa0-44fc-88cc-6a60a939d880/"_blank">Click Here for E2E Automated Test Cases List</a></p>
+    <p><a href="https://dev.azure.com/bebuse/ETM/_build?definitionId=1562&_a=summary" target="_blank">Click Here for Test Suite Runs of QA-E2E Test Run</a></p>
     <div id="total-stats">
-    <div>
-        <span style="color: blue;">Total run:</span> <span id="total-run" style="color: blue;">0</span> | 
-        <span style="color: green;">Total Passed:</span> <span id="total-passed" style="color: green;">0</span> | 
-        <span style="color: red;">Total Failed:</span> <span id="total-failed" style="color: red;">0</span>
+        <div>
+            <span style="color: blue;">Total run:</span> <span id="total-run" style="color: blue;">0</span> |
+            <span style="color: green;">Total Passed:</span> <span id="total-passed" style="color: green;">0</span> |
+            <span style="color: red;">Total Failed:</span> <span id="total-failed" style="color: red;">0</span>
+        </div>
     </div>
-</div>
 
     <div id="reports-container">
         <p>Loading test reports...</p>
@@ -29,109 +74,127 @@
 
     <script>
         async function fetchReportsFromGitHub() {
-    const repoOwner = "BogdanDucaBP";  // Replace with your GitHub username or org
-    const repoName = "BogdanDucaBP";         // Replace with your repository name
-    const reportsPath = "reports";            // The folder containing reports
-    const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${reportsPath}`;
+            const repoOwner = "BogdanDucaBP";  // Replace with your GitHub username or org
+            const repoName = "BogdanDucaBP";            // Replace with your repository name
+            const reportsPath = "reports";              // The folder containing reports
+            const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${reportsPath}`;
 
-    const reportsContainer = document.getElementById('reports-container');
-    reportsContainer.innerHTML = ''; // Clear the reports container before displaying new data
+            const reportsContainer = document.getElementById('reports-container');
+            reportsContainer.innerHTML = ''; // Clear the reports container before displaying new data
 
-    let totalRun = 0, totalPassed = 0, totalFailed = 0;
-
-    try {
-        const response = await fetch(apiUrl);
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-
-        const files = await response.json();
-        const xmlFiles = files.filter(file => file.name.endsWith('.xml'));
-
-        // Loop through each XML file and display its contents
-        for (const file of xmlFiles) {
-            const fileUrl = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/${reportsPath}/${file.name}`;
+            let totalRun = 0, totalPassed = 0, totalFailed = 0;
 
             try {
-                const fileResponse = await fetch(fileUrl);
-                if (!fileResponse.ok) throw new Error(`HTTP error! Status: ${fileResponse.status}`);
+                const response = await fetch(apiUrl);
+                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
-                const xmlText = await fileResponse.text();
-                const parser = new DOMParser();
-                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+                const files = await response.json();
+                const xmlFiles = files.filter(file => file.name.endsWith('.xml'));
 
-                const { passed, failed } = displayXml(xmlDoc, file.name, reportsContainer);
-                totalPassed += passed;
-                totalFailed += failed;
-                totalRun += passed + failed;
-            } catch (fileError) {
-                console.error(`Error fetching ${file.name}:`, fileError);  // Log error to console
-                // Do not append the error message to the reports container
+                // Loop through each XML file and display its contents
+                for (const file of xmlFiles) {
+                    const fileUrl = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/${reportsPath}/${file.name}`;
+
+                    try {
+                        const fileResponse = await fetch(fileUrl);
+                        if (!fileResponse.ok) throw new Error(`HTTP error! Status: ${fileResponse.status}`);
+
+                        const xmlText = await fileResponse.text();
+                        const parser = new DOMParser();
+                        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+
+                        const { passed, failed } = displayXml(xmlDoc, file.name, reportsContainer);
+                        totalPassed += passed;
+                        totalFailed += failed;
+                        totalRun += passed + failed;
+                    } catch (fileError) {
+                        console.error(`Error fetching ${file.name}:`, fileError);  // Log error to console
+                        // Do not append the error message to the reports container
+                    }
+                }
+
+                // Update the total stats
+                document.getElementById('total-run').textContent = totalRun;
+                document.getElementById('total-passed').textContent = totalPassed;
+                document.getElementById('total-failed').textContent = totalFailed;
+
+            } catch (error) {
+                console.error("Error fetching reports list:", error);  // Log error to console
+                reportsContainer.innerHTML = `<p>Error fetching reports list: ${error.message}</p>`;
             }
         }
-
-        // Update the total stats
-        document.getElementById('total-run').textContent = totalRun;
-        document.getElementById('total-passed').textContent = totalPassed;
-        document.getElementById('total-failed').textContent = totalFailed;
-
-    } catch (error) {
-        console.error("Error fetching reports list:", error);  // Log error to console
-        reportsContainer.innerHTML = `<p>Error fetching reports list: ${error.message}</p>`;
-    }
-}
 
 
         function displayXml(xmlDoc, headingText, reportsContainer) {
-    console.log("displayXml called with:", xmlDoc, headingText);
-    let passed = 0;
-    let failed = 0;
+            console.log("displayXml called with:", xmlDoc, headingText);
+            let passed = 0;
+            let failed = 0;
 
-    const testSuites = xmlDoc.querySelectorAll('testsuite');
+            const testSuites = xmlDoc.querySelectorAll('testsuite');
 
-    if (testSuites.length > 0) {
-        const reportHeading = document.createElement('h2');
-        reportHeading.textContent = headingText;
-        reportsContainer.appendChild(reportHeading);
-    }
+            // Create a details element for the entire report file
+            const detailsElement = document.createElement('details');
+            reportsContainer.appendChild(detailsElement);
 
-    testSuites.forEach(suite => {
-        const suiteName = suite.getAttribute('name');
+            // Create a summary element for the report file title (TEST-FileName.xml)
+            const summaryElement = document.createElement('summary');
+            summaryElement.textContent = headingText;
+            detailsElement.appendChild(summaryElement);
 
-        // Only append "Test Suite" line if the suite name is valid
-        if (suiteName && suiteName !== "Unknown Suite") {
-            const suiteElement = document.createElement('p');
-            suiteElement.textContent = `Test Suite: ${suiteName}`;
-            reportsContainer.appendChild(suiteElement);
-        }
+            // Create a div to hold the actual test content, which will be collapsible
+            const testContentDiv = document.createElement('div');
+            testContentDiv.classList.add('test-content');
+            detailsElement.appendChild(testContentDiv);
 
-        const testCases = suite.querySelectorAll('testcase');
-        testCases.forEach(testCase => {
-            const caseName = testCase.getAttribute('name');
-            const caseElement = document.createElement('p');
-            
-            // Check if the test case has a failure
-            const failure = testCase.querySelector('failure');
-            if (failure) {
-                caseElement.textContent = `❌ ${caseName} - FAILED`;
-                caseElement.style.color = "red"; // Red for failed tests
-                const failureMessage = document.createElement('p');
-                failureMessage.textContent = `  - Reason: ${failure.textContent}`;
-                failureMessage.style.fontStyle = "italic";
-                reportsContainer.appendChild(caseElement);
-                reportsContainer.appendChild(failureMessage);
-                failed++; // Count failed tests
-            } else {
-                caseElement.textContent = `✅ ${caseName} - PASSED`;
-                caseElement.style.color = "green"; // Green for passed tests
-                reportsContainer.appendChild(caseElement);
-                passed++; // Count passed tests
+
+            if (testSuites.length === 0) {
+                // If no test suites, just indicate no tests found or an issue
+                const noTests = document.createElement('p');
+                noTests.textContent = "No test suites found in this report.";
+                testContentDiv.appendChild(noTests);
+                return { passed: 0, failed: 0 };
             }
-        });
-    });
 
-    // Return the number of passed and failed tests for this report
-    return { passed, failed };
-}
+            testSuites.forEach(suite => {
+                const suiteName = suite.getAttribute('name');
 
+                // Only append "Test Suite" line if the suite name is valid
+                if (suiteName && suiteName !== "Unknown Suite") {
+                    const suiteElement = document.createElement('p');
+                    suiteElement.classList.add('test-suite-name');
+                    suiteElement.textContent = `Test Suite: ${suiteName}`;
+                    testContentDiv.appendChild(suiteElement);
+                }
+
+                const testCases = suite.querySelectorAll('testcase');
+                testCases.forEach(testCase => {
+                    const caseName = testCase.getAttribute('name');
+                    const caseElement = document.createElement('p');
+
+                    // Check if the test case has a failure
+                    const failure = testCase.querySelector('failure');
+                    if (failure) {
+                        caseElement.textContent = `❌ ${caseName} - FAILED`;
+                        caseElement.style.color = "red"; // Red for failed tests
+                        const failureMessage = document.createElement('p');
+                        failureMessage.textContent = `  - Reason: ${failure.textContent}`;
+                        failureMessage.style.fontStyle = "italic";
+                        failureMessage.style.marginLeft = "35px"; /* Further indent failure reason */
+                        testContentDiv.appendChild(caseElement);
+                        testContentDiv.appendChild(failureMessage);
+                        failed++; // Count failed tests
+                    } else {
+                        caseElement.textContent = `✅ ${caseName} - PASSED`;
+                        caseElement.style.color = "green"; // Green for passed tests
+                        testContentDiv.appendChild(caseElement);
+                        passed++; // Count passed tests
+                    }
+                });
+            });
+
+            // Return the number of passed and failed tests for this report
+            return { passed, failed };
+        }
 
 
         fetchReportsFromGitHub();
