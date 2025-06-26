@@ -13,9 +13,13 @@
             font-weight: bold;
             padding: 10px;
             cursor: pointer;
+            /* Default background and text color, will be overridden by JS for success/failure */
             background-color: #f0f0f0;
+            color: #333; /* Dark gray text */
             border-bottom: 1px solid #ccc;
             list-style: none; /* Hide default triangle/arrow */
+            display: flex; /* Use flexbox for alignment of arrow and text */
+            align-items: center; /* Vertically align items */
         }
 
         /* Custom arrow for summary */
@@ -27,7 +31,7 @@
             content: '►'; /* Right-pointing triangle for closed state */
             display: inline-block;
             width: 1em;
-            margin-right: 5px;
+            margin-right: 8px; /* Slightly more space for the arrow */
             transition: transform 0.2s ease-in-out;
         }
 
@@ -35,6 +39,26 @@
             content: '▼'; /* Down-pointing triangle for open state */
             transform: rotate(90deg); /* Optional: Rotate for a smoother transition */
         }
+
+        /* Colors for success/failure summaries */
+        details.success summary {
+            background-color: #d4edda; /* Light green */
+            color: #155724; /* Dark green text */
+            border-color: #c3e6cb;
+        }
+
+        details.failure summary {
+            background-color: #f8d7da; /* Light red */
+            color: #721c24; /* Dark red text */
+            border-color: #f5c6cb;
+        }
+
+        details.neutral summary {
+            background-color: #fefefe; /* Very light gray/almost white */
+            color: #6c757d; /* Gray text */
+            border-color: #e0e0e0;
+        }
+
 
         .test-content {
             padding: 10px;
@@ -85,7 +109,7 @@
         }
         /* --- END CSS FOR BUTTON LINKS --- */
 
-        /* --- NEW CSS FOR TOTAL STATS SECTION --- */
+        /* --- CSS FOR TOTAL STATS SECTION --- */
         #total-stats {
             background-color: #e9f5ff; /* Light blue background to make it stand out */
             border: 1px solid #cce5ff; /* Light blue border */
@@ -115,7 +139,7 @@
         #total-stats span {
             font-weight: inherit; /* Ensure all spans inherit the bold from the parent */
         }
-        /* --- END NEW CSS --- */
+        /* --- END CSS FOR TOTAL STATS SECTION --- */
 
     </style>
 </head>
@@ -132,9 +156,9 @@
 
     <div id="total-stats">
         <div>
-            <span id="total-run" style="color: blue;">0</span> Total run |
-            <span id="total-passed" style="color: green;">0</span> Total Passed |
-            <span id="total-failed" style="color: red;">0</span> Total Failed
+            <span id="total-run">0</span> Total run |
+            <span id="total-passed">0</span> Total Passed |
+            <span id="total-failed">0</span> Total Failed
         </div>
     </div>
 
@@ -202,13 +226,38 @@
 
             const testSuites = xmlDoc.querySelectorAll('testsuite');
 
+            // First, count tests to determine color and text for summary
+            testSuites.forEach(suite => {
+                const testCases = suite.querySelectorAll('testcase');
+                testCases.forEach(testCase => {
+                    const failure = testCase.querySelector('failure');
+                    if (failure) {
+                        failed++;
+                    } else {
+                        passed++;
+                    }
+                });
+            });
+
+            const totalTests = passed + failed;
+
             // Create a details element for the entire report file
             const detailsElement = document.createElement('details');
             reportsContainer.appendChild(detailsElement);
 
+            // Set class based on success/failure status
+            if (failed > 0) {
+                detailsElement.classList.add('failure');
+            } else if (passed > 0) {
+                detailsElement.classList.add('success');
+            } else {
+                detailsElement.classList.add('neutral'); // For reports with no tests
+            }
+
             // Create a summary element for the report file title (TEST-FileName.xml)
             const summaryElement = document.createElement('summary');
-            summaryElement.textContent = headingText;
+            // Add counts to the summary text
+            summaryElement.textContent = `${headingText} (Total: ${totalTests} | Failed: ${failed})`;
             detailsElement.appendChild(summaryElement);
 
             // Create a div to hold the actual test content, which will be collapsible
@@ -217,50 +266,47 @@
             detailsElement.appendChild(testContentDiv);
 
 
-            if (testSuites.length === 0) {
-                // If no test suites, just indicate no tests found or an issue
+            if (totalTests === 0) {
+                // If no test suites or no test cases, just indicate no tests found or an issue
                 const noTests = document.createElement('p');
-                noTests.textContent = "No test suites found in this report.";
+                noTests.textContent = "No test cases found in this report.";
                 testContentDiv.appendChild(noTests);
-                return { passed: 0, failed: 0 };
-            }
+            } else {
+                testSuites.forEach(suite => {
+                    const suiteName = suite.getAttribute('name');
 
-            testSuites.forEach(suite => {
-                const suiteName = suite.getAttribute('name');
-
-                // Only append "Test Suite" line if the suite name is valid
-                if (suiteName && suiteName !== "Unknown Suite") {
-                    const suiteElement = document.createElement('p');
-                    suiteElement.classList.add('test-suite-name');
-                    suiteElement.textContent = `Test Suite: ${suiteName}`;
-                    testContentDiv.appendChild(suiteElement);
-                }
-
-                const testCases = suite.querySelectorAll('testcase');
-                testCases.forEach(testCase => {
-                    const caseName = testCase.getAttribute('name');
-                    const caseElement = document.createElement('p');
-
-                    // Check if the test case has a failure
-                    const failure = testCase.querySelector('failure');
-                    if (failure) {
-                        caseElement.textContent = `❌ ${caseName} - FAILED`;
-                        caseElement.style.color = "red"; // Red for failed tests
-                        const failureMessage = document.createElement('p');
-                        failureMessage.textContent = `  - Reason: ${failure.textContent}`;
-                        failureMessage.style.fontStyle = "italic";
-                        failureMessage.style.marginLeft = "35px"; /* Further indent failure reason */
-                        testContentDiv.appendChild(caseElement);
-                        testContentDiv.appendChild(failureMessage);
-                        failed++; // Count failed tests
-                    } else {
-                        caseElement.textContent = `✅ ${caseName} - PASSED`;
-                        caseElement.style.color = "green"; // Green for passed tests
-                        testContentDiv.appendChild(caseElement);
-                        passed++; // Count passed tests
+                    // Only append "Test Suite" line if the suite name is valid
+                    if (suiteName && suiteName !== "Unknown Suite") {
+                        const suiteElement = document.createElement('p');
+                        suiteElement.classList.add('test-suite-name');
+                        suiteElement.textContent = `Test Suite: ${suiteName}`;
+                        testContentDiv.appendChild(suiteElement);
                     }
+
+                    const testCases = suite.querySelectorAll('testcase');
+                    testCases.forEach(testCase => {
+                        const caseName = testCase.getAttribute('name');
+                        const caseElement = document.createElement('p');
+
+                        // Check if the test case has a failure
+                        const failure = testCase.querySelector('failure');
+                        if (failure) {
+                            caseElement.textContent = `❌ ${caseName} - FAILED`;
+                            caseElement.style.color = "red"; // Red for failed tests
+                            const failureMessage = document.createElement('p');
+                            failureMessage.textContent = `  - Reason: ${failure.textContent}`;
+                            failureMessage.style.fontStyle = "italic";
+                            failureMessage.style.marginLeft = "35px"; /* Further indent failure reason */
+                            testContentDiv.appendChild(caseElement);
+                            testContentDiv.appendChild(failureMessage);
+                        } else {
+                            caseElement.textContent = `✅ ${caseName} - PASSED`;
+                            caseElement.style.color = "green"; // Green for passed tests
+                            testContentDiv.appendChild(caseElement);
+                        }
+                    });
                 });
-            });
+            }
 
             // Return the number of passed and failed tests for this report
             return { passed, failed };
