@@ -87,7 +87,7 @@
         .button-link {
             display: inline-block; /* Makes the link behave like a block for sizing, but inline with text flow */
             padding: 10px 15px;
-            background-color: #007bff; /* A nice blue color */
+            background-color: #007bff; /* A nice blue color (default) */
             color: white; /* White text */
             text-decoration: none; /* Remove underline */
             border-radius: 5px; /* Slightly rounded corners */
@@ -107,7 +107,20 @@
             background-color: #004085; /* Even darker on click */
             transform: translateY(0); /* Reset lift on active */
         }
-        /* --- END CSS FOR BUTTON LINKS --- */
+
+        /* --- NEW CSS for RED BUG BUTTON --- */
+        .bug-button {
+            background-color: #dc3545; /* Red color for bugs */
+        }
+
+        .bug-button:hover {
+            background-color: #c82333; /* Darker red on hover */
+        }
+
+        .bug-button:active {
+            background-color: #bd2130; /* Even darker red on click */
+        }
+        /* --- END NEW CSS --- */
 
         /* --- CSS FOR TOTAL STATS SECTION --- */
         #total-stats {
@@ -126,7 +139,6 @@
         }
 
         #total-stats div {
-            /* This div wraps the spans, make sure it inherits bold from parent or explicitly set */
             font-weight: inherit; /* Inherit font-weight from #total-stats */
         }
 
@@ -148,10 +160,10 @@
 
     <div class="button-container">
         <a href="https://dev.azure.com/bebuse/ETM/_dashboards/dashboard/96fd841f-fd31-42de-8e84-502472485591" class="button-link" target="_blank">Automation Overview</a>
+        <a href="https://dev.azure.com/bebuse/ETM/_queries/query/465b6a21-1aa0-44fc-88cc-6a60a939d880/" class="button-link" target="_blank">E2E Automated Test Cases List</a>
+        <a href="https://dev.azure.com/bebuse/ETM/_queries/query/d834a08f-9fa6-4810-9ec1-8f83ba1b2799/" class="button-link bug-button" target="_blank">Automation Open BUG's</a>
         <a href="https://dev.azure.com/bebuse/ETM/_build?definitionId=1562&view=ms.vss-pipelineanalytics-web.new-build-definition-pipeline-analytics-view-cardmetrics" class="button-link" target="_blank">Analytics of QA - E2E Test Run</a>
         <a href="https://dev.azure.com/bebuse/ETM/_build?definitionId=1562&_a=summary" class="button-link" target="_blank">Pipeline Summary of QA-E2E Test Run</a>
-        <a href="https://dev.azure.com/bebuse/ETM/_queries/query/d834a08f-9fa6-4810-9ec1-8f83ba1b2799/" class="button-link" target="_blank">Automation Open BUG's</a>
-        <a href="https://dev.azure.com/bebuse/ETM/_queries/query/465b6a21-1aa0-44fc-88cc-6a60a939d880/" class="button-link" target="_blank">E2E Automated Test Cases List</a>
     </div>
 
     <div id="total-stats">
