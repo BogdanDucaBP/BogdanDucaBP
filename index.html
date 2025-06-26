@@ -52,7 +52,7 @@
             margin-left: 25px; /* Indent test cases */
         }
 
-        /* --- CSS FOR BUTTON LINKS --- */
+        /* --- CSS for BUTTON LINKS --- */
         .button-container {
             display: flex; /* Use flexbox to arrange buttons */
             flex-wrap: wrap; /* Allow buttons to wrap to the next line if needed */
@@ -87,31 +87,33 @@
 
         /* --- NEW CSS FOR TOTAL STATS SECTION --- */
         #total-stats {
-            background-color: #e9f7ef; /* Light green background to signify success focus */
-            border: 1px solid #cce8d4; /* Slightly darker green border */
-            border-radius: 8px; /* More rounded corners */
-            padding: 15px 20px; /* More padding inside the box */
-            margin-top: 25px; /* Space above the section */
-            margin-bottom: 25px; /* Space below the section */
+            background-color: #e9f5ff; /* Light blue background to make it stand out */
+            border: 1px solid #cce5ff; /* Light blue border */
+            border-radius: 8px; /* Slightly more rounded corners */
+            padding: 15px 20px; /* Increased padding for more space */
+            margin-bottom: 20px; /* Space below this section */
             text-align: center; /* Center the text */
+            font-size: 1.2em; /* Make the text slightly larger */
+            font-weight: bold; /* Make all text in this section bold */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            display: flex; /* Use flexbox for internal alignment */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
         }
 
         #total-stats div {
-            font-size: 1.3em; /* Make the overall text bigger */
-            font-weight: bold; /* Make all the text bold */
-            color: #333; /* Darker text for readability */
+            /* This div wraps the spans, make sure it inherits bold from parent or explicitly set */
+            font-weight: inherit; /* Inherit font-weight from #total-stats */
         }
 
-        /* Re-emphasize existing colors, ensure they are bold within the new styling */
-        #total-run {
-            color: #007bff; /* Keep blue for total run, or pick another neutral if desired */
-        }
-        #total-passed {
-            color: #28a745; /* Stronger green for passed */
-        }
-        #total-failed {
-            color: #dc3545; /* Stronger red for failed */
+        /* Adjusting specific span colors to override the overall bold if needed, but not font-weight */
+        #total-run { color: #007bff; } /* Blue for total run */
+        #total-passed { color: #28a745; } /* Green for passed */
+        #total-failed { color: #dc3545; } /* Red for failed */
+
+        /* Ensuring the pipes are also bold and same size */
+        #total-stats span {
+            font-weight: inherit; /* Ensure all spans inherit the bold from the parent */
         }
         /* --- END NEW CSS --- */
 
@@ -130,9 +132,9 @@
 
     <div id="total-stats">
         <div>
-            <span id="total-run">0</span> |
-            <span id="total-passed">0</span> |
-            <span id="total-failed">0</span>
+            <span id="total-run" style="color: blue;">0</span> Total run |
+            <span id="total-passed" style="color: green;">0</span> Total Passed |
+            <span id="total-failed" style="color: red;">0</span> Total Failed
         </div>
     </div>
 
