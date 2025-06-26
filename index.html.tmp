@@ -153,10 +153,28 @@
         }
         /* --- END CSS FOR TOTAL STATS SECTION --- */
 
+        /* --- NEW CSS for Title with Logo --- */
+        .page-title {
+            display: flex; /* Use flexbox to align image and text */
+            align-items: center; /* Vertically center the logo with the text */
+            gap: 10px; /* Space between the logo and the text */
+            font-size: 2em; /* Keep your H1 size, or adjust as needed */
+            margin-bottom: 20px; /* Maintain good spacing below the title */
+        }
+
+        .page-title img {
+            height: 40px; /* Adjust height as needed for your logo's size */
+            width: auto; /* Maintain aspect ratio */
+            vertical-align: middle; /* Ensures it aligns nicely with text baseline */
+        }
+        /* --- END NEW CSS --- */
+
     </style>
 </head>
 <body>
-    <h1>Welcome to ETM Test Reports</h1>
+    <h1 class="page-title">
+        Welcome to <img src="reports/etm.webp" alt="ETM Logo"> Test Reports
+    </h1>
 
     <div class="button-container">
         <a href="https://dev.azure.com/bebuse/ETM/_dashboards/dashboard/96fd841f-fd31-42de-8e84-502472485591" class="button-link" target="_blank">Automation Overview</a>
