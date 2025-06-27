@@ -177,7 +177,7 @@
     </h1>
 
     <div class="button-container">
-        <a href="https://dev.azure.com/bebuse/d024ff75-3653-4e94-a527-509e0d7c7279/c9487d5a-ddfa-4b52-882f-3518a62f0188/_dashboards/dashboard/96fd841f-fd31-42de-8e84-502472485591" class="button-link" target="_blank">Automation Overview</a>
+        <a href="https://dev.azure.com/bebuse/ETM/_dashboards/dashboard/96fd841f-fd31-42de-8e84-502472485591" class="button-link" target="_blank">Automation Overview</a>
         <a href="https://dev.azure.com/bebuse/ETM/_queries/query/465b6a21-1aa0-44fc-88cc-6a60a939d880/" class="button-link" target="_blank">E2E Automated Test Cases List</a>
         <a href="https://dev.azure.com/bebuse/ETM/_queries/query/d834a08f-9fa6-4810-9ec1-8f83ba1b2799/" class="button-link bug-button" target="_blank">Automation Open BUG's</a>
         <a href="https://dev.azure.com/bebuse/ETM/_build?definitionId=1562&view=ms.vss-pipelineanalytics-web.new-build-definition-pipeline-analytics-view-cardmetrics" class="button-link" target="_blank">Analytics of QA - E2E Test Run</a>
@@ -227,13 +227,13 @@
                         const parser = new DOMParser();
                         const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
 
+                        // Pass the xmlDoc to displayXml to extract total time
                         const { passed, failed } = displayXml(xmlDoc, file.name, reportsContainer);
                         totalPassed += passed;
                         totalFailed += failed;
                         totalRun += passed + failed;
                     } catch (fileError) {
                         console.error(`Error fetching ${file.name}:`, fileError);  // Log error to console
-                        // Do not append the error message to the reports container
                     }
                 }
 
@@ -250,14 +250,19 @@
 
 
         function displayXml(xmlDoc, headingText, reportsContainer) {
-            console.log("displayXml called with:", xmlDoc, headingText);
             let passed = 0;
             let failed = 0;
+            let totalSuiteTime = 0; // Variable to store total time for the summary
 
             const testSuites = xmlDoc.querySelectorAll('testsuite');
 
-            // First, count tests to determine color and text for summary
+            // Iterate through test suites to calculate total passed/failed and get total time
             testSuites.forEach(suite => {
+                const suiteTime = parseFloat(suite.getAttribute('time'));
+                if (!isNaN(suiteTime)) {
+                    totalSuiteTime += suiteTime; // Accumulate time from each testsuite
+                }
+
                 const testCases = suite.querySelectorAll('testcase');
                 testCases.forEach(testCase => {
                     const failure = testCase.querySelector('failure');
@@ -286,8 +291,12 @@
 
             // Create a summary element for the report file title (TEST-FileName.xml)
             const summaryElement = document.createElement('summary');
-            // Add counts to the summary text
-            summaryElement.textContent = `${headingText} (Total: ${totalTests} | Failed: ${failed})`;
+            // *** UPDATED: Append total execution time to the summary text ***
+            let totalTimeDisplay = '';
+            if (totalSuiteTime > 0) {
+                totalTimeDisplay = ` (Execution Time: ${totalSuiteTime.toFixed(2)}s)`;
+            }
+            summaryElement.textContent = `${headingText} (Total: ${totalTests} | Failed: ${failed})${totalTimeDisplay}`;
             detailsElement.appendChild(summaryElement);
 
             // Create a div to hold the actual test content, which will be collapsible
@@ -297,19 +306,22 @@
 
 
             if (totalTests === 0) {
-                // If no test suites or no test cases, just indicate no tests found or an issue
                 const noTests = document.createElement('p');
                 noTests.textContent = "No test cases found in this report.";
                 testContentDiv.appendChild(noTests);
             } else {
                 testSuites.forEach(suite => {
                     const suiteName = suite.getAttribute('name');
+                    const suiteTime = parseFloat(suite.getAttribute('time'));
+                    let timeDisplay = '';
+                    if (!isNaN(suiteTime)) {
+                        timeDisplay = ` (Time: ${suiteTime.toFixed(2)}s)`;
+                    }
 
-                    // Only append "Test Suite" line if the suite name is valid
                     if (suiteName && suiteName !== "Unknown Suite") {
                         const suiteElement = document.createElement('p');
                         suiteElement.classList.add('test-suite-name');
-                        suiteElement.textContent = `Test Suite: ${suiteName}`;
+                        suiteElement.textContent = `Test Suite: ${suiteName}${timeDisplay}`;
                         testContentDiv.appendChild(suiteElement);
                     }
 
@@ -318,30 +330,27 @@
                         const caseName = testCase.getAttribute('name');
                         const caseElement = document.createElement('p');
 
-                        // Check if the test case has a failure
                         const failure = testCase.querySelector('failure');
                         if (failure) {
                             caseElement.textContent = `❌ ${caseName} - FAILED`;
-                            caseElement.style.color = "red"; // Red for failed tests
+                            caseElement.style.color = "red";
                             const failureMessage = document.createElement('p');
                             failureMessage.textContent = `  - Reason: ${failure.textContent}`;
                             failureMessage.style.fontStyle = "italic";
-                            failureMessage.style.marginLeft = "35px"; /* Further indent failure reason */
+                            failureMessage.style.marginLeft = "35px";
                             testContentDiv.appendChild(caseElement);
                             testContentDiv.appendChild(failureMessage);
                         } else {
                             caseElement.textContent = `✅ ${caseName} - PASSED`;
-                            caseElement.style.color = "green"; // Green for passed tests
+                            caseElement.style.color = "green";
                             testContentDiv.appendChild(caseElement);
                         }
                     });
                 });
             }
 
-            // Return the number of passed and failed tests for this report
             return { passed, failed };
         }
-
 
         fetchReportsFromGitHub();
     </script>
