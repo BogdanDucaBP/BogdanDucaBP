@@ -179,7 +179,7 @@
     </h1>
 
     <div class="button-container">
-        <a href="https://dev.azure.com/bebuse/d024ff75-3653-4e94-a527-509e0d7c7279/c9487d5a-ddfa-4b52-882f-3518a62f0188/_dashboards/dashboard/96fd841f-fd31-42de-8e84-502472485591" class="button-link" target="_blank">Automation Overview</a>
+        <a href="https://dev.azure.com/bebuse/d024ff75-3653-4e94-a527-509e0d7c7279/c9487d5a-ddfa-4b52-882f-3518a62f0188/_dashboards/dashboard/96fd841f-fd31-42de-8e84-502472485591" target="_blank">Automation Overview</a>
         <a href="https://dev.azure.com/bebuse/ETM/_queries/query/465b6a21-1aa0-44fc-88cc-6a60a939d880/" class="button-link" target="_blank">E2E Automated Test Cases List</a>
         <a href="https://dev.azure.com/bebuse/ETM/_queries/query/d834a08f-9fa6-4810-9ec1-8f83ba1b2799/" class="button-link bug-button" target="_blank">Automation Open BUG's</a>
         <a href="https://dev.azure.com/bebuse/ETM/_build?definitionId=1562&view=ms.vss-pipelineanalytics-web.new-build-definition-pipeline-analytics-view-cardmetrics" class="button-link" target="_blank">Analytics of QA - E2E Test Run</a>
@@ -285,7 +285,7 @@
                         console.error(`Error processing file ${file.name}:`, fileError);
                         const errorP = document.createElement('p');
                         errorP.style.color = 'red';
-                        // *** FIX APPLIED HERE: Only use fileError.message ***
+                        // Fix for ReferenceError: removed reference to totalFileTimeSeconds here
                         errorP.textContent = `Could not process ${file.name}: ${fileError.message}`;
                         reportsContainer.appendChild(errorP);
                     }
@@ -308,7 +308,7 @@
             console.log(`--- displayXml for file: ${headingText} ---`);
             let passed = 0;
             let failed = 0;
-            let totalSuiteTimeSeconds = 0;
+            let totalFileTimeSeconds = 0; // Corrected variable name for consistency
 
             // Try to find testsuites or single testsuite as root
             let testSuites = xmlDoc.querySelectorAll('testsuite');
@@ -322,7 +322,6 @@
 
             if (testSuites.length === 0) {
                  console.warn(`No <testsuite> elements found in ${headingText}. It might be empty or malformed.`);
-                 // Also explicitly check for <testsuites> container and log if found but no inner testsuite
                  const testSuitesContainer = xmlDoc.querySelector('testsuites');
                  if (testSuitesContainer) {
                      console.warn(`Found a <testsuites> container but no <testsuite> children within it for ${headingText}.`);
@@ -330,38 +329,24 @@
                  return { passed: 0, failed: 0, totalFileTimeSeconds: 0 }; // Return zeros immediately
             }
 
+            // First pass to calculate total time and ensure time attribute is handled
             testSuites.forEach(suite => {
                 const suiteName = suite.getAttribute('name') || 'Unnamed Suite';
                 const suiteTimeStr = suite.getAttribute('time');
                 const suiteTime = parseFloat(suiteTimeStr);
 
                 if (!isNaN(suiteTime)) {
-                    totalSuiteTimeSeconds += suiteTime;
+                    totalFileTimeSeconds += suiteTime; // Accumulate using the correct variable
                 } else {
                     console.warn(`Suite "${suiteName}" in ${headingText} has invalid or missing 'time' attribute: "${suiteTimeStr}"`);
                 }
                 console.log(`Processing suite: "${suiteName}" (Time: ${suiteTime || 'N/A'}s)`);
-
-                const testCases = suite.querySelectorAll('testcase');
-                console.log(`Found ${testCases.length} <testcase> elements in suite "${suiteName}".`);
-
-                testCases.forEach(testCase => {
-                    const caseName = testCase.getAttribute('name') || 'Unnamed Test Case';
-                    const failure = testCase.querySelector('failure');
-                    if (failure) {
-                        passed++; // Mistake here, should be failed++
-                        //console.log(`Test Case: "${caseName}" - FAILED`); // Commented for less verbose logs
-                    } else {
-                        passed++;
-                        //console.log(`Test Case: "${caseName}" - PASSED`); // Commented for less verbose logs
-                    }
-                });
             });
 
-            // *** CRITICAL FIX: The above was always incrementing 'passed' instead of 'failed' for failures. ***
-            // Let's re-do the counting logic within testCases.forEach to ensure correctness.
-            passed = 0; // Reset as we'll recount below
-            failed = 0; // Reset as we'll recount below
+            // Second pass for counting passed/failed (after time accumulation)
+            // This loop was previously flawed; resetting and re-counting ensures correctness.
+            passed = 0;
+            failed = 0;
             testSuites.forEach(suite => {
                 const testCases = suite.querySelectorAll('testcase');
                 testCases.forEach(testCase => {
@@ -376,7 +361,7 @@
 
 
             const totalTests = passed + failed;
-            console.log(`Summary for ${headingText}: Total Tests: ${totalTests}, Passed: ${passed}, Failed: ${failed}, Total Time: ${totalSuiteTimeSeconds}s`);
+            console.log(`Summary for ${headingText}: Total Tests: ${totalTests}, Passed: ${passed}, Failed: ${failed}, Total Time: ${totalFileTimeSeconds}s`);
 
             const detailsElement = document.createElement('details');
             reportsContainer.appendChild(detailsElement);
@@ -391,8 +376,8 @@
 
             const summaryElement = document.createElement('summary');
             let totalTimeDisplay = '';
-            if (totalSuiteTimeSeconds > 0) {
-                const totalSuiteTimeMinutes = totalSuiteTimeSeconds / 60;
+            if (totalFileTimeSeconds > 0) { // Use the correct variable
+                const totalSuiteTimeMinutes = totalFileTimeSeconds / 60; // Use the correct variable
                 totalTimeDisplay = ` (Execution Time: ${totalSuiteTimeMinutes.toFixed(2)} min)`;
             }
             summaryElement.textContent = `${headingText} (Total: ${totalTests} | Failed: ${failed})${totalTimeDisplay}`;
@@ -450,7 +435,7 @@
                 });
             }
             console.log(`--- Finished displayXml for: ${headingText} ---`);
-            return { passed, failed, totalFileTimeSeconds };
+            return { passed, failed, totalFileTimeSeconds }; // Now correctly returns the defined variable
         }
 
         fetchReportsFromGitHub();
