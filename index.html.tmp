@@ -227,13 +227,13 @@
                         const parser = new DOMParser();
                         const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
 
+                        // Pass the xmlDoc to displayXml to extract total time
                         const { passed, failed } = displayXml(xmlDoc, file.name, reportsContainer);
                         totalPassed += passed;
                         totalFailed += failed;
                         totalRun += passed + failed;
                     } catch (fileError) {
                         console.error(`Error fetching ${file.name}:`, fileError);  // Log error to console
-                        // Do not append the error message to the reports container
                     }
                 }
 
@@ -250,14 +250,18 @@
 
 
         function displayXml(xmlDoc, headingText, reportsContainer) {
-            console.log("displayXml called with:", xmlDoc, headingText);
             let passed = 0;
             let failed = 0;
+            let totalSuiteTimeSeconds = 0; // Keep in seconds initially for accuracy
 
             const testSuites = xmlDoc.querySelectorAll('testsuite');
 
-            // First, count tests to determine color and text for summary
             testSuites.forEach(suite => {
+                const suiteTime = parseFloat(suite.getAttribute('time'));
+                if (!isNaN(suiteTime)) {
+                    totalSuiteTimeSeconds += suiteTime; // Accumulate time from each testsuite
+                }
+
                 const testCases = suite.querySelectorAll('testcase');
                 testCases.forEach(testCase => {
                     const failure = testCase.querySelector('failure');
@@ -286,8 +290,14 @@
 
             // Create a summary element for the report file title (TEST-FileName.xml)
             const summaryElement = document.createElement('summary');
-            // Add counts to the summary text
-            summaryElement.textContent = `${headingText} (Total: ${totalTests} | Failed: ${failed})`;
+
+            // *** NEW/MODIFIED: Calculate time in minutes for the summary ***
+            let totalTimeDisplay = '';
+            if (totalSuiteTimeSeconds > 0) {
+                const totalSuiteTimeMinutes = totalSuiteTimeSeconds / 60;
+                totalTimeDisplay = ` (Execution Time: ${totalSuiteTimeMinutes.toFixed(2)} min)`;
+            }
+            summaryElement.textContent = `${headingText} (Total: ${totalTests} | Failed: ${failed})${totalTimeDisplay}`;
             detailsElement.appendChild(summaryElement);
 
             // Create a div to hold the actual test content, which will be collapsible
@@ -297,19 +307,23 @@
 
 
             if (totalTests === 0) {
-                // If no test suites or no test cases, just indicate no tests found or an issue
                 const noTests = document.createElement('p');
                 noTests.textContent = "No test cases found in this report.";
                 testContentDiv.appendChild(noTests);
             } else {
                 testSuites.forEach(suite => {
                     const suiteName = suite.getAttribute('name');
+                    const suiteTime = parseFloat(suite.getAttribute('time'));
+                    let timeDisplay = '';
+                    if (!isNaN(suiteTime)) {
+                        // For individual suites, still show in seconds as they might be short
+                        timeDisplay = ` (Time: ${suiteTime.toFixed(2)}s)`;
+                    }
 
-                    // Only append "Test Suite" line if the suite name is valid
                     if (suiteName && suiteName !== "Unknown Suite") {
                         const suiteElement = document.createElement('p');
                         suiteElement.classList.add('test-suite-name');
-                        suiteElement.textContent = `Test Suite: ${suiteName}`;
+                        suiteElement.textContent = `Test Suite: ${suiteName}${timeDisplay}`;
                         testContentDiv.appendChild(suiteElement);
                     }
 
@@ -318,30 +332,27 @@
                         const caseName = testCase.getAttribute('name');
                         const caseElement = document.createElement('p');
 
-                        // Check if the test case has a failure
                         const failure = testCase.querySelector('failure');
                         if (failure) {
                             caseElement.textContent = `❌ ${caseName} - FAILED`;
-                            caseElement.style.color = "red"; // Red for failed tests
+                            caseElement.style.color = "red";
                             const failureMessage = document.createElement('p');
                             failureMessage.textContent = `  - Reason: ${failure.textContent}`;
                             failureMessage.style.fontStyle = "italic";
-                            failureMessage.style.marginLeft = "35px"; /* Further indent failure reason */
+                            failureMessage.style.marginLeft = "35px";
                             testContentDiv.appendChild(caseElement);
                             testContentDiv.appendChild(failureMessage);
                         } else {
                             caseElement.textContent = `✅ ${caseName} - PASSED`;
-                            caseElement.style.color = "green"; // Green for passed tests
+                            caseElement.style.color = "green";
                             testContentDiv.appendChild(caseElement);
                         }
                     });
                 });
             }
 
-            // Return the number of passed and failed tests for this report
             return { passed, failed };
         }
-
 
         fetchReportsFromGitHub();
     </script>
