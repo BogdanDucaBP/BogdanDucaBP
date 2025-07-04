@@ -1,353 +1,306 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites tests="2" failures="1" errors="1" skipped="0">
-  <testsuite timestamp="2025-07-03T15:27:51" time="175.181" tests="2" failures="1" errors="1" skipped="0">
+  <testsuite timestamp="2025-07-04T15:23:51" time="92.363" tests="2" failures="1" errors="1" skipped="0">
     <properties>
       <property name="specId" value="0"/>
-      <property name="suiteName" value="Dynamic site option US120073"/>
+      <property name="suiteName" value="Check QaLive System is up, or stop pipeline"/>
       <property name="capabilities" value="chrome.137_0_7151_120.windows"/>
-      <property name="file" value="file:///D:/a/1/s/test/specs/R2C/dynamic-site-option.spec.js"/>
+      <property name="file" value="file:///D:/a/1/s/test/specs/TECH/check-QaLive-up.spec.js"/>
     </properties>
-    <testcase classname="chrome.137_0_7151_120.windows.Dynamic_site_option_US120073" name="Should create new site" time="95.826">
-      <failure/>
-      <error message="Can't call click on element with selector &quot;//span[contains(text(), &quot;Template for ETO-Process&quot;)]&quot; because element wasn't found"/>
+    <testcase classname="chrome.137_0_7151_120.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check for visible error message controls and stop pipeline if found" time="8.081">
       <system-out><![CDATA[
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.ui.core.Icon","viewName":"etm.portal.ui.managesites.view.Master","viewId":"application-managesites-display-component---masterSite","properties":{"src":{"regex":{"source":"add"}}}},"wdio_ui5_key":"etmportal.ui.managesites.view.Mastersap.ui.core.Icon{\"src\":{\"regex\":{\"source\":\"add\"}}}"}]}
-RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.ui.core.Icon","viewName":"etm.portal.ui.managesites.view.Master","viewId":"application-managesites-display-component---masterSite","properties":{"src":{"regex":{"source":"add"}}}},"wdio_ui5_key":"etmportal.ui.managesites.view.Mastersap.ui.core.Icon{\"src\":{\"regex\":{\"source\":\"add\"}}}"}]}
-RESULT: undefined
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/element - {"using":"xpath","value":"//*[@id=\"__button4-img\"]"}
-RESULT: {"using":"xpath","value":"//*[@id=\"__button4-img\"]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/element/f.ED90F8F557D11E36442700EBC3819001.d.69ABB039E83FDA779615A3C4775E573C.e.168/click - {}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/refresh - {}
 RESULT: {}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managesites-display-component---NewSite--siteId","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanagesites-display-component---NewSite--siteId"}]}
-COMMAND: GET /session/c9615976e329e23721a4cb3aad42d355/screenshot - {}
-RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managesites-display-component---NewSite--siteId","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanagesites-display-component---NewSite--siteId"}]}
-RESULT: undefined
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsName1","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanagesites-display-component---NewSite--addressDetailDetailsName1"}]}
-RESULT: {}
-RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsName1","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanagesites-display-component---NewSite--addressDetailDetailsName1"}]}
-RESULT: undefined
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/execute/async - {"script":"<script> [776 bytes]","args":[{"enterText":"Webdriver Site 1mf7v","selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsName1","interaction":{"idSuffix":"inner"}},"clearTextFirst":true,"interactionType":"ENTER_TEXT"}]}
-RESULT: {"script":"<script> [776 bytes]","args":[{"enterText":"Webdriver Site 1mf7v","selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsName1","interaction":{"idSuffix":"inner"}},"clearTextFirst":true,"interactionType":"ENTER_TEXT"}]}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsLanguage","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanagesites-display-component---NewSite--addressDetailDetailsLanguage"}]}
-RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsLanguage","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanagesites-display-component---NewSite--addressDetailDetailsLanguage"}]}
-RESULT: undefined
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/execute/async - {"script":"<script> [776 bytes]","args":[{"enterText":"Romanian","selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsLanguage","interaction":{"idSuffix":"inner"}},"clearTextFirst":true,"interactionType":"ENTER_TEXT"}]}
-RESULT: {"script":"<script> [776 bytes]","args":[{"enterText":"Romanian","selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsLanguage","interaction":{"idSuffix":"inner"}},"clearTextFirst":true,"interactionType":"ENTER_TEXT"}]}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsCity1","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanagesites-display-component---NewSite--addressDetailDetailsCity1"}]}
-RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsCity1","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanagesites-display-component---NewSite--addressDetailDetailsCity1"}]}
-RESULT: undefined
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/execute/async - {"script":"<script> [776 bytes]","args":[{"enterText":"Bucharest","selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsCity1","interaction":{"idSuffix":"inner"}},"clearTextFirst":true,"interactionType":"ENTER_TEXT"}]}
-RESULT: {"script":"<script> [776 bytes]","args":[{"enterText":"Bucharest","selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsCity1","interaction":{"idSuffix":"inner"}},"clearTextFirst":true,"interactionType":"ENTER_TEXT"}]}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsCountry","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanagesites-display-component---NewSite--addressDetailDetailsCountry"}]}
-RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsCountry","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanagesites-display-component---NewSite--addressDetailDetailsCountry"}]}
-RESULT: undefined
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/execute/async - {"script":"<script> [776 bytes]","args":[{"enterText":"Romania","selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsCountry","interaction":{"idSuffix":"inner"}},"clearTextFirst":true,"interactionType":"ENTER_TEXT"}]}
-RESULT: {"script":"<script> [776 bytes]","args":[{"enterText":"Romania","selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsCountry","interaction":{"idSuffix":"inner"}},"clearTextFirst":true,"interactionType":"ENTER_TEXT"}]}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsCalendar","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanagesites-display-component---NewSite--addressDetailDetailsCalendar"}]}
-RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsCalendar","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanagesites-display-component---NewSite--addressDetailDetailsCalendar"}]}
-RESULT: undefined
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/execute/async - {"script":"<script> [776 bytes]","args":[{"enterText":"Germany","selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsCalendar","interaction":{"idSuffix":"inner"}},"clearTextFirst":true,"interactionType":"ENTER_TEXT"}]}
-RESULT: {"script":"<script> [776 bytes]","args":[{"enterText":"Germany","selector":{"id":"application-managesites-display-component---NewSite--addressDetailDetailsCalendar","interaction":{"idSuffix":"inner"}},"clearTextFirst":true,"interactionType":"ENTER_TEXT"}]}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managesites-display-component---NewSite--addressEditDetailsCostObjectCstType-arrow"},"wdio_ui5_key":"applicationmanagesites-display-component---NewSite--addressEditDetailsCostObjectCstType-arrow"}]}
-RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managesites-display-component---NewSite--addressEditDetailsCostObjectCstType-arrow"},"wdio_ui5_key":"applicationmanagesites-display-component---NewSite--addressEditDetailsCostObjectCstType-arrow"}]}
-RESULT: undefined
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/element - {"using":"xpath","value":"//*[@id=\"application-managesites-display-component---NewSite--addressEditDetailsCostObjectCstType-arrow\"]"}
-RESULT: {"using":"xpath","value":"//*[@id=\"application-managesites-display-component---NewSite--addressEditDetailsCostObjectCstType-arrow\"]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/element/f.ED90F8F557D11E36442700EBC3819001.d.69ABB039E83FDA779615A3C4775E573C.e.448/click - {}
-RESULT: {}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/element - {"using":"xpath","value":"//span[contains(text(), \"Work Breakdown Structure\")]"}
-COMMAND: GET /session/c9615976e329e23721a4cb3aad42d355/screenshot - {}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Work Breakdown Structure\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/element/f.ED90F8F557D11E36442700EBC3819001.d.69ABB039E83FDA779615A3C4775E573C.e.449/click - {}
-RESULT: {}
-RESULT: {}
-COMMAND: GET /session/c9615976e329e23721a4cb3aad42d355/screenshot - {}
+COMMAND: GET /session/ba7fab4725a66c3cae667d86af1f0190/screenshot - {}
 RESULT: {}
 RESULT: undefined
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managesites-display-component---NewSite--addressNewCostObjectCstID-vhi"},"wdio_ui5_key":"applicationmanagesites-display-component---NewSite--addressNewCostObjectCstID-vhi"}]}
-RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managesites-display-component---NewSite--addressNewCostObjectCstID-vhi"},"wdio_ui5_key":"applicationmanagesites-display-component---NewSite--addressNewCostObjectCstID-vhi"}]}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
+RESULT: {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapMMsgBoxText"}
+RESULT: {"using":"css selector","value":"div.sapMMsgBoxText"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapMMessageToast"}
+RESULT: {"using":"css selector","value":"div.sapMMessageToast"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div[role=\"alert\"]"}
+RESULT: {"using":"css selector","value":"div[role=\"alert\"]"}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.137_0_7151_120.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check if the number in the specified element is greater than 0" time="60.392">
+      <failure/>
+      <error message="Can't call getText on element with selector &quot;div.sapSuiteStackedMCBarLabel&quot; because element wasn't found"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/element - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
 RESULT: undefined
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.SearchField","properties":{"placeholder":"Search"},"searchOpenDialogs":true,"interaction":{"idSuffix":"I"}},"wdio_ui5_key":"sapm.SearchField{\"placeholder\":\"Search\"}"}]}
-RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.SearchField","properties":{"placeholder":"Search"},"searchOpenDialogs":true,"interaction":{"idSuffix":"I"}},"wdio_ui5_key":"sapm.SearchField{\"placeholder\":\"Search\"}"}]}
 RESULT: undefined
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/actions - {"actions":[{"id":"action1","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
-RESULT: {"actions":[{"id":"action1","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
-COMMAND: GET /session/c9615976e329e23721a4cb3aad42d355/screenshot - {}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: undefined
+RESULT: undefined
+RESULT: undefined
+RESULT: undefined
+RESULT: undefined
+RESULT: undefined
+RESULT: undefined
+RESULT: undefined
+RESULT: undefined
+RESULT: undefined
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: undefined
+RESULT: undefined
+RESULT: undefined
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: undefined
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba7fab4725a66c3cae667d86af1f0190/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: GET /session/ba7fab4725a66c3cae667d86af1f0190/screenshot - {}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
 RESULT: {}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/element - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(text(), \"Template for ETO-Process\")]"}
-COMMAND: GET /session/c9615976e329e23721a4cb3aad42d355/screenshot - {}
+COMMAND: GET /session/ba7fab4725a66c3cae667d86af1f0190/screenshot - {}
+COMMAND: GET /session/ba7fab4725a66c3cae667d86af1f0190/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: DELETE /session/ba7fab4725a66c3cae667d86af1f0190 - {}
 RESULT: {}
 ]]></system-out>
       <system-err><![CDATA[
-Error: Can't call click on element with selector "//span[contains(text(), "Template for ETO-Process")]" because element wasn't found
-    at async Context.<anonymous> (D:\a\1\s\test\specs\R2C\dynamic-site-option.spec.js:138:5)
+Error: Can't call getText on element with selector "div.sapSuiteStackedMCBarLabel" because element wasn't found
+    at async Context.<anonymous> (D:\a\1\s\test\specs\TECH\check-QaLive-up.spec.js:56:22)
 ]]></system-err>
-    </testcase>
-    <testcase classname="chrome.137_0_7151_120.windows.Dynamic_site_option_US120073" name="Should edit partner field" time="21.214">
-      <system-out><![CDATA[
-COMMAND: GET /session/c9615976e329e23721a4cb3aad42d355/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.Button","viewName":"etm.portal.ui.managesites.view.Detail","viewId":"application-managesites-display-component---detailSite","i18NText":{"propertyName":"text","key":"edit"},"interaction":{"idSuffix":"content"}},"wdio_ui5_key":"etmportal.ui.managesites.view.Detailsap.m.Button{\"propertyName\":\"text\",\"key\":\"edit\"}"}]}
-RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.Button","viewName":"etm.portal.ui.managesites.view.Detail","viewId":"application-managesites-display-component---detailSite","i18NText":{"propertyName":"text","key":"edit"},"interaction":{"idSuffix":"content"}},"wdio_ui5_key":"etmportal.ui.managesites.view.Detailsap.m.Button{\"propertyName\":\"text\",\"key\":\"edit\"}"}]}
-RESULT: undefined
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/element - {"using":"xpath","value":"//bdi[contains(text(), \"Commercial\")]"}
-RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Commercial\")]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/element/f.ED90F8F557D11E36442700EBC3819001.d.69ABB039E83FDA779615A3C4775E573C.e.454/click - {}
-RESULT: {}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/element - {"using":"xpath","value":"//input[@id=\"application-managesites-display-component---NewSite--addressDetailDetailsPartner-inner\"]"}
-COMMAND: GET /session/c9615976e329e23721a4cb3aad42d355/screenshot - {}
-RESULT: {"using":"xpath","value":"//input[@id=\"application-managesites-display-component---NewSite--addressDetailDetailsPartner-inner\"]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/elements - {"using":"xpath","value":"//input[@id=\"application-managesites-display-component---NewSite--addressDetailDetailsPartner-inner\"]"}
-RESULT: {}
-RESULT: {"using":"xpath","value":"//input[@id=\"application-managesites-display-component---NewSite--addressDetailDetailsPartner-inner\"]"}
-COMMAND: POST /session/c9615976e329e23721a4cb3aad42d355/element - {"using":"xpath","value":"//bdi[contains(text(), \"Save\")]"}
-RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Save\")]"}
-COMMAND: GET /session/c9615976e329e23721a4cb3aad42d355/screenshot - {}
-RESULT: {}
-COMMAND: DELETE /session/c9615976e329e23721a4cb3aad42d355 - {}
-RESULT: {}
-]]></system-out>
     </testcase>
   </testsuite>
 </testsuites>
