@@ -1,17 +1,1178 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="1" failures="1" errors="1" skipped="0">
-  <testsuite timestamp="2025-12-07T16:23:12" time="156.55" tests="1" failures="1" errors="1" skipped="0">
+<testsuites tests="6" failures="2" errors="2" skipped="0">
+  <testsuite timestamp="2025-12-07T16:25:45" time="614.316" tests="6" failures="2" errors="2" skipped="0">
     <properties>
       <property name="specId" value="0"/>
-      <property name="suiteName" value="Check QaLive System is up, or stop pipeline"/>
+      <property name="suiteName" value="Bill of Resources tests for bundle creation &amp; replenishment US131067 US131070"/>
       <property name="capabilities" value="chrome.142_0_7444_176.windows"/>
-      <property name="file" value="file:///D:/a/1/s/test/specs/TECH/check-QaLive-up.spec.js"/>
+      <property name="file" value="file:///D:/a/1/s/test/specs/HTR/bill-of-resources.spec.js"/>
     </properties>
-    <testcase classname="chrome.142_0_7444_176.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="before all hook for Check QaLive System is up or stop pipeline" time="156.548">
+    <testcase classname="chrome.142_0_7444_176.windows.Bill_of_Resources_tests_for_bundle_creation_&amp;_replenishment_US131067_US131070" name="Prereq Should create a new yard used for all following tests in the module" time="0.416">
+      <system-out><![CDATA[
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/window/fullscreen - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.142_0_7444_176.windows.Bill_of_Resources_tests_for_bundle_creation_&amp;_replenishment_US131067_US131070" name="Prereq Should create two equipments one being a copy of the other" time="300.048">
+      <system-out><![CDATA[
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Resources"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Resources\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Resources"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Resources\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//*[@id=\"__tile40\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile40\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.117/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.258","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.258"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.258","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.258"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.258/enabled - {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.258","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.258"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.258","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.258"}]}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.258","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.258"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.258","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.258"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.258/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--TYPE-arrow\"]"}
+RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--TYPE-arrow\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.613/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--TYPE-popup-list-listUl\")]//li//span[text()=\"Equipment\"]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--TYPE-popup-list-listUl\")]//li//span[text()=\"Equipment\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.615/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--ID-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--ID-inner\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.634/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.634/value - {"text":"SOACD4aWy_1"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"text":"SOACD4aWy_1"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--SHORT_TEXT-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--SHORT_TEXT-inner\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.635/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.635/value - {"text":"Equipment WDIO"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"text":"Equipment WDIO"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--BASE_UNIT_OF_MEASURE-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--BASE_UNIT_OF_MEASURE-inner\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.638/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.638/value - {"text":"Piece"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"text":"Piece"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--WEIGHT_UNIT-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--WEIGHT_UNIT-inner\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.642/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.642/value - {"text":"Gram"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"text":"Gram"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--DIMENSION_UNIT-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--DIMENSION_UNIT-inner\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.647/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.647/value - {"text":"Meter"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"text":"Meter"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--control-anchor\"]"}
+RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--control-anchor\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.750/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--PLANNING_GROUP-arrow\"]"}
+RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--PLANNING_GROUP-arrow\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.755/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--PLANNING_GROUP-popup-list-listUl\")]//li//span[contains(text(),\"Heavy Equi\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--PLANNING_GROUP-popup-list-listUl\")]//li//span[contains(text(),\"Heavy Equi\")]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.758/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--ITEM_TYPE-arrow\"]"}
+RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--ITEM_TYPE-arrow\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.759/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--ITEM_TYPE-popup-list-listUl\")]//li//span[text()=\"Resource Unit\"]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--ITEM_TYPE-popup-list-listUl\")]//li//span[text()=\"Resource Unit\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.760/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--btnAddTimeSegment\"]"}
+RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--btnAddTimeSegment\"]"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.762/rect - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [92 bytes]","args":[]}
+RESULT: {"script":"<script> [92 bytes]","args":[]}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/actions - {"actions":[{"id":"action1","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1888,"y":-32,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.762"}}]}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.762","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.762"},{"block":"start","inline":"nearest"}]}
+RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.762","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.762"},{"block":"start","inline":"nearest"}]}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.762/click - {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--idRuTSAdmin-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\"]"}
+RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--idRuTSAdmin-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.766/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--idRuTSAdmin-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"DATAWD-Y-BORIA\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--idRuTSAdmin-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"DATAWD-Y-BORIA\")]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.769/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"(//span[contains(@id, \"-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\")])[5]"}
+RESULT: {"using":"xpath","value":"(//span[contains(@id, \"-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\")])[5]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.770/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//ul[contains(@id,\"-newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"PM Order\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"-newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"PM Order\")]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.772/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//span[contains(@id,\"newResourceUnit--RUTimeSegment-0-vhi\")]"}
+RESULT: {"using":"xpath","value":"//span[contains(@id,\"newResourceUnit--RUTimeSegment-0-vhi\")]"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.776/rect - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [92 bytes]","args":[]}
+RESULT: {"script":"<script> [92 bytes]","args":[]}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/actions - {"actions":[{"id":"action2","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1888,"y":-24,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.776"}}]}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.776","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.776"},{"block":"start","inline":"nearest"}]}
+RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.776","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.776"},{"block":"start","inline":"nearest"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.776/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//div[contains(@id,\"dialog\")]//input"}
+RESULT: {"using":"xpath","value":"//div[contains(@id,\"dialog\")]//input"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.782/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.782/value - {"text":"4000360"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"text":"4000360"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[contains(@id,\"btnGo\")]"}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"btnGo\")]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/actions - {"actions":[{"id":"action3","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"5 more keys: [\"azimuthAngle\",\"x\",\"y\",\"duration\",\"origin\"]"},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0},{"type":"pause","duration":10},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0}]}]}
+RESULT: {"actions":[{"id":"action3","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"5 more keys: [\"azimuthAngle\",\"x\",\"y\",\"duration\",\"origin\"]"},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0},{"type":"pause","duration":10},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0}]}]}
+COMMAND: DELETE /session/76e166b7816e02b5f65e89fd39399cd9/actions - {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"(//div[contains(@id,\"dialog\")]//table//tr//td//span[text()=\"4000360\"])[1]"}
+RESULT: {"using":"xpath","value":"(//div[contains(@id,\"dialog\")]//table//tr//td//span[text()=\"4000360\"])[1]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.799/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.801/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--newTimeSegmentFromDatePicker-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--newTimeSegmentFromDatePicker-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-inner\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.804/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.804/value - {"text":"12/06/25"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"text":"12/06/25"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--resource-anchor\"]"}
+RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--resource-anchor\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.807/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-manageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-manageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE"}]}
+RESULT: undefined
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.674"},"setValue",["12/06/25"]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.674"},"setValue",["12/06/25"]]}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//label[contains(@class, \"sapMLabelRequired\") and .//bdi[contains(text(), \"Planned Retirement\")]]"}
+RESULT: {"using":"xpath","value":"//label[contains(@class, \"sapMLabelRequired\") and .//bdi[contains(text(), \"Planned Retirement\")]]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//label[contains(@class, \"sapMLabelRequired\") and .//bdi[contains(text(), \"Planned Retirement\")]]"}
+RESULT: {"using":"xpath","value":"//label[contains(@class, \"sapMLabelRequired\") and .//bdi[contains(text(), \"Planned Retirement\")]]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"resourceUnitSaveButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"resourceUnitSaveButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.629/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Close\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Close\")])[last()]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.815/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[substring(@id, string-length(@id) - string-length('actionsToolbar-overflowButton') + 1) = 'actionsToolbar-overflowButton']"}
+RESULT: {"using":"xpath","value":"//button[substring(@id, string-length(@id) - string-length('actionsToolbar-overflowButton') + 1) = 'actionsToolbar-overflowButton']"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.835/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"priceInfoButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"priceInfoButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.837/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.230/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//*[@id=\"__tile40\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile40\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.117/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"css selector","value":"#application-manageresources-display-component---masterRU--smartFilterBar-btnBasicSearch-I"}
+RESULT: {"using":"css selector","value":"#application-manageresources-display-component---masterRU--smartFilterBar-btnBasicSearch-I"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"css selector","value":"#application-manageresources-display-component---masterRU--smartFilterBar-btnBasicSearch-I"}
+RESULT: {"using":"css selector","value":"#application-manageresources-display-component---masterRU--smartFilterBar-btnBasicSearch-I"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.901","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.901"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.901","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.901"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.901/enabled - {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.901","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.901"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.901","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.901"}]}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.901","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.901"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.901","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.901"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"css selector","value":"#application-manageresources-display-component---masterRU--smartFilterBar-btnBasicSearch-I"}
+RESULT: {"using":"css selector","value":"#application-manageresources-display-component---masterRU--smartFilterBar-btnBasicSearch-I"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.901/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.901/value - {"text":"SOACD4aWy_1"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"text":"SOACD4aWy_1"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/actions - {"actions":[{"id":"action4","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {"actions":[{"id":"action4","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//table[contains(@id, \"masterRU--customRUTable-listUl\")]/tbody/tr"}
+RESULT: {"using":"xpath","value":"//table[contains(@id, \"masterRU--customRUTable-listUl\")]/tbody/tr"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.967/elements - {"using":"css selector","value":"td"}
+RESULT: {"using":"css selector","value":"td"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.970/text - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"(//span[contains(@id, \"imgNav\")])[1]"}
+RESULT: {"using":"xpath","value":"(//span[contains(@id, \"imgNav\")])[1]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.964/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[substring(@id, string-length(@id) - string-length('actionsToolbar-overflowButton') + 1) = 'actionsToolbar-overflowButton']"}
+RESULT: {"using":"xpath","value":"//button[substring(@id, string-length(@id) - string-length('actionsToolbar-overflowButton') + 1) = 'actionsToolbar-overflowButton']"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1134/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"copyResourceUnitButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"copyResourceUnitButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1136/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"selectAllSectionsButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"selectAllSectionsButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1139/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Confirm\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Confirm\")])[last()]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1146/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--general-anchor\"]"}
+RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--general-anchor\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1270/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/actions - {"actions":[{"type":"key","id":"keyboard","actions":[{"type":"keyDown","value":""}]}]}
+RESULT: {"actions":[{"type":"key","id":"keyboard","actions":[{"type":"keyDown","value":""}]}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--ID-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--ID-inner\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1265/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1265/value - {"text":"SOACD4aWy_2"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"text":"SOACD4aWy_2"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--SHORT_TEXT-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--SHORT_TEXT-inner\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1150/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1150/value - {"text":"Equipment Copy WDIO"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"text":"Equipment Copy WDIO"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--control-anchor\"]"}
+RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--control-anchor\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1278/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--PLANNING_GROUP-arrow\"]"}
+RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--PLANNING_GROUP-arrow\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1285/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--PLANNING_GROUP-popup-list-listUl\")]//li//span[contains(text(),\"Heavy Equi\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--PLANNING_GROUP-popup-list-listUl\")]//li//span[contains(text(),\"Heavy Equi\")]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1286/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--btnAddTimeSegment\"]"}
+RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--btnAddTimeSegment\"]"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1287/rect - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [92 bytes]","args":[]}
+RESULT: {"script":"<script> [92 bytes]","args":[]}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/actions - {"actions":[{"id":"action5","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1888,"y":-32,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1287"}}]}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1287","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1287"},{"block":"start","inline":"nearest"}]}
+RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1287","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1287"},{"block":"start","inline":"nearest"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"(//span[contains(@id, \"-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\")])[5]"}
+RESULT: {"using":"xpath","value":"(//span[contains(@id, \"-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\")])[5]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1290/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//ul[contains(@id,\"-newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"PM Order\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"-newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"PM Order\")]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1291/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//span[contains(@id,\"newResourceUnit--RUTimeSegment-0-vhi\")]"}
+RESULT: {"using":"xpath","value":"//span[contains(@id,\"newResourceUnit--RUTimeSegment-0-vhi\")]"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1295/rect - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [92 bytes]","args":[]}
+RESULT: {"script":"<script> [92 bytes]","args":[]}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/actions - {"actions":[{"id":"action6","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1888,"y":-24,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1295"}}]}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1295","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1295"},{"block":"start","inline":"nearest"}]}
+RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1295","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1295"},{"block":"start","inline":"nearest"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1295/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//div[contains(@id,\"dialog\")]//input"}
+RESULT: {"using":"xpath","value":"//div[contains(@id,\"dialog\")]//input"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1299/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1299/value - {"text":"4000360"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"text":"4000360"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[contains(@id,\"btnGo\")]"}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"btnGo\")]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/actions - {"actions":[{"id":"action7","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"5 more keys: [\"azimuthAngle\",\"x\",\"y\",\"duration\",\"origin\"]"},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0},{"type":"pause","duration":10},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0}]}]}
+RESULT: {"actions":[{"id":"action7","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"5 more keys: [\"azimuthAngle\",\"x\",\"y\",\"duration\",\"origin\"]"},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0},{"type":"pause","duration":10},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0}]}]}
+COMMAND: DELETE /session/76e166b7816e02b5f65e89fd39399cd9/actions - {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"(//div[contains(@id,\"dialog\")]//table//tr//td//span[text()=\"4000360\"])[1]"}
+RESULT: {"using":"xpath","value":"(//div[contains(@id,\"dialog\")]//table//tr//td//span[text()=\"4000360\"])[1]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1316/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1318/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--newTimeSegmentFromDatePicker-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--newTimeSegmentFromDatePicker-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-inner\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1249/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1249/value - {"text":"12/06/25"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"text":"12/06/25"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--resource-anchor\"]"}
+RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--resource-anchor\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1322/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.674"},"setValue",["12/06/25"]]}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-manageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-manageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE"}]}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1189"},"setValue",["12/06/25"]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1189"},"setValue",["12/06/25"]]}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"resourceUnitSaveButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"resourceUnitSaveButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1327/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Close\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Close\")])[last()]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1331/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.882/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.142_0_7444_176.windows.Bill_of_Resources_tests_for_bundle_creation_&amp;_replenishment_US131067_US131070" name="Prereq Should do a stock increase for the equipments" time="123.646">
+      <system-out><![CDATA[
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Handovers"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Handovers\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Handovers"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Handovers\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//*[@id=\"__tile135\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile135\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.204/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1366","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1366"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1366","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1366"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1366/enabled - {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1366","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1366"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1366","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1366"}]}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1366","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1366"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1366","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1366"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1366/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//span[contains(@id ,\"AddNewHO--typeSelect-arrow\")]"}
+RESULT: {"using":"xpath","value":"//span[contains(@id ,\"AddNewHO--typeSelect-arrow\")]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1743/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//div[contains(@id,\"typeSelect-valueStateText\")]//li[contains(text(), \"stock increase yard\")]"}
+RESULT: {"using":"xpath","value":"//div[contains(@id,\"typeSelect-valueStateText\")]//li[contains(text(), \"stock increase yard\")]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1744/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managehandovers-display-component---AddNewHO--dueDate","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanagehandovers-display-component---AddNewHO--dueDate"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managehandovers-display-component---AddNewHO--dueDate","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanagehandovers-display-component---AddNewHO--dueDate"}]}
+RESULT: undefined
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1745"},"setValue",["12/06/25"]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1745"},"setValue",["12/06/25"]]}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//input[@id=\"generalSectionFrg--receiveYard-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"generalSectionFrg--receiveYard-inner\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1746/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1746/value - {"text":"DATAWD-Y-BORIA"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"text":"DATAWD-Y-BORIA"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//ul[contains(@id,\"generalSectionFrg--receiveYard-popup-list-listUl\")]//li//span[contains(text(),'DATAWD-Y-BORIA')]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"generalSectionFrg--receiveYard-popup-list-listUl\")]//li//span[contains(text(),'DATAWD-Y-BORIA')]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1770/click - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[contains(@id,\"anchor\")]//span//bdi[contains(text(),\"Items\")]"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"anchor\")]//span//bdi[contains(text(),\"Items\")]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1771/click - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"addItemsStockIncDecButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addItemsStockIncDecButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1776/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//input[contains(@id, \"application-managehandovers-display-component---AddNewHO--smartFilterBarStockIncrease-btnBasicSearch-I\")]"}
+RESULT: {"using":"xpath","value":"//input[contains(@id, \"application-managehandovers-display-component---AddNewHO--smartFilterBarStockIncrease-btnBasicSearch-I\")]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1778/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1778/value - {"text":"SOACD4aWy_1"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"text":"SOACD4aWy_1"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/actions - {"actions":[{"id":"action8","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {"actions":[{"id":"action8","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//div[@id=\"application-managehandovers-display-component---AddNewHO--popup-sa-CbBg\"]"}
+RESULT: {"using":"xpath","value":"//div[@id=\"application-managehandovers-display-component---AddNewHO--popup-sa-CbBg\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1827/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Select\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Select\")])[last()]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1828/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"addItemsStockIncDecButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addItemsStockIncDecButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1776/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//input[contains(@id, \"application-managehandovers-display-component---AddNewHO--smartFilterBarStockIncrease-btnBasicSearch-I\")]"}
+RESULT: {"using":"xpath","value":"//input[contains(@id, \"application-managehandovers-display-component---AddNewHO--smartFilterBarStockIncrease-btnBasicSearch-I\")]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1843/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1843/value - {"text":"SOACD4aWy_2"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"text":"SOACD4aWy_2"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/actions - {"actions":[{"id":"action9","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {"actions":[{"id":"action9","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//div[@id=\"application-managehandovers-display-component---AddNewHO--popup-sa-CbBg\"]"}
+RESULT: {"using":"xpath","value":"//div[@id=\"application-managehandovers-display-component---AddNewHO--popup-sa-CbBg\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1871/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Select\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Select\")])[last()]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1894/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"AddNewHOSaveButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"AddNewHOSaveButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1899/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"receiptDatePicker","viewName":"etm.portal.ui.managehandovers.view.DetailExecuteHO","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"receiptDatePickeretmportal.ui.managehandovers.view.DetailExecuteHO"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"receiptDatePicker","viewName":"etm.portal.ui.managehandovers.view.DetailExecuteHO","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"receiptDatePickeretmportal.ui.managehandovers.view.DetailExecuteHO"}]}
+RESULT: undefined
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1909"},"setValue",["12/06/25"]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1909"},"setValue",["12/06/25"]]}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"(//table[@id=\"receiveDialog--hoItemsTable-listUl\"]//button//bdi[text()=\"Confirm\"])[1]"}
+RESULT: {"using":"xpath","value":"(//table[@id=\"receiveDialog--hoItemsTable-listUl\"]//button//bdi[text()=\"Confirm\"])[1]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1957/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"(//table[@id=\"receiveDialog--hoItemsTable-listUl\"]//button//bdi[text()=\"Confirm\"])[2]"}
+RESULT: {"using":"xpath","value":"(//table[@id=\"receiveDialog--hoItemsTable-listUl\"]//button//bdi[text()=\"Confirm\"])[2]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1959/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt= \"execHoReceiveButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt= \"execHoReceiveButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1961/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.1343/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.142_0_7444_176.windows.Bill_of_Resources_tests_for_bundle_creation_&amp;_replenishment_US131067_US131070" name="Should create a new bundle with the 2 RUs using onto first one US131067" time="66.326">
+      <system-out><![CDATA[
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Bill Of Resources"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Bill Of Resources\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Bill Of Resources"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Bill Of Resources\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//*[@id=\"__tile35\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile35\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.182/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2204","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2204"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2204","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2204"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2204/enabled - {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2204","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2204"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2204","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2204"}]}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2204","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2204"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2204","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2204"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2204/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//span[@id=\"application-billofresources-display-component---newBoR--typeSelect-arrow\"]"}
+RESULT: {"using":"xpath","value":"//span[@id=\"application-billofresources-display-component---newBoR--typeSelect-arrow\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2341/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//ul//li[contains(@id,\"newBoR--typeSelect-\") and text()=\"Bundle\"]"}
+RESULT: {}
+RESULT: {"using":"xpath","value":"//ul//li[contains(@id,\"newBoR--typeSelect-\") and text()=\"Bundle\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2706/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//span[@id=\"application-billofresources-display-component---newBoR--headerRUInput-vhi\"]"}
+RESULT: {"using":"xpath","value":"//span[@id=\"application-billofresources-display-component---newBoR--headerRUInput-vhi\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2721/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//input[@id=\"application-billofresources-display-component---newBoR--ruDialogSearchField-I\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-billofresources-display-component---newBoR--ruDialogSearchField-I\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2725/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2725/value - {"text":"SOACD4aWy_1"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"text":"SOACD4aWy_1"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/actions - {"actions":[{"id":"action10","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {"actions":[{"id":"action10","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//table[@id=\"application-billofresources-display-component---newBoR--RusTable-listUl\"]//tbody/tr/td/span[contains(text(),\"SOACD4aWy_1\")]"}
+RESULT: {"using":"xpath","value":"//table[@id=\"application-billofresources-display-component---newBoR--RusTable-listUl\"]//tbody/tr/td/span[contains(text(),\"SOACD4aWy_1\")]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2744/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"ruValueHelpOkButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"ruValueHelpOkButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2746/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//input[@id=\"application-billofresources-display-component---newBoR--borDescInput-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-billofresources-display-component---newBoR--borDescInput-inner\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2392/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2392/value - {"text":"SOACD4aWy_1"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"text":"SOACD4aWy_1"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"addItemNewButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addItemNewButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2759/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"(//div[@data-kt=\"borItemNewInput\"]//input[@aria-labelledby=\"application-billofresources-display-component---newBoR--itemInput\"])[1]"}
+RESULT: {"using":"xpath","value":"(//div[@data-kt=\"borItemNewInput\"]//input[@aria-labelledby=\"application-billofresources-display-component---newBoR--itemInput\"])[1]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2395/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2395/value - {"text":"10"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"text":"10"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"(//div[@data-kt=\"itemRuDetailLiveSearchComboBox\"]//span)[1]"}
+RESULT: {"using":"xpath","value":"(//div[@data-kt=\"itemRuDetailLiveSearchComboBox\"]//span)[1]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2761/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//li[@data-kt=\"itemRuDetailLiveSearchComboBoxItem\"]//span[contains(text(),\"SOACD4aWy_2\")]"}
+RESULT: {"using":"xpath","value":"//li[@data-kt=\"itemRuDetailLiveSearchComboBoxItem\"]//span[contains(text(),\"SOACD4aWy_2\")]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2762/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"saveNewButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"saveNewButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2475/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//bdi[normalize-space()=\"State\"]/ancestor::div[contains(@class,\"sapUiVltCell\")]/following-sibling::div//span[contains(@class,\"sapMText\")]"}
+RESULT: {"using":"xpath","value":"//bdi[normalize-space()=\"State\"]/ancestor::div[contains(@class,\"sapUiVltCell\")]/following-sibling::div//span[contains(@class,\"sapMText\")]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3015","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3015"}]}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3015","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3015"}]}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.2147/click - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.142_0_7444_176.windows.Bill_of_Resources_tests_for_bundle_creation_&amp;_replenishment_US131067_US131070" name="Should create replenishment handover from BOR US131070" time="53.869">
       <failure/>
-      <error message="waitUntil condition timed out after 150000ms"/>
+      <error message="The element with selector &quot;//header[contains(@id, &quot;headerTitle&quot;)]/div[1]/div[2]/div[2]/span&quot; you are trying to pass into the execute method wasn't found"/>
+      <system-out><![CDATA[
+RESULT: undefined
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//*[@id=\"__tile35\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile35\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.182/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3090","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3090"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3090","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3090"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3090/enabled - {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3090","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3090"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3090","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3090"}]}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3090","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3090"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3090","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3090"}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//input[@id=\"application-billofresources-display-component---BillOfResources--smartFilterBar-btnBasicSearch-I\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-billofresources-display-component---BillOfResources--smartFilterBar-btnBasicSearch-I\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3071/clear - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3071/value - {"text":"SOACD4aWy_1"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {"text":"SOACD4aWy_1"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/actions - {"actions":[{"id":"action11","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+RESULT: {"actions":[{"id":"action11","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//table[contains(@id,\"BillOfResources--masterListBoRTable-listUl\")]/tbody/tr"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"BillOfResources--masterListBoRTable-listUl\")]/tbody/tr"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3213/elements - {"using":"css selector","value":"td"}
+RESULT: {"using":"css selector","value":"td"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3218/text - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"(//span[contains(@id, \"imgNav\")])[1]"}
+RESULT: {"using":"xpath","value":"(//span[contains(@id, \"imgNav\")])[1]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3126/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"(//button[contains(@id,\"actionsToolbar-overflowButton\")])[1]"}
+RESULT: {"using":"xpath","value":"(//button[contains(@id,\"actionsToolbar-overflowButton\")])[1]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3474","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3474"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3474","ELEMENT":"f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3474"}]}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"replenishButton\"]"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"replenishButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3475/click - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"executeButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"executeButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.3491/click - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//header[contains(@id, \"headerTitle\")]/div[1]/div[2]/div[2]/span"}
+RESULT: {"using":"xpath","value":"//header[contains(@id, \"headerTitle\")]/div[1]/div[2]/div[2]/span"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+]]></system-out>
       <system-err><![CDATA[
-Error: waitUntil condition timed out after 150000ms
+Error: The element with selector "//header[contains(@id, "headerTitle")]/div[1]/div[2]/div[2]/span" you are trying to pass into the execute method wasn't found
+    at Array.map (<anonymous>)
+    at async BillOfResourcesUtils.bundleReplenishment (D:\a\1\s\test\utils\pages\BillOfResources\billofresources-utils.js:110:29)
+    at async Context.<anonymous> (D:\a\1\s\test\specs\HTR\bill-of-resources.spec.js:87:9)
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.142_0_7444_176.windows.Bill_of_Resources_tests_for_bundle_creation_&amp;_replenishment_US131067_US131070" name="Should check the completeness of bundle created US131059" time="55.44">
+      <failure/>
+      <error message="element (&quot;//button[@data-kt=&quot;addBorMasterButton&quot;]&quot;) still not existing after 45000ms"/>
+      <system-out><![CDATA[
+RESULT: undefined
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//*[@id=\"__tile35\"]"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile35\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element/f.19133CAA3B67B4947657E31E42780A4C.d.999A948EF88A6E2226571B5E74A17744.e.182/click - {}
+RESULT: {}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/element - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/76e166b7816e02b5f65e89fd39399cd9/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+COMMAND: GET /session/76e166b7816e02b5f65e89fd39399cd9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: DELETE /session/76e166b7816e02b5f65e89fd39399cd9 - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+Error: element ("//button[@data-kt="addBorMasterButton"]") still not existing after 45000ms
+    at async GeneralUtilsFunctions.checkIfPageLoaded (D:\a\1\s\test\utils\general-utils-functions.js:23:9)
+    at async BillOfResourcesUtils.completenessCheck (D:\a\1\s\test\utils\pages\BillOfResources\billofresources-utils.js:182:9)
+    at async Context.<anonymous> (D:\a\1\s\test\specs\HTR\bill-of-resources.spec.js:91:9)
 ]]></system-err>
     </testcase>
   </testsuite>
