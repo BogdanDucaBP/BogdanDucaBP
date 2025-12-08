@@ -1,18 +1,1107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="1" failures="1" errors="1" skipped="0">
-  <testsuite timestamp="2025-12-08T21:13:06" time="156.721" tests="1" failures="1" errors="1" skipped="0">
+<testsuites tests="9" failures="0" errors="0" skipped="0">
+  <testsuite timestamp="2025-12-08T21:15:26" time="553.378" tests="9" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
-      <property name="suiteName" value="Check QaLive System is up, or stop pipeline"/>
+      <property name="suiteName" value="Manage Calendar Exceptions Tests US151097 US151100 US151102"/>
       <property name="capabilities" value="chrome.142_0_7444_176.windows"/>
-      <property name="file" value="file:///D:/a/1/s/test/specs/TECH/check-QaLive-up.spec.js"/>
+      <property name="file" value="file:///D:/a/1/s/test/specs/BTS/manage-calendar-exceptions.spec.js"/>
     </properties>
-    <testcase classname="chrome.142_0_7444_176.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="before all hook for Check QaLive System is up or stop pipeline" time="156.718">
-      <failure/>
-      <error message="waitUntil condition timed out after 150000ms"/>
-      <system-err><![CDATA[
-Error: waitUntil condition timed out after 150000ms
-]]></system-err>
+    <testcase classname="chrome.142_0_7444_176.windows.Manage_Calendar_Exceptions_Tests_US151097_US151100_US151102" name="Prereq Test 1 Should create a calendar if we dont already have one" time="66.631">
+      <system-out><![CDATA[
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/window/fullscreen - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Calendars"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Calendars\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Calendars"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Calendars\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//*[@id=\"__tile37\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile37\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.187/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.246","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.246"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.246","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.246"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.246/enabled - {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.246","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.246"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.246","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.246"}]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.246","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.246"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.246","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.246"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.246/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[contains(@id,\"inputDescription-inner\")]"}
+RESULT: {"using":"xpath","value":"//input[contains(@id,\"inputDescription-inner\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.328/clear - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.328/value - {"text":"WDIO-CAL-JLL7s"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"text":"WDIO-CAL-JLL7s"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[contains(@id,\"DatePickerFrom-inner\")]"}
+RESULT: {"using":"xpath","value":"//input[contains(@id,\"DatePickerFrom-inner\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.329/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/actions - {"actions":[{"id":"action1","type":"key","parameters":{},"actions":[{"type":"keyDown","value":"0"},{"type":"keyDown","value":"6"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"1"},{"type":"keyDown","value":"1"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"2"},{"type":"keyDown","value":"5"},{"type":"pause","duration":10},{"type":"keyUp","value":"0"},"(7 more items)"]}]}
+RESULT: {"actions":[{"id":"action1","type":"key","parameters":{},"actions":[{"type":"keyDown","value":"0"},{"type":"keyDown","value":"6"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"1"},{"type":"keyDown","value":"1"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"2"},{"type":"keyDown","value":"5"},{"type":"pause","duration":10},{"type":"keyUp","value":"0"},"(7 more items)"]}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[contains(@id,\"DatePickerTo-inner\")]"}
+RESULT: {"using":"xpath","value":"//input[contains(@id,\"DatePickerTo-inner\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.330/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/actions - {"actions":[{"id":"action2","type":"key","parameters":{},"actions":[{"type":"keyDown","value":"0"},{"type":"keyDown","value":"6"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"0"},{"type":"keyDown","value":"6"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"2"},{"type":"keyDown","value":"6"},{"type":"pause","duration":10},{"type":"keyUp","value":"0"},"(7 more items)"]}]}
+RESULT: {"actions":[{"id":"action2","type":"key","parameters":{},"actions":[{"type":"keyDown","value":"0"},{"type":"keyDown","value":"6"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"0"},{"type":"keyDown","value":"6"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"2"},{"type":"keyDown","value":"6"},{"type":"pause","duration":10},{"type":"keyUp","value":"0"},"(7 more items)"]}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.TimePicker","viewName":"etm.portal.ui.managecalendars.view.NewCalendar","bindingPath":{"path":"","propertyPath":"/MONDAY_START","modelName":"oNewCALModel"},"interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"etmportal.ui.managecalendars.view.NewCalendarsap.m.TimePicker{\"path\":\"\",\"propertyPath\":\"/MONDAY_START\",\"modelName\":\"oNewCALModel\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.TimePicker","viewName":"etm.portal.ui.managecalendars.view.NewCalendar","bindingPath":{"path":"","propertyPath":"/MONDAY_START","modelName":"oNewCALModel"},"interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"etmportal.ui.managecalendars.view.NewCalendarsap.m.TimePicker{\"path\":\"\",\"propertyPath\":\"/MONDAY_START\",\"modelName\":\"oNewCALModel\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.333"},"setValue",["10:00"]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.333"},"setValue",["10:00"]]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.TimePicker","viewName":"etm.portal.ui.managecalendars.view.NewCalendar","bindingPath":{"path":"","propertyPath":"/MONDAY_END","modelName":"oNewCALModel"},"interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"etmportal.ui.managecalendars.view.NewCalendarsap.m.TimePicker{\"path\":\"\",\"propertyPath\":\"/MONDAY_END\",\"modelName\":\"oNewCALModel\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.TimePicker","viewName":"etm.portal.ui.managecalendars.view.NewCalendar","bindingPath":{"path":"","propertyPath":"/MONDAY_END","modelName":"oNewCALModel"},"interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"etmportal.ui.managecalendars.view.NewCalendarsap.m.TimePicker{\"path\":\"\",\"propertyPath\":\"/MONDAY_END\",\"modelName\":\"oNewCALModel\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.334"},"setValue",["18:00"]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.334"},"setValue",["18:00"]]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/actions - {"actions":[{"id":"action3","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+RESULT: {"actions":[{"id":"action3","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//div[@data-kt=\"NewCalendarMondayEndTimePicker\"]//div[1]//span"}
+RESULT: {"using":"xpath","value":"//div[@data-kt=\"NewCalendarMondayEndTimePicker\"]//div[1]//span"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.487/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[contains(@id,\"picker\")]//bdi[contains(text(),\"OK\")][last()]"}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"picker\")]//bdi[contains(text(),\"OK\")][last()]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.492/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"NewCalendarCopyToAllButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"NewCalendarCopyToAllButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.493/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//div[contains(@data-kt, \"NewCalendarMondayWorkInput\")]//input"}
+RESULT: {"using":"xpath","value":"//div[contains(@data-kt, \"NewCalendarMondayWorkInput\")]//input"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.335/property/value - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//div[contains(@data-kt, \"NewCalendarFridayWorkInput\")]//input"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"using":"xpath","value":"//div[contains(@data-kt, \"NewCalendarFridayWorkInput\")]//input"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.347/property/value - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"NewCalendarSaveButton\"]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"NewCalendarSaveButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.496/click - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//header[@id=\"application-managecalendars-display-component---calendarDetail--ObjectPageLayout-headerTitle\"]//div[contains(@class,\"sapFDynamicPageTitleExpanded\")]//span"}
+RESULT: {"using":"xpath","value":"//header[@id=\"application-managecalendars-display-component---calendarDetail--ObjectPageLayout-headerTitle\"]//div[contains(@class,\"sapFDynamicPageTitleExpanded\")]//span"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.576","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.576"}]}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.576","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.576"}]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.215/click - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.142_0_7444_176.windows.Manage_Calendar_Exceptions_Tests_US151097_US151100_US151102" name="Test 1 Should create calendar exceptions specific to the calendar US151097" time="58.64">
+      <system-out><![CDATA[
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Calendar Exceptions"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Calendar Exceptions\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Calendar Exceptions"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Calendar Exceptions\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//*[@id=\"__tile54\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile54\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.164/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[@id=\"application-managecalendarexceptions-display-component---calendarExceptionCalendars--smartFilterBar-btnBasicSearch-I\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-managecalendarexceptions-display-component---calendarExceptionCalendars--smartFilterBar-btnBasicSearch-I\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//input[@id=\"application-managecalendarexceptions-display-component---calendarExceptionCalendars--smartFilterBar-btnBasicSearch-I\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-managecalendarexceptions-display-component---calendarExceptionCalendars--smartFilterBar-btnBasicSearch-I\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.631","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.631"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.631","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.631"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.631/enabled - {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.631","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.631"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.631","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.631"}]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.631","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.631"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.631","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.631"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//div[@data-kt=\"MasterCalendarsCalendarsCountIconTabFilter\"]//div[1]//div[1]//span[1]"}
+RESULT: {"using":"xpath","value":"//div[@data-kt=\"MasterCalendarsCalendarsCountIconTabFilter\"]//div[1]//div[1]//span[1]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.726/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[@id=\"application-managecalendarexceptions-display-component---calendarExceptionCalendars--smartFilterBar-btnBasicSearch-I\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-managecalendarexceptions-display-component---calendarExceptionCalendars--smartFilterBar-btnBasicSearch-I\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.631/clear - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.631/value - {"text":"72"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"text":"72"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/actions - {"actions":[{"id":"action4","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+RESULT: {"actions":[{"id":"action4","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//table[@id=\"application-managecalendarexceptions-display-component---calendarExceptionCalendars--customCalendarTable-listUl\"]//tbody/tr"}
+RESULT: {"using":"xpath","value":"//table[@id=\"application-managecalendarexceptions-display-component---calendarExceptionCalendars--customCalendarTable-listUl\"]//tbody/tr"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.732/elements - {"using":"css selector","value":"td"}
+RESULT: {"using":"css selector","value":"td"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.738/text - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//span[contains(@id, \"imgNav\")])[1]"}
+RESULT: {"using":"xpath","value":"(//span[contains(@id, \"imgNav\")])[1]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.736/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"DetailAddExceptionButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"DetailAddExceptionButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.811/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//ul[contains(@id,\"editDetailCalendarException--exceptionsList-listUl\")]//li//div[contains(text(),\"shutdown\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"editDetailCalendarException--exceptionsList-listUl\")]//li//div[contains(text(),\"shutdown\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.817/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251209\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251209\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.820/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.820/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251210\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251210\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.821/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.821/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251211\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251211\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.822/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.822/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251212\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251212\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.823/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.823/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"EditDetailSaveButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"EditDetailSaveButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.824/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//div[contains(@class,\"sapUiCalItemType10\")]"}
+RESULT: {"using":"xpath","value":"//div[contains(@class,\"sapUiCalItemType10\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.580/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.142_0_7444_176.windows.Manage_Calendar_Exceptions_Tests_US151097_US151100_US151102" name="Prereq Test 2 Should create a new yard partner site contract" time="0.008">
+      <system-out><![CDATA[
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/window/fullscreen - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.142_0_7444_176.windows.Manage_Calendar_Exceptions_Tests_US151097_US151100_US151102" name="Prereq Test 2 Should create a new calendar" time="60.335">
+      <system-out><![CDATA[
+RESULT: undefined
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//*[@id=\"__tile37\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile37\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.187/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.862","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.862"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.862","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.862"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.862/enabled - {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.862","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.862"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.862","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.862"}]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.862","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.862"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.862","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.862"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.862/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[contains(@id,\"inputDescription-inner\")]"}
+RESULT: {"using":"xpath","value":"//input[contains(@id,\"inputDescription-inner\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.910/clear - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.910/value - {"text":"WDIO-CAL-Tm9j3"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"text":"WDIO-CAL-Tm9j3"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[contains(@id,\"DatePickerFrom-inner\")]"}
+RESULT: {"using":"xpath","value":"//input[contains(@id,\"DatePickerFrom-inner\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.911/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/actions - {"actions":[{"id":"action5","type":"key","parameters":{},"actions":[{"type":"keyDown","value":"0"},{"type":"keyDown","value":"6"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"1"},{"type":"keyDown","value":"1"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"2"},{"type":"keyDown","value":"5"},{"type":"pause","duration":10},{"type":"keyUp","value":"0"},"(7 more items)"]}]}
+RESULT: {"actions":[{"id":"action5","type":"key","parameters":{},"actions":[{"type":"keyDown","value":"0"},{"type":"keyDown","value":"6"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"1"},{"type":"keyDown","value":"1"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"2"},{"type":"keyDown","value":"5"},{"type":"pause","duration":10},{"type":"keyUp","value":"0"},"(7 more items)"]}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[contains(@id,\"DatePickerTo-inner\")]"}
+RESULT: {"using":"xpath","value":"//input[contains(@id,\"DatePickerTo-inner\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.912/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/actions - {"actions":[{"id":"action6","type":"key","parameters":{},"actions":[{"type":"keyDown","value":"0"},{"type":"keyDown","value":"6"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"0"},{"type":"keyDown","value":"6"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"2"},{"type":"keyDown","value":"6"},{"type":"pause","duration":10},{"type":"keyUp","value":"0"},"(7 more items)"]}]}
+RESULT: {"actions":[{"id":"action6","type":"key","parameters":{},"actions":[{"type":"keyDown","value":"0"},{"type":"keyDown","value":"6"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"0"},{"type":"keyDown","value":"6"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"2"},{"type":"keyDown","value":"6"},{"type":"pause","duration":10},{"type":"keyUp","value":"0"},"(7 more items)"]}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.333"},"setValue",["10:00"]]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.TimePicker","viewName":"etm.portal.ui.managecalendars.view.NewCalendar","bindingPath":{"path":"","propertyPath":"/MONDAY_START","modelName":"oNewCALModel"},"interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"etmportal.ui.managecalendars.view.NewCalendarsap.m.TimePicker{\"path\":\"\",\"propertyPath\":\"/MONDAY_START\",\"modelName\":\"oNewCALModel\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.TimePicker","viewName":"etm.portal.ui.managecalendars.view.NewCalendar","bindingPath":{"path":"","propertyPath":"/MONDAY_START","modelName":"oNewCALModel"},"interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"etmportal.ui.managecalendars.view.NewCalendarsap.m.TimePicker{\"path\":\"\",\"propertyPath\":\"/MONDAY_START\",\"modelName\":\"oNewCALModel\"}"}]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.915"},"setValue",["10:00"]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.915"},"setValue",["10:00"]]}
+RESULT: undefined
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.334"},"setValue",["18:00"]]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.TimePicker","viewName":"etm.portal.ui.managecalendars.view.NewCalendar","bindingPath":{"path":"","propertyPath":"/MONDAY_END","modelName":"oNewCALModel"},"interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"etmportal.ui.managecalendars.view.NewCalendarsap.m.TimePicker{\"path\":\"\",\"propertyPath\":\"/MONDAY_END\",\"modelName\":\"oNewCALModel\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.TimePicker","viewName":"etm.portal.ui.managecalendars.view.NewCalendar","bindingPath":{"path":"","propertyPath":"/MONDAY_END","modelName":"oNewCALModel"},"interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"etmportal.ui.managecalendars.view.NewCalendarsap.m.TimePicker{\"path\":\"\",\"propertyPath\":\"/MONDAY_END\",\"modelName\":\"oNewCALModel\"}"}]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.916"},"setValue",["18:00"]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.916"},"setValue",["18:00"]]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/actions - {"actions":[{"id":"action7","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+RESULT: {"actions":[{"id":"action7","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//div[@data-kt=\"NewCalendarMondayEndTimePicker\"]//div[1]//span"}
+RESULT: {"using":"xpath","value":"//div[@data-kt=\"NewCalendarMondayEndTimePicker\"]//div[1]//span"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.1113/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[contains(@id,\"picker\")]//bdi[contains(text(),\"OK\")][last()]"}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"picker\")]//bdi[contains(text(),\"OK\")][last()]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.1117/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"NewCalendarCopyToAllButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"NewCalendarCopyToAllButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.1119/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//div[contains(@data-kt, \"NewCalendarMondayWorkInput\")]//input"}
+RESULT: {"using":"xpath","value":"//div[contains(@data-kt, \"NewCalendarMondayWorkInput\")]//input"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.917/property/value - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//div[contains(@data-kt, \"NewCalendarFridayWorkInput\")]//input"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"using":"xpath","value":"//div[contains(@data-kt, \"NewCalendarFridayWorkInput\")]//input"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.929/property/value - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"NewCalendarSaveButton\"]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"NewCalendarSaveButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.1122/click - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//header[@id=\"application-managecalendars-display-component---calendarDetail--ObjectPageLayout-headerTitle\"]//div[contains(@class,\"sapFDynamicPageTitleExpanded\")]//span"}
+RESULT: {"using":"xpath","value":"//header[@id=\"application-managecalendars-display-component---calendarDetail--ObjectPageLayout-headerTitle\"]//div[contains(@class,\"sapFDynamicPageTitleExpanded\")]//span"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.1203","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.1203"}]}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.1203","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.1203"}]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.BBB2E6485D3C1B008D38AE1EFE5F30D2.e.842/click - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.142_0_7444_176.windows.Manage_Calendar_Exceptions_Tests_US151097_US151100_US151102" name="Prereq Test 2 Should assign our calendar to the site" time="104.963">
+      <system-out><![CDATA[
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/refresh - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/refresh - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/window/fullscreen - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [189 bytes]","args":[]}
+RESULT: {"script":"<script> [189 bytes]","args":[]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [123 bytes]","args":[]}
+RESULT: {"script":"<script> [123 bytes]","args":[]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/timeouts - {"script":"<number>"}
+RESULT: {"script":"<number>"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/timeouts - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [2676 bytes]","args":[]}
+RESULT: {"script":"<script> [2676 bytes]","args":[]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [2342 bytes]","args":[{"protocol":"http","hostname":"0.0.0.0","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+RESULT: {"script":"<script> [2342 bytes]","args":[{"protocol":"http","hostname":"0.0.0.0","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [21126 bytes]","args":[35000]}
+RESULT: {"script":"<script> [21126 bytes]","args":[35000]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/window/fullscreen - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Sites"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Sites\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Sites"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Sites\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//*[@id=\"__tile33\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile33\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1268/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"addOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addOverflowToolbarButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//button[@data-kt=\"addOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addOverflowToolbarButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//button[@data-kt=\"addOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addOverflowToolbarButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//button[@data-kt=\"addOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addOverflowToolbarButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"addOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addOverflowToolbarButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1381","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1381"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1381","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1381"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1381/enabled - {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1381","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1381"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1381","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1381"}]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1381","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1381"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1381","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1381"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[@id=\"application-managesites-display-component---masterSite--smartFilterBar-btnBasicSearch-I\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-managesites-display-component---masterSite--smartFilterBar-btnBasicSearch-I\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1369/clear - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1369/value - {"text":"DATAWD-S-MCE"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"text":"DATAWD-S-MCE"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/actions - {"actions":[{"id":"action8","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+RESULT: {"actions":[{"id":"action8","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//table[contains(@id,\"customSitesTable-listUl\")]//tbody//tr"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customSitesTable-listUl\")]//tbody//tr"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1437/elements - {"using":"css selector","value":"td"}
+RESULT: {"using":"css selector","value":"td"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1440/text - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//span[contains(@id, \"imgNav\")])[1]"}
+RESULT: {"using":"xpath","value":"(//span[contains(@id, \"imgNav\")])[1]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1435/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"editButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"editButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1471","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1471"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1471","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1471"}]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1471/click - {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//div[@id=\"application-managesites-display-component---Sites-edit--ObjectPageLayout-anchBar-scroll\"]//button[2]"}
+RESULT: {"using":"xpath","value":"//div[@id=\"application-managesites-display-component---Sites-edit--ObjectPageLayout-anchBar-scroll\"]//button[2]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1664/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[@id=\"application-managesites-display-component---Sites-edit--addressDetailDetailsCalendar-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-managesites-display-component---Sites-edit--addressDetailDetailsCalendar-inner\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1635/clear - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1635/value - {"text":"73"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"text":"73"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//span[@id=\"application-managesites-display-component---Sites-edit--addressDetailDetailsCalendar-arrow\"]"}
+RESULT: {"using":"xpath","value":"//span[@id=\"application-managesites-display-component---Sites-edit--addressDetailDetailsCalendar-arrow\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1672/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//span[@id=\"application-managesites-display-component---Sites-edit--addressDetailDetailsCalendar-arrow\"]"}
+RESULT: {"using":"xpath","value":"//span[@id=\"application-managesites-display-component---Sites-edit--addressDetailDetailsCalendar-arrow\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1672/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//ul[contains(@id,\"edit--addressDetailDetailsCalendar-popup-list-listUl\")]//li//span[contains(text(),\"73 - WDIO-CAL\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"edit--addressDetailDetailsCalendar-popup-list-listUl\")]//li//span[contains(text(),\"73 - WDIO-CAL\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1673/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"saveSiteButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"saveSiteButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1652/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//div[@id=\"application-managesites-display-component---detailSite--addressEditDetailsCalendarVBox\"]//div[3]/span"}
+RESULT: {"using":"xpath","value":"//div[@id=\"application-managesites-display-component---detailSite--addressEditDetailsCalendarVBox\"]//div[3]/span"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1739","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1739"}]}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1739","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1739"}]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1346/click - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.142_0_7444_176.windows.Manage_Calendar_Exceptions_Tests_US151097_US151100_US151102" name="Test 2 Should create calendar exceptions specific to the site US151100" time="57.015">
+      <system-out><![CDATA[
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Calendar Exceptions"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Calendar Exceptions\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Calendar Exceptions"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Calendar Exceptions\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//*[@id=\"__tile95\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile95\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1328/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[@id=\"application-managecalendarexceptions-display-component---calendarExceptionCalendars--smartFilterBar-btnBasicSearch-I\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-managecalendarexceptions-display-component---calendarExceptionCalendars--smartFilterBar-btnBasicSearch-I\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//input[@id=\"application-managecalendarexceptions-display-component---calendarExceptionCalendars--smartFilterBar-btnBasicSearch-I\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-managecalendarexceptions-display-component---calendarExceptionCalendars--smartFilterBar-btnBasicSearch-I\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1790","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1790"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1790","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1790"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1790/enabled - {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1790","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1790"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1790","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1790"}]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1790","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1790"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1790","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1790"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//div[@data-kt=\"MasterCalendarsSitesCountIconTabFilter\"]//div[1]//div[1]//span[1]"}
+RESULT: {"using":"xpath","value":"//div[@data-kt=\"MasterCalendarsSitesCountIconTabFilter\"]//div[1]//div[1]//span[1]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1875/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[@id=\"application-managecalendarexceptions-display-component---calendarExceptionSites--smartFilterBar-btnBasicSearch-I\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-managecalendarexceptions-display-component---calendarExceptionSites--smartFilterBar-btnBasicSearch-I\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1887/clear - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1887/value - {"text":"DATAWD-S-MCE"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"text":"DATAWD-S-MCE"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/actions - {"actions":[{"id":"action9","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+RESULT: {"actions":[{"id":"action9","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//table[@id=\"application-managecalendarexceptions-display-component---calendarExceptionSites--customSitesTable-listUl\"]//tbody//tr"}
+RESULT: {"using":"xpath","value":"//table[@id=\"application-managecalendarexceptions-display-component---calendarExceptionSites--customSitesTable-listUl\"]//tbody//tr"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1937/elements - {"using":"css selector","value":"td"}
+RESULT: {"using":"css selector","value":"td"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1934/text - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//span[contains(@id, \"imgNav\")])[1]"}
+RESULT: {"using":"xpath","value":"(//span[contains(@id, \"imgNav\")])[1]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1936/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"DetailAddExceptionButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"DetailAddExceptionButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2024/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//ul[contains(@id,\"editDetailCalendarException--exceptionsList-listUl\")]//li//div[contains(text(),\"exception: non-working day\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"editDetailCalendarException--exceptionsList-listUl\")]//li//div[contains(text(),\"exception: non-working day\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2054/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251209\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251209\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2057/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2057/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251210\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251210\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2058/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2058/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251211\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251211\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2059/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2059/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251212\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251212\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2060/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2060/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251213\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251213\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2061/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251214\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251214\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2062/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251215\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251215\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2063/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2063/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251216\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251216\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2064/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2064/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"EditDetailSaveButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"EditDetailSaveButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2065/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//div[contains(@class,\"sapUiCalItemType05\")]"}
+RESULT: {"using":"xpath","value":"//div[contains(@class,\"sapUiCalItemType05\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1743/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.142_0_7444_176.windows.Manage_Calendar_Exceptions_Tests_US151097_US151100_US151102" name="Prereq Test 3 Should create a new calendar" time="63.56">
+      <system-out><![CDATA[
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Calendars"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Calendars\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Calendars"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Calendars\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//*[@id=\"__tile29\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile29\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1256/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2128","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2128"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2128","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2128"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2128/enabled - {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2128","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2128"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2128","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2128"}]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2128","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2128"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2128","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2128"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"MasterAddButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2128/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[contains(@id,\"inputDescription-inner\")]"}
+RESULT: {"using":"xpath","value":"//input[contains(@id,\"inputDescription-inner\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2217/clear - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2217/value - {"text":"WDIO-CAL-4qWdy"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"text":"WDIO-CAL-4qWdy"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[contains(@id,\"DatePickerFrom-inner\")]"}
+RESULT: {"using":"xpath","value":"//input[contains(@id,\"DatePickerFrom-inner\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2218/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/actions - {"actions":[{"id":"action10","type":"key","parameters":{},"actions":[{"type":"keyDown","value":"0"},{"type":"keyDown","value":"6"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"1"},{"type":"keyDown","value":"1"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"2"},{"type":"keyDown","value":"5"},{"type":"pause","duration":10},{"type":"keyUp","value":"0"},"(7 more items)"]}]}
+RESULT: {"actions":[{"id":"action10","type":"key","parameters":{},"actions":[{"type":"keyDown","value":"0"},{"type":"keyDown","value":"6"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"1"},{"type":"keyDown","value":"1"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"2"},{"type":"keyDown","value":"5"},{"type":"pause","duration":10},{"type":"keyUp","value":"0"},"(7 more items)"]}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[contains(@id,\"DatePickerTo-inner\")]"}
+RESULT: {"using":"xpath","value":"//input[contains(@id,\"DatePickerTo-inner\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2219/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/actions - {"actions":[{"id":"action11","type":"key","parameters":{},"actions":[{"type":"keyDown","value":"0"},{"type":"keyDown","value":"6"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"0"},{"type":"keyDown","value":"6"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"2"},{"type":"keyDown","value":"6"},{"type":"pause","duration":10},{"type":"keyUp","value":"0"},"(7 more items)"]}]}
+RESULT: {"actions":[{"id":"action11","type":"key","parameters":{},"actions":[{"type":"keyDown","value":"0"},{"type":"keyDown","value":"6"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"0"},{"type":"keyDown","value":"6"},{"type":"keyDown","value":"/"},{"type":"keyDown","value":"2"},{"type":"keyDown","value":"6"},{"type":"pause","duration":10},{"type":"keyUp","value":"0"},"(7 more items)"]}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.TimePicker","viewName":"etm.portal.ui.managecalendars.view.NewCalendar","bindingPath":{"path":"","propertyPath":"/MONDAY_START","modelName":"oNewCALModel"},"interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"etmportal.ui.managecalendars.view.NewCalendarsap.m.TimePicker{\"path\":\"\",\"propertyPath\":\"/MONDAY_START\",\"modelName\":\"oNewCALModel\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.TimePicker","viewName":"etm.portal.ui.managecalendars.view.NewCalendar","bindingPath":{"path":"","propertyPath":"/MONDAY_START","modelName":"oNewCALModel"},"interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"etmportal.ui.managecalendars.view.NewCalendarsap.m.TimePicker{\"path\":\"\",\"propertyPath\":\"/MONDAY_START\",\"modelName\":\"oNewCALModel\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2222"},"setValue",["10:00"]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2222"},"setValue",["10:00"]]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.TimePicker","viewName":"etm.portal.ui.managecalendars.view.NewCalendar","bindingPath":{"path":"","propertyPath":"/MONDAY_END","modelName":"oNewCALModel"},"interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"etmportal.ui.managecalendars.view.NewCalendarsap.m.TimePicker{\"path\":\"\",\"propertyPath\":\"/MONDAY_END\",\"modelName\":\"oNewCALModel\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.TimePicker","viewName":"etm.portal.ui.managecalendars.view.NewCalendar","bindingPath":{"path":"","propertyPath":"/MONDAY_END","modelName":"oNewCALModel"},"interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"etmportal.ui.managecalendars.view.NewCalendarsap.m.TimePicker{\"path\":\"\",\"propertyPath\":\"/MONDAY_END\",\"modelName\":\"oNewCALModel\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2223"},"setValue",["18:00"]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2223"},"setValue",["18:00"]]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/actions - {"actions":[{"id":"action12","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+RESULT: {"actions":[{"id":"action12","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//div[@data-kt=\"NewCalendarMondayEndTimePicker\"]//div[1]//span"}
+RESULT: {"using":"xpath","value":"//div[@data-kt=\"NewCalendarMondayEndTimePicker\"]//div[1]//span"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2370/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[contains(@id,\"picker\")]//bdi[contains(text(),\"OK\")][last()]"}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"picker\")]//bdi[contains(text(),\"OK\")][last()]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2375/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"NewCalendarCopyToAllButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"NewCalendarCopyToAllButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2377/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//div[contains(@data-kt, \"NewCalendarMondayWorkInput\")]//input"}
+RESULT: {"using":"xpath","value":"//div[contains(@data-kt, \"NewCalendarMondayWorkInput\")]//input"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2224/property/value - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//div[contains(@data-kt, \"NewCalendarFridayWorkInput\")]//input"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"using":"xpath","value":"//div[contains(@data-kt, \"NewCalendarFridayWorkInput\")]//input"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2236/property/value - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"NewCalendarSaveButton\"]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"NewCalendarSaveButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2380/click - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//header[@id=\"application-managecalendars-display-component---calendarDetail--ObjectPageLayout-headerTitle\"]//div[contains(@class,\"sapFDynamicPageTitleExpanded\")]//span"}
+RESULT: {"using":"xpath","value":"//header[@id=\"application-managecalendars-display-component---calendarDetail--ObjectPageLayout-headerTitle\"]//div[contains(@class,\"sapFDynamicPageTitleExpanded\")]//span"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2461","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2461"}]}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2461","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2461"}]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2107/click - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.142_0_7444_176.windows.Manage_Calendar_Exceptions_Tests_US151097_US151100_US151102" name="Prereq Test 3 Should create a contract with our calendar" time="69.744">
+      <system-out><![CDATA[
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Contracts"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Contracts\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Contracts"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Contracts\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//*[@id=\"__tile137\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile137\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1281/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: undefined
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"addButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2496/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[@id=\"application-managecontracts-display-component---AddNewContract--projectDescription-inner\"]"}
+RESULT: {}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-managecontracts-display-component---AddNewContract--projectDescription-inner\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2767/clear - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2767/value - {"text":"Contract WDIO"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"text":"Contract WDIO"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[@id=\"application-managecontracts-display-component---AddNewContract--site-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-managecontracts-display-component---AddNewContract--site-inner\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2769/clear - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2769/value - {"text":"DATAWD-S-MCE"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"text":"DATAWD-S-MCE"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//ul[contains(@id,\"AddNewContract--site-popup-list-listUl\")]//li//span[contains(text(),\"DATAWD-S-MCE\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"AddNewContract--site-popup-list-listUl\")]//li//span[contains(text(),\"DATAWD-S-MCE\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2849/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[@id=\"application-managecontracts-display-component---AddNewContract--yardId-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-managecontracts-display-component---AddNewContract--yardId-inner\"]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2770/property/value - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[@id=\"application-managecontracts-display-component---AddNewContract--customerSelect-inner\"]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-managecontracts-display-component---AddNewContract--customerSelect-inner\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2768/clear - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2768/value - {"text":"DATAWD-P-MCE"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"text":"DATAWD-P-MCE"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//ul[contains(@id,\"AddNewContract--customerSelect-popup-list-listUl\")]//li//span[contains(text(),\"DATAWD-P-MCE\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"AddNewContract--customerSelect-popup-list-listUl\")]//li//span[contains(text(),\"DATAWD-P-MCE\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2852/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[@id=\"application-managecontracts-display-component---AddNewContract--calendarInput-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-managecontracts-display-component---AddNewContract--calendarInput-inner\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2771/clear - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2771/value - {"text":"74"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"text":"74"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//ul[contains(@id,'application-managecontracts-display-component---AddNewContract--calendarInput-popup-list-listUl')]//li[starts-with(normalize-space(.), '74 - WDIO-CAL')]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,'application-managecontracts-display-component---AddNewContract--calendarInput-popup-list-listUl')]//li[starts-with(normalize-space(.), '74 - WDIO-CAL')]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2854/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//button[@data-kt=\"saveButton\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//button[@data-kt=\"saveButton\"])[last()]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2842/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//span[contains(@id ,\"contractDetailTitleNoExpanded\")]"}
+RESULT: {"using":"xpath","value":"//span[contains(@id ,\"contractDetailTitleNoExpanded\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//span[contains(@id ,\"contractDetailTitleNoExpanded\")]"}
+RESULT: {"using":"xpath","value":"//span[contains(@id ,\"contractDetailTitleNoExpanded\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2908","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2908"}]}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2908","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2908"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//a[@data-kt=\"calendarLink\"]"}
+RESULT: {"using":"xpath","value":"//a[@data-kt=\"calendarLink\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2911","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2911"}]}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2911","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2911"}]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2463/click - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.142_0_7444_176.windows.Manage_Calendar_Exceptions_Tests_US151097_US151100_US151102" name="Test 3 Should create calendar exceptions specific to the contract US151102" time="57.457">
+      <system-out><![CDATA[
+RESULT: undefined
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//*[@id=\"__tile95\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile95\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.1328/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[@id=\"application-managecalendarexceptions-display-component---calendarExceptionCalendars--smartFilterBar-btnBasicSearch-I\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-managecalendarexceptions-display-component---calendarExceptionCalendars--smartFilterBar-btnBasicSearch-I\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//input[@id=\"application-managecalendarexceptions-display-component---calendarExceptionCalendars--smartFilterBar-btnBasicSearch-I\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-managecalendarexceptions-display-component---calendarExceptionCalendars--smartFilterBar-btnBasicSearch-I\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2961","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2961"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2961","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2961"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2961/enabled - {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2961","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2961"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2961","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2961"}]}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2961","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2961"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2961","ELEMENT":"f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2961"}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//div[@data-kt=\"MasterCalendarsContractsCountIconTabFilter\"]//div[1]//div[1]//span[1]"}
+RESULT: {"using":"xpath","value":"//div[@data-kt=\"MasterCalendarsContractsCountIconTabFilter\"]//div[1]//div[1]//span[1]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3049/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//input[@id=\"application-managecalendarexceptions-display-component---calendarExceptionContracts--smartFilterBar-btnBasicSearch-I\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-managecalendarexceptions-display-component---calendarExceptionContracts--smartFilterBar-btnBasicSearch-I\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3061/clear - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3061/value - {"text":"21445"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {"text":"21445"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/actions - {"actions":[{"id":"action13","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+RESULT: {"actions":[{"id":"action13","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//table[@id=\"application-managecalendarexceptions-display-component---calendarExceptionContracts--customContractsTable-listUl\"]//tbody//tr"}
+RESULT: {"using":"xpath","value":"//table[@id=\"application-managecalendarexceptions-display-component---calendarExceptionContracts--customContractsTable-listUl\"]//tbody//tr"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3111/elements - {"using":"css selector","value":"td"}
+RESULT: {"using":"css selector","value":"td"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3108/text - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//span[contains(@id, \"imgNav\")])[1]"}
+RESULT: {"using":"xpath","value":"(//span[contains(@id, \"imgNav\")])[1]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3110/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"DetailAddExceptionButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"DetailAddExceptionButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3203/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//ul[contains(@id,\"editDetailCalendarException--exceptionsList-listUl\")]//li//div[contains(text(),\"shutdown\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"editDetailCalendarException--exceptionsList-listUl\")]//li//div[contains(text(),\"shutdown\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3233/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251209\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251209\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3236/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3236/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251210\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251210\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3237/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3237/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251211\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251211\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3238/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3238/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251212\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251212\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3239/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3239/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251213\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251213\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3240/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251214\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251214\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3241/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"(//div[@data-sap-day=\"20251215\"])[last()]"}
+RESULT: {"using":"xpath","value":"(//div[@data-sap-day=\"20251215\"])[last()]"}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3242/attribute/class - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3242/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"xpath","value":"//button[@data-kt=\"EditDetailSaveButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"EditDetailSaveButton\"]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.3243/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/elements - {"using":"xpath","value":"//div[contains(@class,\"sapUiCalItemType10\")]"}
+RESULT: {"using":"xpath","value":"//div[contains(@class,\"sapUiCalItemType10\")]"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/2edd5e8b044d4fd7e118f6787dae998e/element/f.EBB053B2DED3D1250347E702C626563C.d.C6CE025F0949052166571425AFB31FAE.e.2915/click - {}
+RESULT: {}
+COMMAND: GET /session/2edd5e8b044d4fd7e118f6787dae998e/screenshot - {}
+RESULT: {}
+COMMAND: DELETE /session/2edd5e8b044d4fd7e118f6787dae998e - {}
+RESULT: {}
+]]></system-out>
     </testcase>
   </testsuite>
 </testsuites>
