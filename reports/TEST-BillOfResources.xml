@@ -1,17 +1,1361 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="1" failures="1" errors="1" skipped="0">
-  <testsuite timestamp="2025-12-08T16:23:14" time="156.538" tests="1" failures="1" errors="1" skipped="0">
+<testsuites tests="6" failures="4" errors="4" skipped="0">
+  <testsuite timestamp="2025-12-08T16:25:42" time="571.475" tests="6" failures="4" errors="4" skipped="0">
     <properties>
       <property name="specId" value="0"/>
-      <property name="suiteName" value="Check QaLive System is up, or stop pipeline"/>
+      <property name="suiteName" value="Bill of Resources tests for bundle creation &amp; replenishment US131067 US131070"/>
       <property name="capabilities" value="chrome.142_0_7444_176.windows"/>
-      <property name="file" value="file:///D:/a/1/s/test/specs/TECH/check-QaLive-up.spec.js"/>
+      <property name="file" value="file:///D:/a/1/s/test/specs/HTR/bill-of-resources.spec.js"/>
     </properties>
-    <testcase classname="chrome.142_0_7444_176.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="before all hook for Check QaLive System is up or stop pipeline" time="156.535">
+    <testcase classname="chrome.142_0_7444_176.windows.Bill_of_Resources_tests_for_bundle_creation_&amp;_replenishment_US131067_US131070" name="Prereq Should create a new yard used for all following tests in the module" time="0.437">
+      <system-out><![CDATA[
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/window/fullscreen - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.142_0_7444_176.windows.Bill_of_Resources_tests_for_bundle_creation_&amp;_replenishment_US131067_US131070" name="Prereq Should create two equipments one being a copy of the other" time="292.962">
+      <system-out><![CDATA[
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Resources"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Resources\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Resources"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Resources\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//*[@id=\"__tile40\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile40\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.123/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.258","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.258"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.258","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.258"}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.258/enabled - {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.258","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.258"}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.258","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.258"}]}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.258","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.258"}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.258","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.258"}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.258/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--TYPE-arrow\"]"}
+RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--TYPE-arrow\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.614/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--TYPE-popup-list-listUl\")]//li//span[text()=\"Equipment\"]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--TYPE-popup-list-listUl\")]//li//span[text()=\"Equipment\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.616/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--ID-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--ID-inner\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.635/clear - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.635/value - {"text":"d0aYPFUnq_1"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {"text":"d0aYPFUnq_1"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--SHORT_TEXT-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--SHORT_TEXT-inner\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.636/clear - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.636/value - {"text":"Equipment WDIO"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {"text":"Equipment WDIO"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--BASE_UNIT_OF_MEASURE-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--BASE_UNIT_OF_MEASURE-inner\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.639/clear - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.639/value - {"text":"Piece"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {"text":"Piece"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--WEIGHT_UNIT-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--WEIGHT_UNIT-inner\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.643/clear - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.643/value - {"text":"Gram"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {"text":"Gram"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--DIMENSION_UNIT-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--DIMENSION_UNIT-inner\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.648/clear - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.648/value - {"text":"Meter"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {"text":"Meter"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--control-anchor\"]"}
+RESULT: {}
+RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--control-anchor\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.751/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--PLANNING_GROUP-arrow\"]"}
+RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--PLANNING_GROUP-arrow\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.756/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--PLANNING_GROUP-popup-list-listUl\")]//li//span[contains(text(),\"Heavy Equi\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--PLANNING_GROUP-popup-list-listUl\")]//li//span[contains(text(),\"Heavy Equi\")]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.757/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--ITEM_TYPE-arrow\"]"}
+RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--ITEM_TYPE-arrow\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.758/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--ITEM_TYPE-popup-list-listUl\")]//li//span[text()=\"Resource Unit\"]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--ITEM_TYPE-popup-list-listUl\")]//li//span[text()=\"Resource Unit\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.759/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--btnAddTimeSegment\"]"}
+RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--btnAddTimeSegment\"]"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.761/rect - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [92 bytes]","args":[]}
+RESULT: {"script":"<script> [92 bytes]","args":[]}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/actions - {"actions":[{"id":"action1","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1888,"y":-32,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.761"}}]}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.761","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.761"},{"block":"start","inline":"nearest"}]}
+RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.761","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.761"},{"block":"start","inline":"nearest"}]}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.761/click - {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--idRuTSAdmin-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\"]"}
+RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--idRuTSAdmin-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.765/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--idRuTSAdmin-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"DATAWD-Y-BORIA\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--idRuTSAdmin-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"DATAWD-Y-BORIA\")]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.768/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"(//span[contains(@id, \"-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\")])[5]"}
+RESULT: {"using":"xpath","value":"(//span[contains(@id, \"-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\")])[5]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.771/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//ul[contains(@id,\"-newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"PM Order\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"-newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"PM Order\")]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.773/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//span[contains(@id,\"newResourceUnit--RUTimeSegment-0-vhi\")]"}
+RESULT: {"using":"xpath","value":"//span[contains(@id,\"newResourceUnit--RUTimeSegment-0-vhi\")]"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.777/rect - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [92 bytes]","args":[]}
+RESULT: {"script":"<script> [92 bytes]","args":[]}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/actions - {"actions":[{"id":"action2","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1888,"y":-24,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.777"}}]}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.777","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.777"},{"block":"start","inline":"nearest"}]}
+RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.777","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.777"},{"block":"start","inline":"nearest"}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.777/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//div[contains(@id,\"dialog\")]//input"}
+RESULT: {"using":"xpath","value":"//div[contains(@id,\"dialog\")]//input"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.782/clear - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.782/value - {"text":"4000360"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {"text":"4000360"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[contains(@id,\"btnGo\")]"}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"btnGo\")]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/actions - {"actions":[{"id":"action3","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"5 more keys: [\"azimuthAngle\",\"x\",\"y\",\"duration\",\"origin\"]"},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0},{"type":"pause","duration":10},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0}]}]}
+RESULT: {"actions":[{"id":"action3","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"5 more keys: [\"azimuthAngle\",\"x\",\"y\",\"duration\",\"origin\"]"},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0},{"type":"pause","duration":10},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0}]}]}
+COMMAND: DELETE /session/83239faa2a7e9c662bfebcff4e2589c1/actions - {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"(//div[contains(@id,\"dialog\")]//table//tr//td//span[text()=\"4000360\"])[1]"}
+RESULT: {"using":"xpath","value":"(//div[contains(@id,\"dialog\")]//table//tr//td//span[text()=\"4000360\"])[1]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.799/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.801/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--newTimeSegmentFromDatePicker-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--newTimeSegmentFromDatePicker-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-inner\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.804/clear - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.804/value - {"text":"12/07/25"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {"text":"12/07/25"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--resource-anchor\"]"}
+RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--resource-anchor\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.807/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-manageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-manageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE"}]}
+RESULT: undefined
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.675"},"setValue",["12/07/25"]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.675"},"setValue",["12/07/25"]]}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//label[contains(@class, \"sapMLabelRequired\") and .//bdi[contains(text(), \"Planned Retirement\")]]"}
+RESULT: {"using":"xpath","value":"//label[contains(@class, \"sapMLabelRequired\") and .//bdi[contains(text(), \"Planned Retirement\")]]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//label[contains(@class, \"sapMLabelRequired\") and .//bdi[contains(text(), \"Planned Retirement\")]]"}
+RESULT: {"using":"xpath","value":"//label[contains(@class, \"sapMLabelRequired\") and .//bdi[contains(text(), \"Planned Retirement\")]]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@data-kt=\"resourceUnitSaveButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"resourceUnitSaveButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.630/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Close\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Close\")])[last()]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.815/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[substring(@id, string-length(@id) - string-length('actionsToolbar-overflowButton') + 1) = 'actionsToolbar-overflowButton']"}
+RESULT: {"using":"xpath","value":"//button[substring(@id, string-length(@id) - string-length('actionsToolbar-overflowButton') + 1) = 'actionsToolbar-overflowButton']"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.834/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@data-kt=\"priceInfoButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"priceInfoButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.836/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.227/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//*[@id=\"__tile40\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile40\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.123/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"css selector","value":"#application-manageresources-display-component---masterRU--smartFilterBar-btnBasicSearch-I"}
+RESULT: {"using":"css selector","value":"#application-manageresources-display-component---masterRU--smartFilterBar-btnBasicSearch-I"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"css selector","value":"#application-manageresources-display-component---masterRU--smartFilterBar-btnBasicSearch-I"}
+RESULT: {"using":"css selector","value":"#application-manageresources-display-component---masterRU--smartFilterBar-btnBasicSearch-I"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.899","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.899"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.899","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.899"}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.899/enabled - {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.899","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.899"}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.899","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.899"}]}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.899","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.899"}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.899","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.899"}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"css selector","value":"#application-manageresources-display-component---masterRU--smartFilterBar-btnBasicSearch-I"}
+RESULT: {"using":"css selector","value":"#application-manageresources-display-component---masterRU--smartFilterBar-btnBasicSearch-I"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.899/clear - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.899/value - {"text":"d0aYPFUnq_1"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {"text":"d0aYPFUnq_1"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/actions - {"actions":[{"id":"action4","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {"actions":[{"id":"action4","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//table[contains(@id, \"masterRU--customRUTable-listUl\")]/tbody/tr"}
+RESULT: {"using":"xpath","value":"//table[contains(@id, \"masterRU--customRUTable-listUl\")]/tbody/tr"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.963/elements - {"using":"css selector","value":"td"}
+RESULT: {"using":"css selector","value":"td"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.966/text - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"(//span[contains(@id, \"imgNav\")])[1]"}
+RESULT: {"using":"xpath","value":"(//span[contains(@id, \"imgNav\")])[1]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.960/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[substring(@id, string-length(@id) - string-length('actionsToolbar-overflowButton') + 1) = 'actionsToolbar-overflowButton']"}
+RESULT: {"using":"xpath","value":"//button[substring(@id, string-length(@id) - string-length('actionsToolbar-overflowButton') + 1) = 'actionsToolbar-overflowButton']"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1137/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@data-kt=\"copyResourceUnitButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"copyResourceUnitButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1139/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@data-kt=\"selectAllSectionsButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"selectAllSectionsButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1141/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Confirm\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Confirm\")])[last()]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1147/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--general-anchor\"]"}
+RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--general-anchor\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1267/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/actions - {"actions":[{"type":"key","id":"keyboard","actions":[{"type":"keyDown","value":""}]}]}
+RESULT: {"actions":[{"type":"key","id":"keyboard","actions":[{"type":"keyDown","value":""}]}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--ID-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--ID-inner\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1266/clear - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1266/value - {"text":"d0aYPFUnq_2"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {"text":"d0aYPFUnq_2"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--SHORT_TEXT-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--SHORT_TEXT-inner\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1151/clear - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1151/value - {"text":"Equipment Copy WDIO"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {"text":"Equipment Copy WDIO"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--control-anchor\"]"}
+RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--control-anchor\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1279/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--PLANNING_GROUP-arrow\"]"}
+RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--PLANNING_GROUP-arrow\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1284/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--PLANNING_GROUP-popup-list-listUl\")]//li//span[contains(text(),\"Heavy Equi\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--PLANNING_GROUP-popup-list-listUl\")]//li//span[contains(text(),\"Heavy Equi\")]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1285/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--btnAddTimeSegment\"]"}
+RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--btnAddTimeSegment\"]"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1286/rect - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [92 bytes]","args":[]}
+RESULT: {"script":"<script> [92 bytes]","args":[]}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/actions - {"actions":[{"id":"action5","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1888,"y":-32,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1286"}}]}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1286","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1286"},{"block":"start","inline":"nearest"}]}
+RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1286","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1286"},{"block":"start","inline":"nearest"}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"(//span[contains(@id, \"-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\")])[5]"}
+RESULT: {"using":"xpath","value":"(//span[contains(@id, \"-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\")])[5]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1289/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//ul[contains(@id,\"-newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"PM Order\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"-newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"PM Order\")]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1290/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//span[contains(@id,\"newResourceUnit--RUTimeSegment-0-vhi\")]"}
+RESULT: {"using":"xpath","value":"//span[contains(@id,\"newResourceUnit--RUTimeSegment-0-vhi\")]"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1294/rect - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [92 bytes]","args":[]}
+RESULT: {"script":"<script> [92 bytes]","args":[]}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/actions - {"actions":[{"id":"action6","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1888,"y":-24,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1294"}}]}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1294","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1294"},{"block":"start","inline":"nearest"}]}
+RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1294","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1294"},{"block":"start","inline":"nearest"}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1294/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//div[contains(@id,\"dialog\")]//input"}
+RESULT: {"using":"xpath","value":"//div[contains(@id,\"dialog\")]//input"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1299/clear - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1299/value - {"text":"4000360"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {"text":"4000360"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[contains(@id,\"btnGo\")]"}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"btnGo\")]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/actions - {"actions":[{"id":"action7","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"5 more keys: [\"azimuthAngle\",\"x\",\"y\",\"duration\",\"origin\"]"},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0},{"type":"pause","duration":10},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0}]}]}
+RESULT: {"actions":[{"id":"action7","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"5 more keys: [\"azimuthAngle\",\"x\",\"y\",\"duration\",\"origin\"]"},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0},{"type":"pause","duration":10},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0}]}]}
+COMMAND: DELETE /session/83239faa2a7e9c662bfebcff4e2589c1/actions - {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"(//div[contains(@id,\"dialog\")]//table//tr//td//span[text()=\"4000360\"])[1]"}
+RESULT: {"using":"xpath","value":"(//div[contains(@id,\"dialog\")]//table//tr//td//span[text()=\"4000360\"])[1]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1316/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1318/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--newTimeSegmentFromDatePicker-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--newTimeSegmentFromDatePicker-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-inner\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1250/clear - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1250/value - {"text":"12/07/25"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {"text":"12/07/25"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--resource-anchor\"]"}
+RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--resource-anchor\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1322/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.675"},"setValue",["12/07/25"]]}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-manageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-manageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE"}]}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1190"},"setValue",["12/07/25"]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1190"},"setValue",["12/07/25"]]}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@data-kt=\"resourceUnitSaveButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"resourceUnitSaveButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1327/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Close\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Close\")])[last()]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1331/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.881/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.142_0_7444_176.windows.Bill_of_Resources_tests_for_bundle_creation_&amp;_replenishment_US131067_US131070" name="Prereq Should do a stock increase for the equipments" time="93.297">
       <failure/>
-      <error message="waitUntil condition timed out after 150000ms"/>
+      <error message="element click intercepted: Element &lt;button id=&quot;application-managehandovers-display-component---AddNewHO--confirmCreationButton&quot; data-sap-ui=&quot;application-managehandovers-display-component---AddNewHO--confirmCreationButton&quot; data-sap-ui-render=&quot;&quot; data-kt=&quot;AddNewHOSaveButton&quot; data-ui5-accesskey=&quot;s&quot; aria-describedby=&quot;__text423&quot; aria-labelledby=&quot;application-managehandovers-display-component---AddNewHO--confirmCreationButton-content&quot; class=&quot;sapMBtnBase sapMBtn sapMBtnInverted sapMBarChild&quot;>...&lt;/button> is not clickable at point (1798, 1000). Other element would receive the click: &lt;div id=&quot;sap-ui-blocklayer-popup&quot; tabindex=&quot;0&quot; class=&quot;sapUiBLy&quot; style=&quot;z-index: 279; visibility: visible;&quot;>&lt;/div>&#xA;  (Session info: chrome=142.0.7444.176)"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Handovers"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Handovers\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Handovers"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Handovers\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//*[@id=\"__tile137\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile137\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.200/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1371","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1371"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1371","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1371"}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1371/enabled - {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1371","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1371"}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1371","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1371"}]}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1371","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1371"}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1371","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1371"}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1371/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//span[contains(@id ,\"AddNewHO--typeSelect-arrow\")]"}
+RESULT: {"using":"xpath","value":"//span[contains(@id ,\"AddNewHO--typeSelect-arrow\")]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1734/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//div[contains(@id,\"typeSelect-valueStateText\")]//li[contains(text(), \"stock increase yard\")]"}
+RESULT: {"using":"xpath","value":"//div[contains(@id,\"typeSelect-valueStateText\")]//li[contains(text(), \"stock increase yard\")]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1735/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managehandovers-display-component---AddNewHO--dueDate","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanagehandovers-display-component---AddNewHO--dueDate"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managehandovers-display-component---AddNewHO--dueDate","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanagehandovers-display-component---AddNewHO--dueDate"}]}
+RESULT: undefined
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1736"},"setValue",["12/07/25"]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1736"},"setValue",["12/07/25"]]}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//input[@id=\"generalSectionFrg--receiveYard-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"generalSectionFrg--receiveYard-inner\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1737/clear - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1737/value - {"text":"DATAWD-Y-BORIA"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {"text":"DATAWD-Y-BORIA"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//ul[contains(@id,\"generalSectionFrg--receiveYard-popup-list-listUl\")]//li//span[contains(text(),'DATAWD-Y-BORIA')]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"generalSectionFrg--receiveYard-popup-list-listUl\")]//li//span[contains(text(),'DATAWD-Y-BORIA')]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1761/click - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[contains(@id,\"anchor\")]//span//bdi[contains(text(),\"Items\")]"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"anchor\")]//span//bdi[contains(text(),\"Items\")]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1762/click - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@data-kt=\"addItemsStockIncDecButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addItemsStockIncDecButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1767/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//input[contains(@id, \"application-managehandovers-display-component---AddNewHO--smartFilterBarStockIncrease-btnBasicSearch-I\")]"}
+RESULT: {"using":"xpath","value":"//input[contains(@id, \"application-managehandovers-display-component---AddNewHO--smartFilterBarStockIncrease-btnBasicSearch-I\")]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1769/clear - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1769/value - {"text":"d0aYPFUnq_1"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {"text":"d0aYPFUnq_1"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/actions - {"actions":[{"id":"action8","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {"actions":[{"id":"action8","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//div[@id=\"application-managehandovers-display-component---AddNewHO--popup-sa-CbBg\"]"}
+RESULT: {"using":"xpath","value":"//div[@id=\"application-managehandovers-display-component---AddNewHO--popup-sa-CbBg\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1819/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Select\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Select\")])[last()]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1820/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@data-kt=\"addItemsStockIncDecButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addItemsStockIncDecButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1767/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//input[contains(@id, \"application-managehandovers-display-component---AddNewHO--smartFilterBarStockIncrease-btnBasicSearch-I\")]"}
+RESULT: {"using":"xpath","value":"//input[contains(@id, \"application-managehandovers-display-component---AddNewHO--smartFilterBarStockIncrease-btnBasicSearch-I\")]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1835/clear - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1835/value - {"text":"d0aYPFUnq_2"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {"text":"d0aYPFUnq_2"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/actions - {"actions":[{"id":"action9","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {"actions":[{"id":"action9","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//div[@id=\"application-managehandovers-display-component---AddNewHO--popup-sa-CbBg\"]"}
+RESULT: {"using":"xpath","value":"//div[@id=\"application-managehandovers-display-component---AddNewHO--popup-sa-CbBg\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1885/click - {}
+RESULT: undefined
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: undefined
+RESULT: undefined
+RESULT: undefined
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Select\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Select\")])[last()]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1886/click - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@data-kt=\"AddNewHOSaveButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"AddNewHOSaveButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1890/click - {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+]]></system-out>
       <system-err><![CDATA[
-Error: waitUntil condition timed out after 150000ms
+element click intercepted: element click intercepted: Element <button id="application-managehandovers-display-component---AddNewHO--confirmCreationButton" data-sap-ui="application-managehandovers-display-component---AddNewHO--confirmCreationButton" data-sap-ui-render="" data-kt="AddNewHOSaveButton" data-ui5-accesskey="s" aria-describedby="__text423" aria-labelledby="application-managehandovers-display-component---AddNewHO--confirmCreationButton-content" class="sapMBtnBase sapMBtn sapMBtnInverted sapMBarChild">...</button> is not clickable at point (1798, 1000). Other element would receive the click: <div id="sap-ui-blocklayer-popup" tabindex="0" class="sapUiBLy" style="z-index: 279; visibility: visible;"></div>
+  (Session info: chrome=142.0.7444.176)
+    at async ManageHandoversUtils.stockIncrease (D:\a\1\s\test\utils\pages\ManageHandovers\managehandovers-utils.js:164:9)
+    at async Context.<anonymous> (D:\a\1\s\test\specs\HTR\bill-of-resources.spec.js:79:9)
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.142_0_7444_176.windows.Bill_of_Resources_tests_for_bundle_creation_&amp;_replenishment_US131067_US131070" name="Should create a new bundle with the 2 RUs using onto first one US131067" time="57.664">
+      <failure/>
+      <error message="element (&quot;//button[@data-kt=&quot;addBorMasterButton&quot;]&quot;) still not existing after 45000ms"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Bill Of Resources"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Bill Of Resources\"}"}]}
+RESULT: {}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Bill Of Resources"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Bill Of Resources\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//*[text()='Close']"}
+RESULT: {"using":"xpath","value":"//*[text()='Close']"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1892/enabled - {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1892","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1892"}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1892","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1892"}]}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1892","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1892"}]}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1892","ELEMENT":"f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1892"}]}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element/f.83A33B3E0E362F28C12724A99F668F8E.d.7004EE0F16AD7B5022C85B369B749576.e.1892/click - {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//*[text()='OK']"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {"using":"xpath","value":"//*[text()='OK']"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+Error: element ("//button[@data-kt="addBorMasterButton"]") still not existing after 45000ms
+    at async GeneralUtilsFunctions.checkIfPageLoaded (D:\a\1\s\test\utils\general-utils-functions.js:23:9)
+    at async BillOfResourcesUtils.createBundle (D:\a\1\s\test\utils\pages\BillOfResources\billofresources-utils.js:17:9)
+    at async Context.<anonymous> (D:\a\1\s\test\specs\HTR\bill-of-resources.spec.js:83:9)
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.142_0_7444_176.windows.Bill_of_Resources_tests_for_bundle_creation_&amp;_replenishment_US131067_US131070" name="Should create replenishment handover from BOR US131070" time="55.321">
+      <failure/>
+      <error message="element (&quot;//button[@data-kt=&quot;addBorMasterButton&quot;]&quot;) still not existing after 45000ms"/>
+      <system-out><![CDATA[
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: undefined
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+Error: element ("//button[@data-kt="addBorMasterButton"]") still not existing after 45000ms
+    at async GeneralUtilsFunctions.checkIfPageLoaded (D:\a\1\s\test\utils\general-utils-functions.js:23:9)
+    at async BillOfResourcesUtils.bundleReplenishment (D:\a\1\s\test\utils\pages\BillOfResources\billofresources-utils.js:79:9)
+    at async Context.<anonymous> (D:\a\1\s\test\specs\HTR\bill-of-resources.spec.js:87:9)
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.142_0_7444_176.windows.Bill_of_Resources_tests_for_bundle_creation_&amp;_replenishment_US131067_US131070" name="Should check the completeness of bundle created US131059" time="55.323">
+      <failure/>
+      <error message="element (&quot;//button[@data-kt=&quot;addBorMasterButton&quot;]&quot;) still not existing after 45000ms"/>
+      <system-out><![CDATA[
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: undefined
+RESULT: {}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/element - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: POST /session/83239faa2a7e9c662bfebcff4e2589c1/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+COMMAND: GET /session/83239faa2a7e9c662bfebcff4e2589c1/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: DELETE /session/83239faa2a7e9c662bfebcff4e2589c1 - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+Error: element ("//button[@data-kt="addBorMasterButton"]") still not existing after 45000ms
+    at async GeneralUtilsFunctions.checkIfPageLoaded (D:\a\1\s\test\utils\general-utils-functions.js:23:9)
+    at async BillOfResourcesUtils.completenessCheck (D:\a\1\s\test\utils\pages\BillOfResources\billofresources-utils.js:182:9)
+    at async Context.<anonymous> (D:\a\1\s\test\specs\HTR\bill-of-resources.spec.js:91:9)
 ]]></system-err>
     </testcase>
   </testsuite>
