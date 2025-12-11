@@ -1,1229 +1,654 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="6" failures="2" errors="2" skipped="0">
-  <testsuite timestamp="2025-12-09T16:25:25" time="588.089" tests="6" failures="2" errors="2" skipped="0">
+<testsuites tests="2" failures="1" errors="1" skipped="0">
+  <testsuite timestamp="2025-12-11T16:23:13" time="192.159" tests="2" failures="1" errors="1" skipped="0">
     <properties>
       <property name="specId" value="0"/>
-      <property name="suiteName" value="Bill of Resources tests for bundle creation &amp; replenishment US131067 US131070"/>
+      <property name="suiteName" value="Check QaLive System is up, or stop pipeline"/>
       <property name="capabilities" value="chrome.142_0_7444_176.windows"/>
-      <property name="file" value="file:///D:/a/1/s/test/specs/HTR/bill-of-resources.spec.js"/>
+      <property name="file" value="file:///D:/a/1/s/test/specs/TECH/check-QaLive-up.spec.js"/>
     </properties>
-    <testcase classname="chrome.142_0_7444_176.windows.Bill_of_Resources_tests_for_bundle_creation_&amp;_replenishment_US131067_US131070" name="Prereq Should create a new yard used for all following tests in the module" time="0.496">
+    <testcase classname="chrome.142_0_7444_176.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check for visible error message controls and stop pipeline if found" time="7.355">
       <system-out><![CDATA[
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/window/fullscreen - {}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/refresh - {}
 RESULT: {}
+COMMAND: GET /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/screenshot - {}
+RESULT: {}
+RESULT: undefined
+RESULT: undefined
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
+RESULT: {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapMMsgBoxText"}
+RESULT: {"using":"css selector","value":"div.sapMMsgBoxText"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapMMessageToast"}
+RESULT: {"using":"css selector","value":"div.sapMMessageToast"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div[role=\"alert\"]"}
+RESULT: {"using":"css selector","value":"div[role=\"alert\"]"}
 ]]></system-out>
     </testcase>
-    <testcase classname="chrome.142_0_7444_176.windows.Bill_of_Resources_tests_for_bundle_creation_&amp;_replenishment_US131067_US131070" name="Prereq Should create two equipments one being a copy of the other" time="279.123">
-      <system-out><![CDATA[
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Resources"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Resources\"}"}]}
-RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Resources"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Resources\"}"}]}
-RESULT: undefined
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//*[@id=\"__tile40\"]"}
-RESULT: {"using":"xpath","value":"//*[@id=\"__tile40\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.117/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//span[text()='Error']"}
-RESULT: {"using":"xpath","value":"//span[text()='Error']"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.261","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.261"}]}
-RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.261","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.261"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.261/enabled - {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.261","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.261"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.261","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.261"}]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.261","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.261"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.261","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.261"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.261/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--TYPE-arrow\"]"}
-RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--TYPE-arrow\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.616/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--TYPE-popup-list-listUl\")]//li//span[text()=\"Equipment\"]"}
-RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--TYPE-popup-list-listUl\")]//li//span[text()=\"Equipment\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.618/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--ID-inner\"]"}
-RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--ID-inner\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.637/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.637/value - {"text":"Pve18nOqF_1"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"Pve18nOqF_1"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--SHORT_TEXT-inner\"]"}
-RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--SHORT_TEXT-inner\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.638/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.638/value - {"text":"Equipment WDIO"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"Equipment WDIO"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--BASE_UNIT_OF_MEASURE-inner\"]"}
-RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--BASE_UNIT_OF_MEASURE-inner\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.641/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.641/value - {"text":"Piece"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"Piece"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--WEIGHT_UNIT-inner\"]"}
-RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--WEIGHT_UNIT-inner\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.645/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.645/value - {"text":"Gram"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"Gram"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--DIMENSION_UNIT-inner\"]"}
-RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--DIMENSION_UNIT-inner\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.650/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.650/value - {"text":"Meter"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"Meter"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--control-anchor\"]"}
-RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--control-anchor\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.753/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--PLANNING_GROUP-arrow\"]"}
-RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--PLANNING_GROUP-arrow\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.758/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--PLANNING_GROUP-popup-list-listUl\")]//li//span[contains(text(),\"Heavy Equi\")]"}
-RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--PLANNING_GROUP-popup-list-listUl\")]//li//span[contains(text(),\"Heavy Equi\")]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.761/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--ITEM_TYPE-arrow\"]"}
-RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--ITEM_TYPE-arrow\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.762/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--ITEM_TYPE-popup-list-listUl\")]//li//span[text()=\"Resource Unit\"]"}
-RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--ITEM_TYPE-popup-list-listUl\")]//li//span[text()=\"Resource Unit\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.763/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--btnAddTimeSegment\"]"}
-RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--btnAddTimeSegment\"]"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.765/rect - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/window/rect - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [92 bytes]","args":[]}
-RESULT: {"script":"<script> [92 bytes]","args":[]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/actions - {"actions":[{"id":"action1","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1888,"y":-32,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.765"}}]}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.765","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.765"},{"block":"start","inline":"nearest"}]}
-RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.765","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.765"},{"block":"start","inline":"nearest"}]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.765/click - {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--idRuTSAdmin-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\"]"}
-RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--idRuTSAdmin-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.767/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--idRuTSAdmin-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"DATAWD-Y-BORIA\")]"}
-RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--idRuTSAdmin-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"DATAWD-Y-BORIA\")]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.772/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"(//span[contains(@id, \"-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\")])[5]"}
-RESULT: {"using":"xpath","value":"(//span[contains(@id, \"-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\")])[5]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.773/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//ul[contains(@id,\"-newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"PM Order\")]"}
-RESULT: {"using":"xpath","value":"//ul[contains(@id,\"-newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"PM Order\")]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.775/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//span[contains(@id,\"newResourceUnit--RUTimeSegment-0-vhi\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(@id,\"newResourceUnit--RUTimeSegment-0-vhi\")]"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.779/rect - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/window/rect - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [92 bytes]","args":[]}
-RESULT: {"script":"<script> [92 bytes]","args":[]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/actions - {"actions":[{"id":"action2","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1888,"y":-24,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.779"}}]}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.779","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.779"},{"block":"start","inline":"nearest"}]}
-RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.779","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.779"},{"block":"start","inline":"nearest"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.779/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//div[contains(@id,\"dialog\")]//input"}
-RESULT: {"using":"xpath","value":"//div[contains(@id,\"dialog\")]//input"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.784/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.784/value - {"text":"4000360"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"4000360"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[contains(@id,\"btnGo\")]"}
-RESULT: {"using":"xpath","value":"//button[contains(@id,\"btnGo\")]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/actions - {"actions":[{"id":"action3","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"5 more keys: [\"azimuthAngle\",\"x\",\"y\",\"duration\",\"origin\"]"},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0},{"type":"pause","duration":10},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0}]}]}
-RESULT: {"actions":[{"id":"action3","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"5 more keys: [\"azimuthAngle\",\"x\",\"y\",\"duration\",\"origin\"]"},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0},{"type":"pause","duration":10},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0}]}]}
-COMMAND: DELETE /session/c3a9dfdf46132f55534377e44ef47d1a/actions - {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"(//div[contains(@id,\"dialog\")]//table//tr//td//span[text()=\"4000360\"])[1]"}
-RESULT: {"using":"xpath","value":"(//div[contains(@id,\"dialog\")]//table//tr//td//span[text()=\"4000360\"])[1]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.801/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
-RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.803/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--newTimeSegmentFromDatePicker-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-inner\"]"}
-RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--newTimeSegmentFromDatePicker-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-inner\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.806/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.806/value - {"text":"12/08/25"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"12/08/25"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--resource-anchor\"]"}
-RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--resource-anchor\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.809/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-manageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE"}]}
-RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-manageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE"}]}
-RESULT: undefined
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.677"},"setValue",["12/08/25"]]}
-RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.677"},"setValue",["12/08/25"]]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//label[contains(@class, \"sapMLabelRequired\") and .//bdi[contains(text(), \"Planned Retirement\")]]"}
-RESULT: {"using":"xpath","value":"//label[contains(@class, \"sapMLabelRequired\") and .//bdi[contains(text(), \"Planned Retirement\")]]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//label[contains(@class, \"sapMLabelRequired\") and .//bdi[contains(text(), \"Planned Retirement\")]]"}
-RESULT: {"using":"xpath","value":"//label[contains(@class, \"sapMLabelRequired\") and .//bdi[contains(text(), \"Planned Retirement\")]]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"resourceUnitSaveButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"resourceUnitSaveButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.632/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Close\")])[last()]"}
-RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Close\")])[last()]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.818/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[substring(@id, string-length(@id) - string-length('actionsToolbar-overflowButton') + 1) = 'actionsToolbar-overflowButton']"}
-RESULT: {"using":"xpath","value":"//button[substring(@id, string-length(@id) - string-length('actionsToolbar-overflowButton') + 1) = 'actionsToolbar-overflowButton']"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.861/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"priceInfoButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"priceInfoButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.863/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"css selector","value":"#shell-header-logo"}
-RESULT: {"using":"css selector","value":"#shell-header-logo"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.233/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: undefined
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//*[@id=\"__tile40\"]"}
-RESULT: {"using":"xpath","value":"//*[@id=\"__tile40\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.117/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: undefined
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//span[text()='Error']"}
-RESULT: {"using":"xpath","value":"//span[text()='Error']"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"css selector","value":"#application-manageresources-display-component---masterRU--smartFilterBar-btnBasicSearch-I"}
-RESULT: {"using":"css selector","value":"#application-manageresources-display-component---masterRU--smartFilterBar-btnBasicSearch-I"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"css selector","value":"#application-manageresources-display-component---masterRU--smartFilterBar-btnBasicSearch-I"}
-RESULT: {"using":"css selector","value":"#application-manageresources-display-component---masterRU--smartFilterBar-btnBasicSearch-I"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.922","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.922"}]}
-RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.922","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.922"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.922/enabled - {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.922","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.922"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.922","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.922"}]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.922","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.922"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.922","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.922"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"css selector","value":"#application-manageresources-display-component---masterRU--smartFilterBar-btnBasicSearch-I"}
-RESULT: {"using":"css selector","value":"#application-manageresources-display-component---masterRU--smartFilterBar-btnBasicSearch-I"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.922/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.922/value - {"text":"Pve18nOqF_1"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"Pve18nOqF_1"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/actions - {"actions":[{"id":"action4","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {"actions":[{"id":"action4","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//table[contains(@id, \"masterRU--customRUTable-listUl\")]/tbody/tr"}
-RESULT: {"using":"xpath","value":"//table[contains(@id, \"masterRU--customRUTable-listUl\")]/tbody/tr"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.992/elements - {"using":"css selector","value":"td"}
-RESULT: {"using":"css selector","value":"td"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.995/text - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"(//span[contains(@id, \"imgNav\")])[1]"}
-RESULT: {"using":"xpath","value":"(//span[contains(@id, \"imgNav\")])[1]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.990/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[substring(@id, string-length(@id) - string-length('actionsToolbar-overflowButton') + 1) = 'actionsToolbar-overflowButton']"}
-RESULT: {"using":"xpath","value":"//button[substring(@id, string-length(@id) - string-length('actionsToolbar-overflowButton') + 1) = 'actionsToolbar-overflowButton']"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1164/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"copyResourceUnitButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"copyResourceUnitButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1166/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"selectAllSectionsButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"selectAllSectionsButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1168/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Confirm\")])[last()]"}
-RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Confirm\")])[last()]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1174/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--general-anchor\"]"}
-RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--general-anchor\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1294/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/actions - {"actions":[{"type":"key","id":"keyboard","actions":[{"type":"keyDown","value":""}]}]}
-RESULT: {"actions":[{"type":"key","id":"keyboard","actions":[{"type":"keyDown","value":""}]}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--ID-inner\"]"}
-RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--ID-inner\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1293/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1293/value - {"text":"Pve18nOqF_2"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"Pve18nOqF_2"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--SHORT_TEXT-inner\"]"}
-RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--SHORT_TEXT-inner\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1178/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1178/value - {"text":"Equipment Copy WDIO"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"Equipment Copy WDIO"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--control-anchor\"]"}
-RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--control-anchor\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1306/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--PLANNING_GROUP-arrow\"]"}
-RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--PLANNING_GROUP-arrow\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1313/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--PLANNING_GROUP-popup-list-listUl\")]//li//span[contains(text(),\"Heavy Equi\")]"}
-RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--PLANNING_GROUP-popup-list-listUl\")]//li//span[contains(text(),\"Heavy Equi\")]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1314/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--btnAddTimeSegment\"]"}
-RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--btnAddTimeSegment\"]"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1315/rect - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/window/rect - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [92 bytes]","args":[]}
-RESULT: {"script":"<script> [92 bytes]","args":[]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/actions - {"actions":[{"id":"action5","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1888,"y":-32,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1315"}}]}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1315","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1315"},{"block":"start","inline":"nearest"}]}
-RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1315","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1315"},{"block":"start","inline":"nearest"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"(//span[contains(@id, \"-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\")])[5]"}
-RESULT: {"using":"xpath","value":"(//span[contains(@id, \"-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\")])[5]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1318/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//ul[contains(@id,\"-newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"PM Order\")]"}
-RESULT: {"using":"xpath","value":"//ul[contains(@id,\"-newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"PM Order\")]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1319/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//span[contains(@id,\"newResourceUnit--RUTimeSegment-0-vhi\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(@id,\"newResourceUnit--RUTimeSegment-0-vhi\")]"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1323/rect - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/window/rect - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [92 bytes]","args":[]}
-RESULT: {"script":"<script> [92 bytes]","args":[]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/actions - {"actions":[{"id":"action6","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1888,"y":-24,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1323"}}]}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1323","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1323"},{"block":"start","inline":"nearest"}]}
-RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1323","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1323"},{"block":"start","inline":"nearest"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1323/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//div[contains(@id,\"dialog\")]//input"}
-RESULT: {"using":"xpath","value":"//div[contains(@id,\"dialog\")]//input"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1328/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1328/value - {"text":"4000360"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"4000360"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[contains(@id,\"btnGo\")]"}
-RESULT: {"using":"xpath","value":"//button[contains(@id,\"btnGo\")]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/actions - {"actions":[{"id":"action7","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"5 more keys: [\"azimuthAngle\",\"x\",\"y\",\"duration\",\"origin\"]"},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0},{"type":"pause","duration":10},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0}]}]}
-RESULT: {"actions":[{"id":"action7","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"5 more keys: [\"azimuthAngle\",\"x\",\"y\",\"duration\",\"origin\"]"},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0},{"type":"pause","duration":10},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0}]}]}
-COMMAND: DELETE /session/c3a9dfdf46132f55534377e44ef47d1a/actions - {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"(//div[contains(@id,\"dialog\")]//table//tr//td//span[text()=\"4000360\"])[1]"}
-RESULT: {"using":"xpath","value":"(//div[contains(@id,\"dialog\")]//table//tr//td//span[text()=\"4000360\"])[1]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1345/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
-RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1347/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--newTimeSegmentFromDatePicker-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-inner\"]"}
-RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--newTimeSegmentFromDatePicker-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-inner\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1277/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1277/value - {"text":"12/08/25"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"12/08/25"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--resource-anchor\"]"}
-RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--resource-anchor\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1351/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: undefined
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.677"},"setValue",["12/08/25"]]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-manageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE"}]}
-RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-manageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE"}]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1217"},"setValue",["12/08/25"]]}
-RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1217"},"setValue",["12/08/25"]]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"resourceUnitSaveButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"resourceUnitSaveButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1356/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Close\")])[last()]"}
-RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Close\")])[last()]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1360/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"css selector","value":"#shell-header-logo"}
-RESULT: {"using":"css selector","value":"#shell-header-logo"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.908/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-]]></system-out>
-    </testcase>
-    <testcase classname="chrome.142_0_7444_176.windows.Bill_of_Resources_tests_for_bundle_creation_&amp;_replenishment_US131067_US131070" name="Prereq Should do a stock increase for the equipments" time="119.657">
-      <system-out><![CDATA[
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Handovers"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Handovers\"}"}]}
-RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Handovers"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Handovers\"}"}]}
-RESULT: undefined
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//*[@id=\"__tile134\"]"}
-RESULT: {"using":"xpath","value":"//*[@id=\"__tile134\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.207/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//span[text()='Error']"}
-RESULT: {"using":"xpath","value":"//span[text()='Error']"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1396","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1396"}]}
-RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1396","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1396"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1396/enabled - {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1396","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1396"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1396","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1396"}]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1396","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1396"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1396","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1396"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1396/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//span[contains(@id ,\"AddNewHO--typeSelect-arrow\")]"}
-RESULT: {"using":"xpath","value":"//span[contains(@id ,\"AddNewHO--typeSelect-arrow\")]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1770/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//div[contains(@id,\"typeSelect-valueStateText\")]//li[contains(text(), \"stock increase yard\")]"}
-RESULT: {"using":"xpath","value":"//div[contains(@id,\"typeSelect-valueStateText\")]//li[contains(text(), \"stock increase yard\")]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1771/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managehandovers-display-component---AddNewHO--dueDate","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanagehandovers-display-component---AddNewHO--dueDate"}]}
-RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"application-managehandovers-display-component---AddNewHO--dueDate","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanagehandovers-display-component---AddNewHO--dueDate"}]}
-RESULT: undefined
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1772"},"setValue",["12/08/25"]]}
-RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1772"},"setValue",["12/08/25"]]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//input[@id=\"generalSectionFrg--receiveYard-inner\"]"}
-RESULT: {"using":"xpath","value":"//input[@id=\"generalSectionFrg--receiveYard-inner\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1773/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1773/value - {"text":"DATAWD-Y-BORIA"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"DATAWD-Y-BORIA"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//ul[contains(@id,\"generalSectionFrg--receiveYard-popup-list-listUl\")]//li//span[contains(text(),'DATAWD-Y-BORIA')]"}
-RESULT: {"using":"xpath","value":"//ul[contains(@id,\"generalSectionFrg--receiveYard-popup-list-listUl\")]//li//span[contains(text(),'DATAWD-Y-BORIA')]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1797/click - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[contains(@id,\"anchor\")]//span//bdi[contains(text(),\"Items\")]"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"using":"xpath","value":"//button[contains(@id,\"anchor\")]//span//bdi[contains(text(),\"Items\")]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1798/click - {}
-RESULT: {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"addItemsStockIncDecButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addItemsStockIncDecButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1803/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//input[contains(@id, \"application-managehandovers-display-component---AddNewHO--smartFilterBarStockIncrease-btnBasicSearch-I\")]"}
-RESULT: {"using":"xpath","value":"//input[contains(@id, \"application-managehandovers-display-component---AddNewHO--smartFilterBarStockIncrease-btnBasicSearch-I\")]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1805/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1805/value - {"text":"Pve18nOqF_1"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"Pve18nOqF_1"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/actions - {"actions":[{"id":"action8","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {"actions":[{"id":"action8","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//div[@id=\"application-managehandovers-display-component---AddNewHO--popup-sa-CbBg\"]"}
-RESULT: {"using":"xpath","value":"//div[@id=\"application-managehandovers-display-component---AddNewHO--popup-sa-CbBg\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1854/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Select\")])[last()]"}
-RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Select\")])[last()]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1855/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"addItemsStockIncDecButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addItemsStockIncDecButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1803/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//input[contains(@id, \"application-managehandovers-display-component---AddNewHO--smartFilterBarStockIncrease-btnBasicSearch-I\")]"}
-RESULT: {"using":"xpath","value":"//input[contains(@id, \"application-managehandovers-display-component---AddNewHO--smartFilterBarStockIncrease-btnBasicSearch-I\")]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1871/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1871/value - {"text":"Pve18nOqF_2"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"Pve18nOqF_2"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/actions - {"actions":[{"id":"action9","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {"actions":[{"id":"action9","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//div[@id=\"application-managehandovers-display-component---AddNewHO--popup-sa-CbBg\"]"}
-RESULT: {"using":"xpath","value":"//div[@id=\"application-managehandovers-display-component---AddNewHO--popup-sa-CbBg\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1918/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Select\")])[last()]"}
-RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Select\")])[last()]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1919/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"AddNewHOSaveButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"AddNewHOSaveButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1924/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"receiptDatePicker","viewName":"etm.portal.ui.managehandovers.view.DetailExecuteHO","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"receiptDatePickeretmportal.ui.managehandovers.view.DetailExecuteHO"}]}
-RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"receiptDatePicker","viewName":"etm.portal.ui.managehandovers.view.DetailExecuteHO","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"receiptDatePickeretmportal.ui.managehandovers.view.DetailExecuteHO"}]}
-RESULT: undefined
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1973"},"setValue",["12/08/25"]]}
-RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1973"},"setValue",["12/08/25"]]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"(//table[@id=\"receiveDialog--hoItemsTable-listUl\"]//button[.//bdi[text()=\"Confirm\"]])[1]"}
-RESULT: {"using":"xpath","value":"(//table[@id=\"receiveDialog--hoItemsTable-listUl\"]//button[.//bdi[text()=\"Confirm\"]])[1]"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2003/rect - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/window/rect - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [92 bytes]","args":[]}
-RESULT: {"script":"<script> [92 bytes]","args":[]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/actions - {"actions":[{"id":"action10","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1855,"y":-524,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2003"}}]}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2003","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2003"},{"block":"center","inline":"nearest"}]}
-RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2003","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2003"},{"block":"center","inline":"nearest"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2003","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2003"}]}
-RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2003","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2003"}]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2003","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2003"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2003","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2003"}]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2003/click - {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"(//table[@id=\"receiveDialog--hoItemsTable-listUl\"]//button[.//bdi[text()=\"Confirm\"]])[2]"}
-RESULT: {"using":"xpath","value":"(//table[@id=\"receiveDialog--hoItemsTable-listUl\"]//button[.//bdi[text()=\"Confirm\"]])[2]"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2007/rect - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/window/rect - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [92 bytes]","args":[]}
-RESULT: {"script":"<script> [92 bytes]","args":[]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/actions - {"actions":[{"id":"action11","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1855,"y":-524,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2007"}}]}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2007","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2007"},{"block":"center","inline":"nearest"}]}
-RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2007","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2007"},{"block":"center","inline":"nearest"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2007","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2007"}]}
-RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2007","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2007"}]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2007","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2007"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2007","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2007"}]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2007/click - {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt= \"execHoReceiveButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt= \"execHoReceiveButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1962/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"css selector","value":"#shell-header-logo"}
-RESULT: {"using":"css selector","value":"#shell-header-logo"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.1373/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-]]></system-out>
-    </testcase>
-    <testcase classname="chrome.142_0_7444_176.windows.Bill_of_Resources_tests_for_bundle_creation_&amp;_replenishment_US131067_US131070" name="Should create a new bundle with the 2 RUs using onto first one US131067" time="65.549">
-      <system-out><![CDATA[
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Bill Of Resources"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Bill Of Resources\"}"}]}
-RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Bill Of Resources"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Bill Of Resources\"}"}]}
-RESULT: undefined
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//*[@id=\"__tile35\"]"}
-RESULT: {"using":"xpath","value":"//*[@id=\"__tile35\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.186/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//span[text()='Error']"}
-RESULT: {"using":"xpath","value":"//span[text()='Error']"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2254","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2254"}]}
-RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2254","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2254"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2254/enabled - {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2254","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2254"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2254","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2254"}]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2254","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2254"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2254","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2254"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2254/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//span[@id=\"application-billofresources-display-component---newBoR--typeSelect-arrow\"]"}
-RESULT: {"using":"xpath","value":"//span[@id=\"application-billofresources-display-component---newBoR--typeSelect-arrow\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2300/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//ul//li[contains(@id,\"newBoR--typeSelect-\") and text()=\"Bundle\"]"}
-RESULT: {"using":"xpath","value":"//ul//li[contains(@id,\"newBoR--typeSelect-\") and text()=\"Bundle\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2670/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//span[@id=\"application-billofresources-display-component---newBoR--headerRUInput-vhi\"]"}
-RESULT: {"using":"xpath","value":"//span[@id=\"application-billofresources-display-component---newBoR--headerRUInput-vhi\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2685/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//input[@id=\"application-billofresources-display-component---newBoR--ruDialogSearchField-I\"]"}
-RESULT: {"using":"xpath","value":"//input[@id=\"application-billofresources-display-component---newBoR--ruDialogSearchField-I\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2689/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2689/value - {"text":"Pve18nOqF_1"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"Pve18nOqF_1"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/actions - {"actions":[{"id":"action12","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {"actions":[{"id":"action12","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//table[@id=\"application-billofresources-display-component---newBoR--RusTable-listUl\"]//tbody/tr/td/span[contains(text(),\"Pve18nOqF_1\")]"}
-RESULT: {"using":"xpath","value":"//table[@id=\"application-billofresources-display-component---newBoR--RusTable-listUl\"]//tbody/tr/td/span[contains(text(),\"Pve18nOqF_1\")]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2709/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"ruValueHelpOkButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"ruValueHelpOkButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2711/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//input[@id=\"application-billofresources-display-component---newBoR--borDescInput-inner\"]"}
-RESULT: {"using":"xpath","value":"//input[@id=\"application-billofresources-display-component---newBoR--borDescInput-inner\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2348/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2348/value - {"text":"Pve18nOqF_1"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"Pve18nOqF_1"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"addItemNewButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addItemNewButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2724/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"(//div[@data-kt=\"borItemNewInput\"]//input[@aria-labelledby=\"application-billofresources-display-component---newBoR--itemInput\"])[1]"}
-RESULT: {"using":"xpath","value":"(//div[@data-kt=\"borItemNewInput\"]//input[@aria-labelledby=\"application-billofresources-display-component---newBoR--itemInput\"])[1]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2351/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2351/value - {"text":"10"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"10"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"(//div[@data-kt=\"itemRuDetailLiveSearchComboBox\"]//span)[1]"}
-RESULT: {"using":"xpath","value":"(//div[@data-kt=\"itemRuDetailLiveSearchComboBox\"]//span)[1]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2726/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//li[@data-kt=\"itemRuDetailLiveSearchComboBoxItem\"]//span[contains(text(),\"Pve18nOqF_2\")]"}
-RESULT: {"using":"xpath","value":"//li[@data-kt=\"itemRuDetailLiveSearchComboBoxItem\"]//span[contains(text(),\"Pve18nOqF_2\")]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2727/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"saveNewButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"saveNewButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2458/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//bdi[normalize-space()=\"State\"]/ancestor::div[contains(@class,\"sapUiVltCell\")]/following-sibling::div//span[contains(@class,\"sapMText\")]"}
-RESULT: {"using":"xpath","value":"//bdi[normalize-space()=\"State\"]/ancestor::div[contains(@class,\"sapUiVltCell\")]/following-sibling::div//span[contains(@class,\"sapMText\")]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2967","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2967"}]}
-RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2967","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2967"}]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"css selector","value":"#shell-header-logo"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"using":"css selector","value":"#shell-header-logo"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.2194/click - {}
-RESULT: {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-]]></system-out>
-    </testcase>
-    <testcase classname="chrome.142_0_7444_176.windows.Bill_of_Resources_tests_for_bundle_creation_&amp;_replenishment_US131067_US131070" name="Should create replenishment handover from BOR US131070" time="53.234">
+    <testcase classname="chrome.142_0_7444_176.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check if the number in the specified element is greater than 0" time="150.212">
       <failure/>
-      <error message="The element with selector &quot;//header[contains(@id, &quot;headerTitle&quot;)]/div[1]/div[2]/div[2]/span&quot; you are trying to pass into the execute method wasn't found"/>
+      <error message="Can't call getText on element with selector &quot;div.sapSuiteStackedMCBarLabel&quot; because element wasn't found"/>
       <system-out><![CDATA[
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/element - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
 RESULT: undefined
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//*[@id=\"__tile35\"]"}
-RESULT: {"using":"xpath","value":"//*[@id=\"__tile35\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.186/click - {}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: undefined
+RESULT: undefined
+RESULT: undefined
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: GET /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/screenshot - {}
 RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//span[text()='Error']"}
-RESULT: {"using":"xpath","value":"//span[text()='Error']"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3033","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3033"}]}
-RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3033","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3033"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3033/enabled - {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3033","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3033"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3033","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3033"}]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3033","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3033"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3033","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3033"}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
+COMMAND: GET /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/screenshot - {}
+COMMAND: GET /session/b323a8cc8fa79cdc36e2d9dc5dc0b269/screenshot - {}
 RESULT: {}
 RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//input[@id=\"application-billofresources-display-component---BillOfResources--smartFilterBar-btnBasicSearch-I\"]"}
-RESULT: {"using":"xpath","value":"//input[@id=\"application-billofresources-display-component---BillOfResources--smartFilterBar-btnBasicSearch-I\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3024/clear - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3024/value - {"text":"Pve18nOqF_1"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"text":"Pve18nOqF_1"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/actions - {"actions":[{"id":"action13","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
-RESULT: {"actions":[{"id":"action13","type":"key","parameters":{},"actions":[{"type":"keyDown","value":""},{"type":"pause","duration":10},{"type":"keyUp","value":""}]}]}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//table[contains(@id,\"BillOfResources--masterListBoRTable-listUl\")]/tbody/tr"}
-RESULT: {"using":"xpath","value":"//table[contains(@id,\"BillOfResources--masterListBoRTable-listUl\")]/tbody/tr"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3059/elements - {"using":"css selector","value":"td"}
-RESULT: {"using":"css selector","value":"td"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3065/text - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"(//span[contains(@id, \"imgNav\")])[1]"}
-RESULT: {"using":"xpath","value":"(//span[contains(@id, \"imgNav\")])[1]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3062/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"(//button[contains(@id,\"actionsToolbar-overflowButton\")])[1]"}
-RESULT: {"using":"xpath","value":"(//button[contains(@id,\"actionsToolbar-overflowButton\")])[1]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3330","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3330"}]}
-RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3330","ELEMENT":"f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3330"}]}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"replenishButton\"]"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"replenishButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3331/click - {}
-RESULT: {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"executeButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"executeButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.3347/click - {}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//header[contains(@id, \"headerTitle\")]/div[1]/div[2]/div[2]/span"}
-RESULT: {"using":"xpath","value":"//header[contains(@id, \"headerTitle\")]/div[1]/div[2]/div[2]/span"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
+COMMAND: DELETE /session/b323a8cc8fa79cdc36e2d9dc5dc0b269 - {}
 RESULT: {}
 ]]></system-out>
       <system-err><![CDATA[
-Error: The element with selector "//header[contains(@id, "headerTitle")]/div[1]/div[2]/div[2]/span" you are trying to pass into the execute method wasn't found
-    at Array.map (<anonymous>)
-    at async BillOfResourcesUtils.bundleReplenishment (D:\a\1\s\test\utils\pages\BillOfResources\billofresources-utils.js:110:29)
-    at async Context.<anonymous> (D:\a\1\s\test\specs\HTR\bill-of-resources.spec.js:87:9)
-]]></system-err>
-    </testcase>
-    <testcase classname="chrome.142_0_7444_176.windows.Bill_of_Resources_tests_for_bundle_creation_&amp;_replenishment_US131067_US131070" name="Should check the completeness of bundle created US131059" time="55.464">
-      <failure/>
-      <error message="element (&quot;//button[@data-kt=&quot;addBorMasterButton&quot;]&quot;) still not existing after 45000ms"/>
-      <system-out><![CDATA[
-RESULT: undefined
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//*[@id=\"__tile35\"]"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"using":"xpath","value":"//*[@id=\"__tile35\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element/f.F256E208842E3104F432D034E05ED284.d.C299AA0FA71541C190D86E18404CFE09.e.186/click - {}
-RESULT: {}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//span[text()='Error']"}
-RESULT: {"using":"xpath","value":"//span[text()='Error']"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/element - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: POST /session/c3a9dfdf46132f55534377e44ef47d1a/elements - {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {"using":"xpath","value":"//button[@data-kt=\"addBorMasterButton\"]"}
-RESULT: {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-COMMAND: GET /session/c3a9dfdf46132f55534377e44ef47d1a/screenshot - {}
-RESULT: {}
-RESULT: {}
-COMMAND: DELETE /session/c3a9dfdf46132f55534377e44ef47d1a - {}
-RESULT: {}
-]]></system-out>
-      <system-err><![CDATA[
-Error: element ("//button[@data-kt="addBorMasterButton"]") still not existing after 45000ms
-    at async GeneralUtilsFunctions.checkIfPageLoaded (D:\a\1\s\test\utils\general-utils-functions.js:23:9)
-    at async BillOfResourcesUtils.completenessCheck (D:\a\1\s\test\utils\pages\BillOfResources\billofresources-utils.js:182:9)
-    at async Context.<anonymous> (D:\a\1\s\test\specs\HTR\bill-of-resources.spec.js:91:9)
+Error: Can't call getText on element with selector "div.sapSuiteStackedMCBarLabel" because element wasn't found
+    at async Context.<anonymous> (D:\a\1\s\test\specs\TECH\check-QaLive-up.spec.js:56:22)
 ]]></system-err>
     </testcase>
   </testsuite>
