@@ -509,22 +509,36 @@
                             caseElement.textContent = `❌ ${caseName} - FAILED`;
                             caseElement.style.color = "red";
                             
+                            console.log(`=== FAILURE DETAILS for "${caseName}" ===`);
+                            
                             // Get failure details
                             let failureReason = failure.textContent?.trim() || '';
                             const failureMessage = failure.getAttribute('message')?.trim() || '';
                             const failureType = failure.getAttribute('type')?.trim() || '';
                             
+                            console.log('FAILURE: textContent:', failureReason ? `"${failureReason}"` : '(empty)');
+                            console.log('FAILURE: message attribute:', failureMessage ? `"${failureMessage}"` : '(empty)');
+                            console.log('FAILURE: type attribute:', failureType ? `"${failureType}"` : '(empty)');
+                            console.log('FAILURE: failure element HTML:', failure.outerHTML?.substring(0, 200) || '(no HTML)');
+                            
                             // Build meaningful failure message
                             let displayMessage = '';
                             if (failureMessage) {
                                 displayMessage = failureMessage;
+                                console.log('FAILURE: Using message attribute');
                             } else if (failureType) {
                                 displayMessage = `Error Type: ${failureType}`;
+                                console.log('FAILURE: Using type attribute');
                             } else if (failureReason) {
                                 displayMessage = failureReason;
+                                console.log('FAILURE: Using textContent');
                             } else {
                                 displayMessage = 'Test failed - no failure details available';
+                                console.log('FAILURE: No details found, using fallback message');
                             }
+                            
+                            console.log('FAILURE: Final display message:', `"${displayMessage}"`);
+                            console.log('=== END FAILURE DETAILS ===');
                             
                             const failureMessageElement = document.createElement('p');
                             failureMessageElement.textContent = `  - Reason: ${displayMessage}`;
@@ -547,35 +561,52 @@
 
         // Centralized visitor counter using CountAPI (free service)
         async function updateVisitorCount() {
+            console.log('=== VISITOR COUNTER: Starting update ===');
             const countApiUrl = 'https://api.countapi.xyz/hit/bogdanduca-etm-reports/visits';
+            console.log('VISITOR COUNTER: API URL:', countApiUrl);
             
             try {
+                console.log('VISITOR COUNTER: Fetching...');
                 const response = await fetch(countApiUrl);
-                const data = await response.json();
+                console.log('VISITOR COUNTER: Response status:', response.status);
                 
-                if (data && data.value) {
-                    document.getElementById('visit-count').textContent = data.value.toLocaleString();
-                    console.log(`Total page visits: ${data.value}`);
+                const data = await response.json();
+                console.log('VISITOR COUNTER: Response data:', data);
+                
+                if (data && data.value !== undefined) {
+                    const count = data.value.toLocaleString();
+                    document.getElementById('visit-count').textContent = count;
+                    console.log(`VISITOR COUNTER: Successfully set count to ${count}`);
                 } else {
+                    console.error('VISITOR COUNTER: Invalid data structure:', data);
                     throw new Error('Invalid response from counter API');
                 }
             } catch (error) {
-                console.error('Error fetching visit count:', error);
+                console.error('VISITOR COUNTER: ERROR -', error);
+                console.error('VISITOR COUNTER: Error details:', error.message, error.stack);
                 document.getElementById('visit-count').textContent = 'Error loading';
             }
+            console.log('=== VISITOR COUNTER: Finished ===');
         }
 
         // Update visitor count on page load
+        console.log('>>> PAGE LOAD: Initializing visitor counter...');
         updateVisitorCount();
 
         // Load all pipelines on page load
+        console.log('>>> PAGE LOAD: Initializing pipeline data load...');
         loadAllPipelines();
 
         // Auto-refresh every 1 minute (60000 milliseconds)
-        setInterval(() => {
-            console.log("--- Auto-refreshing reports ---");
+        console.log('>>> PAGE LOAD: Setting up auto-refresh (60 seconds)...');
+        const refreshInterval = setInterval(() => {
+            const now = new Date().toLocaleTimeString();
+            console.log(`\n========================================`);
+            console.log(`AUTO-REFRESH TRIGGERED at ${now}`);
+            console.log(`========================================`);
             loadAllPipelines();
         }, 60000); // 1 minute
+        console.log('>>> PAGE LOAD: Auto-refresh interval created with ID:', refreshInterval);
     </script>
 </body>
 </html>
