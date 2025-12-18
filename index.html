@@ -202,6 +202,10 @@
         Welcome to <img src="reports/etm.webp" alt="ETM Logo"> Test Reports
     </h1>
 
+    <div style="text-align: right; margin-bottom: 10px; font-size: 0.9em; color: #666;">
+        <span id="visit-counter">👁️ Total Page Views: <span id="visit-count">Loading...</span></span>
+    </div>
+
     <div class="button-container">
         <a href="https://dev.azure.com/bebuse/ETM/_build?definitionScope=%5CGitHub%5CPortal%5CTesting" class="button-link" target="_blank">All Testing Pipelines</a>
         <a href="https://dev.azure.com/bebuse/d024ff75-3653-4e94-a527-509e0d7c7279/c9487d5a-ddfa-4b52-882f-3518a62f0188/_dashboards/dashboard/96fd841f-fd31-42de-8e84-502472485591" class="button-link" target="_blank">Automation Overview</a>
@@ -504,12 +508,31 @@
                         if (failure) {
                             caseElement.textContent = `❌ ${caseName} - FAILED`;
                             caseElement.style.color = "red";
-                            const failureMessage = document.createElement('p');
-                            failureMessage.textContent = `  - Reason: ${failure.textContent}`;
-                            failureMessage.style.fontStyle = "italic";
-                            failureMessage.style.marginLeft = "35px";
+                            
+                            // Get failure details
+                            let failureReason = failure.textContent?.trim() || '';
+                            const failureMessage = failure.getAttribute('message')?.trim() || '';
+                            const failureType = failure.getAttribute('type')?.trim() || '';
+                            
+                            // Build meaningful failure message
+                            let displayMessage = '';
+                            if (failureMessage) {
+                                displayMessage = failureMessage;
+                            } else if (failureType) {
+                                displayMessage = `Error Type: ${failureType}`;
+                            } else if (failureReason) {
+                                displayMessage = failureReason;
+                            } else {
+                                displayMessage = 'Test failed - no failure details available';
+                            }
+                            
+                            const failureMessageElement = document.createElement('p');
+                            failureMessageElement.textContent = `  - Reason: ${displayMessage}`;
+                            failureMessageElement.style.fontStyle = "italic";
+                            failureMessageElement.style.marginLeft = "35px";
+                            failureMessageElement.style.color = "#d32f2f";
                             testContentDiv.appendChild(caseElement);
-                            testContentDiv.appendChild(failureMessage);
+                            testContentDiv.appendChild(failureMessageElement);
                         } else {
                             caseElement.textContent = `✅ ${caseName} - PASSED`;
                             caseElement.style.color = "green";
@@ -522,14 +545,37 @@
             return { passed, failed, totalFileTimeSeconds }; // Now correctly returns the defined variable
         }
 
+        // Centralized visitor counter using CountAPI (free service)
+        async function updateVisitorCount() {
+            const countApiUrl = 'https://api.countapi.xyz/hit/bogdanduca-etm-reports/visits';
+            
+            try {
+                const response = await fetch(countApiUrl);
+                const data = await response.json();
+                
+                if (data && data.value) {
+                    document.getElementById('visit-count').textContent = data.value.toLocaleString();
+                    console.log(`Total page visits: ${data.value}`);
+                } else {
+                    throw new Error('Invalid response from counter API');
+                }
+            } catch (error) {
+                console.error('Error fetching visit count:', error);
+                document.getElementById('visit-count').textContent = 'Error loading';
+            }
+        }
+
+        // Update visitor count on page load
+        updateVisitorCount();
+
         // Load all pipelines on page load
         loadAllPipelines();
 
-        // Auto-refresh every 5 minutes (300000 milliseconds)
+        // Auto-refresh every 1 minute (60000 milliseconds)
         setInterval(() => {
             console.log("--- Auto-refreshing reports ---");
             loadAllPipelines();
-        }, 300000); // 5 minutes
+        }, 60000); // 1 minute
     </script>
 </body>
 </html>
