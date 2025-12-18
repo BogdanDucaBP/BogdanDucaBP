@@ -524,6 +524,12 @@
 
         // Load all pipelines on page load
         loadAllPipelines();
+
+        // Auto-refresh every 5 minutes (300000 milliseconds)
+        setInterval(() => {
+            console.log("--- Auto-refreshing reports ---");
+            loadAllPipelines();
+        }, 300000); // 5 minutes
     </script>
 </body>
 </html>
