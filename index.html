@@ -502,13 +502,9 @@
                     const testCases = suite.querySelectorAll('testcase');
                     testCases.forEach(testCase => {
                         const caseName = testCase.getAttribute('name') || 'Unnamed Test Case';
-                        const caseElement = document.createElement('p');
 
                         const failure = testCase.querySelector('failure');
                         if (failure) {
-                            caseElement.textContent = `❌ ${caseName} - FAILED`;
-                            caseElement.style.color = "red";
-                            
                             console.log(`=== FAILURE DETAILS for "${caseName}" ===`);
                             
                             // Get failure details
@@ -524,30 +520,31 @@
                             // Build meaningful failure message
                             let displayMessage = '';
                             if (failureMessage) {
-                                displayMessage = failureMessage;
+                                displayMessage = ` - ${failureMessage}`;
                                 console.log('FAILURE: Using message attribute');
                             } else if (failureType) {
-                                displayMessage = `Error Type: ${failureType}`;
+                                displayMessage = ` - Error Type: ${failureType}`;
                                 console.log('FAILURE: Using type attribute');
                             } else if (failureReason) {
-                                displayMessage = failureReason;
+                                displayMessage = ` - ${failureReason}`;
                                 console.log('FAILURE: Using textContent');
                             } else {
-                                displayMessage = 'Test failed - no failure details available';
+                                displayMessage = ' - Test failed (no details available)';
                                 console.log('FAILURE: No details found, using fallback message');
                             }
                             
                             console.log('FAILURE: Final display message:', `"${displayMessage}"`);
                             console.log('=== END FAILURE DETAILS ===');
                             
+                            // Single combined line: "- Reason: ❌ test name - FAILED - details"
                             const failureMessageElement = document.createElement('p');
-                            failureMessageElement.textContent = `  - Reason: ${displayMessage}`;
+                            failureMessageElement.textContent = `  - Reason: ❌ ${caseName} - FAILED${displayMessage}`;
                             failureMessageElement.style.fontStyle = "italic";
                             failureMessageElement.style.marginLeft = "35px";
                             failureMessageElement.style.color = "#d32f2f";
-                            testContentDiv.appendChild(caseElement);
                             testContentDiv.appendChild(failureMessageElement);
                         } else {
+                            const caseElement = document.createElement('p');
                             caseElement.textContent = `✅ ${caseName} - PASSED`;
                             caseElement.style.color = "green";
                             testContentDiv.appendChild(caseElement);
