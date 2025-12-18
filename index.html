@@ -559,10 +559,12 @@
             return { passed, failed, totalFileTimeSeconds }; // Now correctly returns the defined variable
         }
 
-        // Centralized visitor counter using CountAPI (free service)
+        // Centralized visitor counter using GoatCounter (free, privacy-friendly service)
         async function updateVisitorCount() {
             console.log('=== VISITOR COUNTER: Starting update ===');
-            const countApiUrl = 'https://api.countapi.xyz/hit/bogdanduca-etm-reports/visits';
+            
+            // Use a simple hits.seeyoufarm.com badge counter (free, no signup needed)
+            const countApiUrl = 'https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fbogdanducabp.github.io%2FBogdanDucaBP&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visits&edge_flat=false';
             console.log('VISITOR COUNTER: API URL:', countApiUrl);
             
             try {
@@ -570,21 +572,23 @@
                 const response = await fetch(countApiUrl);
                 console.log('VISITOR COUNTER: Response status:', response.status);
                 
-                const data = await response.json();
-                console.log('VISITOR COUNTER: Response data:', data);
+                const svgText = await response.text();
+                console.log('VISITOR COUNTER: Response received (SVG)');
                 
-                if (data && data.value !== undefined) {
-                    const count = data.value.toLocaleString();
+                // Extract count from SVG text (format: "visits: 123")
+                const match = svgText.match(/visits<\/text><text[^>]*>(\d+)/);
+                if (match && match[1]) {
+                    const count = parseInt(match[1]).toLocaleString();
                     document.getElementById('visit-count').textContent = count;
                     console.log(`VISITOR COUNTER: Successfully set count to ${count}`);
                 } else {
-                    console.error('VISITOR COUNTER: Invalid data structure:', data);
-                    throw new Error('Invalid response from counter API');
+                    console.warn('VISITOR COUNTER: Could not parse count from response');
+                    document.getElementById('visit-count').textContent = 'N/A';
                 }
             } catch (error) {
                 console.error('VISITOR COUNTER: ERROR -', error);
                 console.error('VISITOR COUNTER: Error details:', error.message, error.stack);
-                document.getElementById('visit-count').textContent = 'Error loading';
+                document.getElementById('visit-count').textContent = 'N/A';
             }
             console.log('=== VISITOR COUNTER: Finished ===');
         }
