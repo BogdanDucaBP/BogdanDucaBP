@@ -161,6 +161,22 @@
             padding-bottom: 5px;
             border-bottom: 2px solid #007bff;
         }
+
+        /* Container for side-by-side pipeline sections */
+        .pipelines-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .pipeline-section {
+            flex: 1;
+            min-width: 400px;
+        }
+
+        .pipeline-section h2 {
+            margin-top: 10px;
+        }
         /* --- END CSS FOR TOTAL STATS SECTION --- */
 
         /* --- NEW CSS for Title with Logo --- */
@@ -203,34 +219,40 @@
             <span id="total-run">0</span> Total run |
             <span id="total-passed">0</span> Total Passed |
             <span id="total-failed">0</span> Total Failed |
-            <span id="grand-total-time">0h:00m:00s</span>
+            <span id="grand-total-time">0h:00m:00s</span> Total Execution Time |
         </div>
     </div>
 
-    <h2>Quality Pipeline Reports</h2>
-    <div id="quality-stats" class="pipeline-stats">
-        <div>
-            <span class="pipeline-total-run">0</span> Total run |
-            <span class="pipeline-total-passed">0</span> Total Passed |
-            <span class="pipeline-total-failed">0</span> Total Failed |
-            <span class="pipeline-total-time">0h:00m:00s</span>
+    <div class="pipelines-container">
+        <div class="pipeline-section">
+            <h2>Quality Pipeline Reports</h2>
+            <div id="quality-stats" class="pipeline-stats">
+                <div>
+                    <span class="pipeline-total-run">0</span> Total run |
+                    <span class="pipeline-total-passed">0</span> Total Passed |
+                    <span class="pipeline-total-failed">0</span> Total Failed |
+                    <span class="pipeline-total-time">0h:00m:00s</span> Total Execution Time |
+                </div>
+            </div>
+            <div id="quality-reports-container" class="reports-container">
+                <p>Loading quality reports...</p>
+            </div>
         </div>
-    </div>
-    <div id="quality-reports-container" class="reports-container">
-        <p>Loading quality reports...</p>
-    </div>
 
-    <h2>Develop Pipeline Reports</h2>
-    <div id="develop-stats" class="pipeline-stats">
-        <div>
-            <span class="pipeline-total-run">0</span> Total run |
-            <span class="pipeline-total-passed">0</span> Total Passed |
-            <span class="pipeline-total-failed">0</span> Total Failed |
-            <span class="pipeline-total-time">0h:00m:00s</span>
+        <div class="pipeline-section">
+            <h2>Develop Pipeline Reports</h2>
+            <div id="develop-stats" class="pipeline-stats">
+                <div>
+                    <span class="pipeline-total-run">0</span> Total run |
+                    <span class="pipeline-total-passed">0</span> Total Passed |
+                    <span class="pipeline-total-failed">0</span> Total Failed |
+                    <span class="pipeline-total-time">0h:00m:00s</span> Total Execution Time |
+                </div>
+            </div>
+            <div id="develop-reports-container" class="reports-container">
+                <p>Loading develop reports...</p>
+            </div>
         </div>
-    </div>
-    <div id="develop-reports-container" class="reports-container">
-        <p>Loading develop reports...</p>
     </div>
 
     <script>
