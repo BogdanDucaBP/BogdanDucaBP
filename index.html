@@ -123,7 +123,7 @@
         /* --- END NEW CSS --- */
 
         /* --- CSS FOR TOTAL STATS SECTION --- */
-        #total-stats {
+        #total-stats, .pipeline-stats {
             background-color: #e9f5ff; /* Light blue background to make it stand out */
             border: 1px solid #cce5ff; /* Light blue border */
             border-radius: 8px; /* Slightly more rounded corners */
@@ -138,20 +138,28 @@
             align-items: center; /* Center content vertically */
         }
 
-        #total-stats div {
+        #total-stats div, .pipeline-stats div {
             font-weight: inherit; /* Inherit font-weight from #total-stats */
         }
 
         /* Adjusting specific span colors to override the overall bold if needed, but not font-weight */
-        #total-run { color: #007bff; } /* Blue for total run */
-        #total-passed { color: #28a745; } /* Green for passed */
-        #total-failed { color: #dc3545; } /* Red for failed */
-        #grand-total-time { color: #6f42c1; } /* A purple color for total time */
-
+        #total-run, .pipeline-total-run { color: #007bff; } /* Blue for total run */
+        #total-passed, .pipeline-total-passed { color: #28a745; } /* Green for passed */
+        #total-failed, .pipeline-total-failed { color: #dc3545; } /* Red for failed */
+        #grand-total-time, .pipeline-total-time { color: #6f42c1; } /* A purple color for total time */
 
         /* Ensuring the pipes are also bold and same size */
-        #total-stats span {
+        #total-stats span, .pipeline-stats span {
             font-weight: inherit; /* Ensure all spans inherit the bold from the parent */
+        }
+
+        /* Pipeline section headers */
+        h2 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #007bff;
         }
         /* --- END CSS FOR TOTAL STATS SECTION --- */
 
@@ -195,8 +203,30 @@
         </div>
     </div>
 
-    <div id="reports-container">
-        <p>Loading test reports...</p>
+    <h2>Quality Pipeline Reports</h2>
+    <div id="quality-stats" class="pipeline-stats">
+        <div>
+            <span class="pipeline-total-run">0</span> Total run |
+            <span class="pipeline-total-passed">0</span> Total Passed |
+            <span class="pipeline-total-failed">0</span> Total Failed |
+            <span class="pipeline-total-time">0h:00m:00s</span>
+        </div>
+    </div>
+    <div id="quality-reports-container" class="reports-container">
+        <p>Loading quality reports...</p>
+    </div>
+
+    <h2>Develop Pipeline Reports</h2>
+    <div id="develop-stats" class="pipeline-stats">
+        <div>
+            <span class="pipeline-total-run">0</span> Total run |
+            <span class="pipeline-total-passed">0</span> Total Passed |
+            <span class="pipeline-total-failed">0</span> Total Failed |
+            <span class="pipeline-total-time">0h:00m:00s</span>
+        </div>
+    </div>
+    <div id="develop-reports-container" class="reports-container">
+        <p>Loading develop reports...</p>
     </div>
 
     <script>
@@ -211,19 +241,18 @@
             return `${hours}h:${pad(minutes)}m:${pad(seconds)}s`;
         }
 
-        async function fetchReportsFromGitHub() {
+        async function fetchReportsFromGitHub(pipelineName, reportsPath, filePrefix, containerId, statsId) {
             const repoOwner = "BogdanDucaBP";  // Replace with your GitHub username or org
             const repoName = "BogdanDucaBP";            // Replace with your repository name
-            const reportsPath = "reports";              // The folder containing reports
             const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${reportsPath}`;
 
-            const reportsContainer = document.getElementById('reports-container');
-            reportsContainer.innerHTML = '<p>Loading test reports...</p>'; // Reset and show loading message
+            const reportsContainer = document.getElementById(containerId);
+            reportsContainer.innerHTML = `<p>Loading ${pipelineName} reports...</p>`; // Reset and show loading message
 
             let totalRun = 0, totalPassed = 0, totalFailed = 0;
             let grandTotalExecutionTimeSeconds = 0;
 
-            console.log("--- Starting fetchReportsFromGitHub ---");
+            console.log(`--- Starting fetchReportsFromGitHub for ${pipelineName} ---`);
             console.log("API URL:", apiUrl);
 
             try {
@@ -233,15 +262,15 @@
                 }
 
                 const files = await response.json();
-                const xmlFiles = files.filter(file => file.name.endsWith('.xml'));
+                const xmlFiles = files.filter(file => file.name.endsWith('.xml') && file.name.startsWith(filePrefix));
 
                 console.log("Files found in repo:", files.length);
-                console.log("XML files filtered:", xmlFiles.length, xmlFiles.map(f => f.name));
+                console.log(`XML files filtered for ${pipelineName}:`, xmlFiles.length, xmlFiles.map(f => f.name));
 
                 if (xmlFiles.length === 0) {
-                    reportsContainer.innerHTML = '<p>No XML test reports found in the specified GitHub path.</p>';
-                    console.warn("No XML test reports found.");
-                    return; // Exit if no XML files
+                    reportsContainer.innerHTML = `<p>No XML test reports found for ${pipelineName}.</p>`;
+                    console.warn(`No XML test reports found for ${pipelineName}.`);
+                    return { totalRun: 0, totalPassed: 0, totalFailed: 0, grandTotalExecutionTimeSeconds: 0 }; // Return zeros
                 }
 
                 reportsContainer.innerHTML = ''; // Clear loading message once files are found
@@ -291,16 +320,46 @@
                     }
                 }
 
-                document.getElementById('total-run').textContent = totalRun;
-                document.getElementById('total-passed').textContent = totalPassed;
-                document.getElementById('total-failed').textContent = totalFailed;
-                document.getElementById('grand-total-time').textContent = formatDuration(grandTotalExecutionTimeSeconds);
-                console.log("--- Finished fetchReportsFromGitHub. Final Totals Updated ---");
+                // Update pipeline-specific stats
+                const statsContainer = document.getElementById(statsId);
+                statsContainer.querySelector('.pipeline-total-run').textContent = totalRun;
+                statsContainer.querySelector('.pipeline-total-passed').textContent = totalPassed;
+                statsContainer.querySelector('.pipeline-total-failed').textContent = totalFailed;
+                statsContainer.querySelector('.pipeline-total-time').textContent = formatDuration(grandTotalExecutionTimeSeconds);
+                console.log(`--- Finished fetchReportsFromGitHub for ${pipelineName}. Final Totals Updated ---`);
+
+                return { totalRun, totalPassed, totalFailed, grandTotalExecutionTimeSeconds };
 
             } catch (error) {
-                console.error("Critical error fetching reports list:", error);
-                reportsContainer.innerHTML = `<p style="color:red;">Error fetching reports list: ${error.message}</p>`;
+                console.error(`Critical error fetching ${pipelineName} reports list:`, error);
+                reportsContainer.innerHTML = `<p style="color:red;">Error fetching ${pipelineName} reports list: ${error.message}</p>`;
+                return { totalRun: 0, totalPassed: 0, totalFailed: 0, grandTotalExecutionTimeSeconds: 0 };
             }
+        }
+
+        async function loadAllPipelines() {
+            console.log("--- Loading all pipeline reports ---");
+
+            // Fetch both pipelines in parallel from the same 'reports' folder, filtered by filename prefix
+            const [qualityStats, developStats] = await Promise.all([
+                fetchReportsFromGitHub('Quality', 'reports', 'QUALITY_', 'quality-reports-container', 'quality-stats'),
+                fetchReportsFromGitHub('Develop', 'reports', 'DEVELOP_', 'develop-reports-container', 'develop-stats')
+            ]);
+
+            // Calculate grand totals across both pipelines
+            const grandTotalRun = qualityStats.totalRun + developStats.totalRun;
+            const grandTotalPassed = qualityStats.totalPassed + developStats.totalPassed;
+            const grandTotalFailed = qualityStats.totalFailed + developStats.totalFailed;
+            const grandTotalTime = qualityStats.grandTotalExecutionTimeSeconds + developStats.grandTotalExecutionTimeSeconds;
+
+            // Update overall stats
+            document.getElementById('total-run').textContent = grandTotalRun;
+            document.getElementById('total-passed').textContent = grandTotalPassed;
+            document.getElementById('total-failed').textContent = grandTotalFailed;
+            document.getElementById('grand-total-time').textContent = formatDuration(grandTotalTime);
+
+            console.log("--- All pipelines loaded. Grand totals updated ---");
+            console.log(`Grand Totals: Run=${grandTotalRun}, Passed=${grandTotalPassed}, Failed=${grandTotalFailed}, Time=${grandTotalTime}s`);
         }
 
 
@@ -404,14 +463,15 @@
 
                     // Only add suite header if there's a meaningful name or time, or if there are test cases
                     if (suiteName !== 'Unnamed Suite' || !isNaN(suiteTime) || suite.querySelectorAll('testcase').length > 0) {
-                        const suiteElement = document.createElement('p');
-                        suiteElement.classList.add('test-suite-name');
-                        suiteElement.textContent = `Test Suite: ${suiteName}${timeDisplay}`;
-                        testContentDiv.appendChild(suiteElement);
-                    }
+            console.log(`--- Finished displayXml for: ${headingText} ---`);
+            return { passed, failed, totalFileTimeSeconds }; // Now correctly returns the defined variable
+        }
 
-
-                    const testCases = suite.querySelectorAll('testcase');
+        // Load all pipelines on page load
+        loadAllPipelines();
+    </script>
+</body>
+</html>             const testCases = suite.querySelectorAll('testcase');
                     testCases.forEach(testCase => {
                         const caseName = testCase.getAttribute('name') || 'Unnamed Test Case';
                         const caseElement = document.createElement('p');
