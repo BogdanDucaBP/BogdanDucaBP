@@ -146,6 +146,8 @@
         #total-run { color: #007bff; } /* Blue for total run */
         #total-passed { color: #28a745; } /* Green for passed */
         #total-failed { color: #dc3545; } /* Red for failed */
+        #grand-total-time { color: #6f42c1; } /* A purple color for total time */
+
 
         /* Ensuring the pipes are also bold and same size */
         #total-stats span {
@@ -188,7 +190,8 @@
         <div>
             <span id="total-run">0</span> Total run |
             <span id="total-passed">0</span> Total Passed |
-            <span id="total-failed">0</span> Total Failed
+            <span id="total-failed">0</span> Total Failed |
+            <span id="grand-total-time">0h:00m:00s</span>
         </div>
     </div>
 
@@ -197,6 +200,17 @@
     </div>
 
     <script>
+        // Helper function to format time in H:M:S
+        function formatDuration(totalSeconds) {
+            const hours = Math.floor(totalSeconds / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const seconds = Math.floor(totalSeconds % 60);
+
+            const pad = (num) => num.toString().padStart(2, '0'); // Helper for leading zeros
+
+            return `${hours}h:${pad(minutes)}m:${pad(seconds)}s`;
+        }
+
         async function fetchReportsFromGitHub() {
             const repoOwner = "BogdanDucaBP";  // Replace with your GitHub username or org
             const repoName = "BogdanDucaBP";            // Replace with your repository name
@@ -204,103 +218,171 @@
             const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${reportsPath}`;
 
             const reportsContainer = document.getElementById('reports-container');
-            reportsContainer.innerHTML = ''; // Clear the reports container before displaying new data
+            reportsContainer.innerHTML = '<p>Loading test reports...</p>'; // Reset and show loading message
 
             let totalRun = 0, totalPassed = 0, totalFailed = 0;
+            let grandTotalExecutionTimeSeconds = 0;
+
+            console.log("--- Starting fetchReportsFromGitHub ---");
+            console.log("API URL:", apiUrl);
 
             try {
                 const response = await fetch(apiUrl);
-                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status} for ${apiUrl}`);
+                }
 
                 const files = await response.json();
                 const xmlFiles = files.filter(file => file.name.endsWith('.xml'));
 
-                // Loop through each XML file and display its contents
+                console.log("Files found in repo:", files.length);
+                console.log("XML files filtered:", xmlFiles.length, xmlFiles.map(f => f.name));
+
+                if (xmlFiles.length === 0) {
+                    reportsContainer.innerHTML = '<p>No XML test reports found in the specified GitHub path.</p>';
+                    console.warn("No XML test reports found.");
+                    return; // Exit if no XML files
+                }
+
+                reportsContainer.innerHTML = ''; // Clear loading message once files are found
+
                 for (const file of xmlFiles) {
                     const fileUrl = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/${reportsPath}/${file.name}`;
+                    console.log(`Attempting to fetch file: ${file.name} from ${fileUrl}`);
 
                     try {
                         const fileResponse = await fetch(fileUrl);
-                        if (!fileResponse.ok) throw new Error(`HTTP error! Status: ${fileResponse.status}`);
+                        if (!fileResponse.ok) {
+                            throw new Error(`HTTP error! Status: ${fileResponse.status} for ${file.name}`);
+                        }
 
                         const xmlText = await fileResponse.text();
+                        console.log(`Successfully fetched ${file.name}. Size: ${xmlText.length} characters.`);
+
                         const parser = new DOMParser();
                         const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
 
-                        // Pass the xmlDoc to displayXml to extract total time
-                        const { passed, failed } = displayXml(xmlDoc, file.name, reportsContainer);
+                        // Check for XML parsing errors
+                        const errorNode = xmlDoc.querySelector('parsererror');
+                        if (errorNode) {
+                            console.error(`Error parsing XML for ${file.name}:`, errorNode.textContent);
+                            const errorP = document.createElement('p');
+                            errorP.style.color = 'red';
+                            errorP.textContent = `Error parsing ${file.name}: ${errorNode.textContent}`;
+                            reportsContainer.appendChild(errorP);
+                            continue; // Skip this file and proceed to the next
+                        }
+                        console.log(`Parsed XML document for ${file.name}:`, xmlDoc);
+
+                        const { passed, failed, totalFileTimeSeconds } = displayXml(xmlDoc, file.name, reportsContainer);
                         totalPassed += passed;
                         totalFailed += failed;
                         totalRun += passed + failed;
+                        grandTotalExecutionTimeSeconds += totalFileTimeSeconds;
+                        console.log(`Processed ${file.name}: Passed=${passed}, Failed=${failed}, Time=${totalFileTimeSeconds}s. Grand Totals: Run=${totalRun}, Passed=${totalPassed}, Failed=${totalFailed}, Time=${grandTotalExecutionTimeSeconds}s`);
+
                     } catch (fileError) {
-                        console.error(`Error fetching ${file.name}:`, fileError);  // Log error to console
+                        console.error(`Error processing file ${file.name}:`, fileError);
+                        const errorP = document.createElement('p');
+                        errorP.style.color = 'red';
+                        // Fix for ReferenceError: removed reference to totalFileTimeSeconds here
+                        errorP.textContent = `Could not process ${file.name}: ${fileError.message}`;
+                        reportsContainer.appendChild(errorP);
                     }
                 }
 
-                // Update the total stats
                 document.getElementById('total-run').textContent = totalRun;
                 document.getElementById('total-passed').textContent = totalPassed;
                 document.getElementById('total-failed').textContent = totalFailed;
+                document.getElementById('grand-total-time').textContent = formatDuration(grandTotalExecutionTimeSeconds);
+                console.log("--- Finished fetchReportsFromGitHub. Final Totals Updated ---");
 
             } catch (error) {
-                console.error("Error fetching reports list:", error);  // Log error to console
-                reportsContainer.innerHTML = `<p>Error fetching reports list: ${error.message}</p>`;
+                console.error("Critical error fetching reports list:", error);
+                reportsContainer.innerHTML = `<p style="color:red;">Error fetching reports list: ${error.message}</p>`;
             }
         }
 
 
         function displayXml(xmlDoc, headingText, reportsContainer) {
+            console.log(`--- displayXml for file: ${headingText} ---`);
             let passed = 0;
             let failed = 0;
-            let totalSuiteTimeSeconds = 0; // Keep in seconds initially for accuracy
+            let totalFileTimeSeconds = 0; // Corrected variable name for consistency
 
-            const testSuites = xmlDoc.querySelectorAll('testsuite');
+            // Try to find testsuites or single testsuite as root
+            let testSuites = xmlDoc.querySelectorAll('testsuite');
+            // If no testsuite elements are found, check if the root itself is a testsuite
+            if (testSuites.length === 0 && xmlDoc.documentElement && xmlDoc.documentElement.tagName === 'testsuite') {
+                testSuites = [xmlDoc.documentElement]; // Treat the root as the only testsuite
+                console.log(`Root element is 'testsuite'. Treating as single test suite.`);
+            }
 
+            console.log(`Found ${testSuites.length} <testsuite> elements in ${headingText}.`);
+
+            if (testSuites.length === 0) {
+                 console.warn(`No <testsuite> elements found in ${headingText}. It might be empty or malformed.`);
+                 const testSuitesContainer = xmlDoc.querySelector('testsuites');
+                 if (testSuitesContainer) {
+                     console.warn(`Found a <testsuites> container but no <testsuite> children within it for ${headingText}.`);
+                 }
+                 return { passed: 0, failed: 0, totalFileTimeSeconds: 0 }; // Return zeros immediately
+            }
+
+            // First pass to calculate total time and ensure time attribute is handled
             testSuites.forEach(suite => {
-                const suiteTime = parseFloat(suite.getAttribute('time'));
-                if (!isNaN(suiteTime)) {
-                    totalSuiteTimeSeconds += suiteTime; // Accumulate time from each testsuite
-                }
+                const suiteName = suite.getAttribute('name') || 'Unnamed Suite';
+                const suiteTimeStr = suite.getAttribute('time');
+                const suiteTime = parseFloat(suiteTimeStr);
 
+                if (!isNaN(suiteTime)) {
+                    totalFileTimeSeconds += suiteTime; // Accumulate using the correct variable
+                } else {
+                    console.warn(`Suite "${suiteName}" in ${headingText} has invalid or missing 'time' attribute: "${suiteTimeStr}"`);
+                }
+                console.log(`Processing suite: "${suiteName}" (Time: ${suiteTime || 'N/A'}s)`);
+            });
+
+            // Second pass for counting passed/failed (after time accumulation)
+            // This loop was previously flawed; resetting and re-counting ensures correctness.
+            passed = 0;
+            failed = 0;
+            testSuites.forEach(suite => {
                 const testCases = suite.querySelectorAll('testcase');
                 testCases.forEach(testCase => {
                     const failure = testCase.querySelector('failure');
                     if (failure) {
-                        failed++;
+                        failed++; // Correct: Increment failed for failures
                     } else {
-                        passed++;
+                        passed++; // Correct: Increment passed for non-failures
                     }
                 });
             });
 
-            const totalTests = passed + failed;
 
-            // Create a details element for the entire report file
+            const totalTests = passed + failed;
+            console.log(`Summary for ${headingText}: Total Tests: ${totalTests}, Passed: ${passed}, Failed: ${failed}, Total Time: ${totalFileTimeSeconds}s`);
+
             const detailsElement = document.createElement('details');
             reportsContainer.appendChild(detailsElement);
 
-            // Set class based on success/failure status
             if (failed > 0) {
                 detailsElement.classList.add('failure');
             } else if (passed > 0) {
                 detailsElement.classList.add('success');
             } else {
-                detailsElement.classList.add('neutral'); // For reports with no tests
+                detailsElement.classList.add('neutral');
             }
 
-            // Create a summary element for the report file title (TEST-FileName.xml)
             const summaryElement = document.createElement('summary');
-
-            // *** NEW/MODIFIED: Calculate time in minutes for the summary ***
             let totalTimeDisplay = '';
-            if (totalSuiteTimeSeconds > 0) {
-                const totalSuiteTimeMinutes = totalSuiteTimeSeconds / 60;
+            if (totalFileTimeSeconds > 0) { // Use the correct variable
+                const totalSuiteTimeMinutes = totalFileTimeSeconds / 60; // Use the correct variable
                 totalTimeDisplay = ` (Execution Time: ${totalSuiteTimeMinutes.toFixed(2)} min)`;
             }
             summaryElement.textContent = `${headingText} (Total: ${totalTests} | Failed: ${failed})${totalTimeDisplay}`;
             detailsElement.appendChild(summaryElement);
 
-            // Create a div to hold the actual test content, which will be collapsible
             const testContentDiv = document.createElement('div');
             testContentDiv.classList.add('test-content');
             detailsElement.appendChild(testContentDiv);
@@ -312,24 +394,26 @@
                 testContentDiv.appendChild(noTests);
             } else {
                 testSuites.forEach(suite => {
-                    const suiteName = suite.getAttribute('name');
-                    const suiteTime = parseFloat(suite.getAttribute('time'));
+                    const suiteName = suite.getAttribute('name') || 'Unnamed Suite';
+                    const suiteTimeStr = suite.getAttribute('time');
+                    const suiteTime = parseFloat(suiteTimeStr);
                     let timeDisplay = '';
                     if (!isNaN(suiteTime)) {
-                        // For individual suites, still show in seconds as they might be short
                         timeDisplay = ` (Time: ${suiteTime.toFixed(2)}s)`;
                     }
 
-                    if (suiteName && suiteName !== "Unknown Suite") {
+                    // Only add suite header if there's a meaningful name or time, or if there are test cases
+                    if (suiteName !== 'Unnamed Suite' || !isNaN(suiteTime) || suite.querySelectorAll('testcase').length > 0) {
                         const suiteElement = document.createElement('p');
                         suiteElement.classList.add('test-suite-name');
                         suiteElement.textContent = `Test Suite: ${suiteName}${timeDisplay}`;
                         testContentDiv.appendChild(suiteElement);
                     }
 
+
                     const testCases = suite.querySelectorAll('testcase');
                     testCases.forEach(testCase => {
-                        const caseName = testCase.getAttribute('name');
+                        const caseName = testCase.getAttribute('name') || 'Unnamed Test Case';
                         const caseElement = document.createElement('p');
 
                         const failure = testCase.querySelector('failure');
@@ -350,8 +434,8 @@
                     });
                 });
             }
-
-            return { passed, failed };
+            console.log(`--- Finished displayXml for: ${headingText} ---`);
+            return { passed, failed, totalFileTimeSeconds }; // Now correctly returns the defined variable
         }
 
         fetchReportsFromGitHub();
