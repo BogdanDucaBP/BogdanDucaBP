@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="2" failures="0" errors="0" skipped="0">
+  <testsuite timestamp="2026-01-15T08:40:08" time="31.53" tests="2" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Check QaLive System is up, or stop pipeline"/>
+      <property name="capabilities" value="chrome.143_0_7499_170.windows"/>
+      <property name="file" value="file:///D:/a/1/s/test/specs/TECH/check-QaLive-up.spec.js"/>
+    </properties>
+    <testcase classname="chrome.143_0_7499_170.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check for visible error message controls and stop pipeline if found" time="9.663">
+      <system-out><![CDATA[
+COMMAND: POST /session/f6cd9c25415d9e4ef2f8c73c793972a6/refresh - {}
+RESULT: {}
+COMMAND: GET /session/f6cd9c25415d9e4ef2f8c73c793972a6/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/f6cd9c25415d9e4ef2f8c73c793972a6/elements - {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
+RESULT: {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
+COMMAND: POST /session/f6cd9c25415d9e4ef2f8c73c793972a6/elements - {"using":"css selector","value":"div.sapMMsgBoxText"}
+RESULT: {"using":"css selector","value":"div.sapMMsgBoxText"}
+COMMAND: POST /session/f6cd9c25415d9e4ef2f8c73c793972a6/elements - {"using":"css selector","value":"div.sapMMessageToast"}
+RESULT: {"using":"css selector","value":"div.sapMMessageToast"}
+COMMAND: POST /session/f6cd9c25415d9e4ef2f8c73c793972a6/elements - {"using":"css selector","value":"div[role=\"alert\"]"}
+RESULT: {"using":"css selector","value":"div[role=\"alert\"]"}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.143_0_7499_170.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check if the number in the specified element is greater than 0" time="0.049">
+      <system-out><![CDATA[
+COMMAND: POST /session/f6cd9c25415d9e4ef2f8c73c793972a6/element - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: GET /session/f6cd9c25415d9e4ef2f8c73c793972a6/element/f.3FECF6CDE061C4DB089ABBD29F42BB03.d.D10EC106754B91DDC181B66305C5465C.e.116/text - {}
+RESULT: {}
+COMMAND: DELETE /session/f6cd9c25415d9e4ef2f8c73c793972a6 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
