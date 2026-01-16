@@ -202,6 +202,10 @@
         Welcome to <img src="reports/etm.webp" alt="ETM Logo"> Test Reports
     </h1>
 
+    <div style="text-align: right; margin-bottom: 10px; font-size: 0.9em; color: #666;">
+        <span id="visit-counter">👁️ Total Page Views: <span id="visit-count">Loading...</span></span>
+    </div>
+
     <div class="button-container">
         <a href="https://dev.azure.com/bebuse/ETM/_build?definitionScope=%5CGitHub%5CPortal%5CTesting" class="button-link" target="_blank">All Testing Pipelines</a>
         <a href="https://dev.azure.com/bebuse/d024ff75-3653-4e94-a527-509e0d7c7279/c9487d5a-ddfa-4b52-882f-3518a62f0188/_dashboards/dashboard/96fd841f-fd31-42de-8e84-502472485591" class="button-link" target="_blank">Automation Overview</a>
@@ -498,19 +502,49 @@
                     const testCases = suite.querySelectorAll('testcase');
                     testCases.forEach(testCase => {
                         const caseName = testCase.getAttribute('name') || 'Unnamed Test Case';
-                        const caseElement = document.createElement('p');
 
                         const failure = testCase.querySelector('failure');
                         if (failure) {
-                            caseElement.textContent = `❌ ${caseName} - FAILED`;
-                            caseElement.style.color = "red";
-                            const failureMessage = document.createElement('p');
-                            failureMessage.textContent = `  - Reason: ${failure.textContent}`;
-                            failureMessage.style.fontStyle = "italic";
-                            failureMessage.style.marginLeft = "35px";
-                            testContentDiv.appendChild(caseElement);
-                            testContentDiv.appendChild(failureMessage);
+                            console.log(`=== FAILURE DETAILS for "${caseName}" ===`);
+                            
+                            // Get failure details
+                            let failureReason = failure.textContent?.trim() || '';
+                            const failureMessage = failure.getAttribute('message')?.trim() || '';
+                            const failureType = failure.getAttribute('type')?.trim() || '';
+                            
+                            console.log('FAILURE: textContent:', failureReason ? `"${failureReason}"` : '(empty)');
+                            console.log('FAILURE: message attribute:', failureMessage ? `"${failureMessage}"` : '(empty)');
+                            console.log('FAILURE: type attribute:', failureType ? `"${failureType}"` : '(empty)');
+                            console.log('FAILURE: failure element HTML:', failure.outerHTML?.substring(0, 200) || '(no HTML)');
+                            
+                            // Build meaningful failure message
+                            let displayMessage = '';
+                            if (failureMessage) {
+                                displayMessage = ` - ${failureMessage}`;
+                                console.log('FAILURE: Using message attribute');
+                            } else if (failureType) {
+                                displayMessage = ` - Error Type: ${failureType}`;
+                                console.log('FAILURE: Using type attribute');
+                            } else if (failureReason) {
+                                displayMessage = ` - ${failureReason}`;
+                                console.log('FAILURE: Using textContent');
+                            } else {
+                                displayMessage = ' - Test failed (no details available)';
+                                console.log('FAILURE: No details found, using fallback message');
+                            }
+                            
+                            console.log('FAILURE: Final display message:', `"${displayMessage}"`);
+                            console.log('=== END FAILURE DETAILS ===');
+                            
+                            // Single combined line: "- Reason: ❌ test name - FAILED - details"
+                            const failureMessageElement = document.createElement('p');
+                            failureMessageElement.textContent = `  - Reason: ❌ ${caseName} - FAILED${displayMessage}`;
+                            failureMessageElement.style.fontStyle = "italic";
+                            failureMessageElement.style.marginLeft = "35px";
+                            failureMessageElement.style.color = "#d32f2f";
+                            testContentDiv.appendChild(failureMessageElement);
                         } else {
+                            const caseElement = document.createElement('p');
                             caseElement.textContent = `✅ ${caseName} - PASSED`;
                             caseElement.style.color = "green";
                             testContentDiv.appendChild(caseElement);
@@ -522,14 +556,58 @@
             return { passed, failed, totalFileTimeSeconds }; // Now correctly returns the defined variable
         }
 
+        // Centralized visitor counter using GoatCounter (free, privacy-friendly service)
+        async function updateVisitorCount() {
+            console.log('=== VISITOR COUNTER: Starting update ===');
+            
+            // Use a simple hits.seeyoufarm.com badge counter (free, no signup needed)
+            const countApiUrl = 'https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fbogdanducabp.github.io%2FBogdanDucaBP&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visits&edge_flat=false';
+            console.log('VISITOR COUNTER: API URL:', countApiUrl);
+            
+            try {
+                console.log('VISITOR COUNTER: Fetching...');
+                const response = await fetch(countApiUrl);
+                console.log('VISITOR COUNTER: Response status:', response.status);
+                
+                const svgText = await response.text();
+                console.log('VISITOR COUNTER: Response received (SVG)');
+                
+                // Extract count from SVG text (format: "visits: 123")
+                const match = svgText.match(/visits<\/text><text[^>]*>(\d+)/);
+                if (match && match[1]) {
+                    const count = parseInt(match[1]).toLocaleString();
+                    document.getElementById('visit-count').textContent = count;
+                    console.log(`VISITOR COUNTER: Successfully set count to ${count}`);
+                } else {
+                    console.warn('VISITOR COUNTER: Could not parse count from response');
+                    document.getElementById('visit-count').textContent = 'N/A';
+                }
+            } catch (error) {
+                console.error('VISITOR COUNTER: ERROR -', error);
+                console.error('VISITOR COUNTER: Error details:', error.message, error.stack);
+                document.getElementById('visit-count').textContent = 'N/A';
+            }
+            console.log('=== VISITOR COUNTER: Finished ===');
+        }
+
+        // Update visitor count on page load
+        console.log('>>> PAGE LOAD: Initializing visitor counter...');
+        updateVisitorCount();
+
         // Load all pipelines on page load
+        console.log('>>> PAGE LOAD: Initializing pipeline data load...');
         loadAllPipelines();
 
-        // Auto-refresh every 5 minutes (300000 milliseconds)
-        setInterval(() => {
-            console.log("--- Auto-refreshing reports ---");
+        // Auto-refresh every 1 minute (60000 milliseconds)
+        console.log('>>> PAGE LOAD: Setting up auto-refresh (60 seconds)...');
+        const refreshInterval = setInterval(() => {
+            const now = new Date().toLocaleTimeString();
+            console.log(`\n========================================`);
+            console.log(`AUTO-REFRESH TRIGGERED at ${now}`);
+            console.log(`========================================`);
             loadAllPipelines();
-        }, 300000); // 5 minutes
+        }, 60000); // 1 minute
+        console.log('>>> PAGE LOAD: Auto-refresh interval created with ID:', refreshInterval);
     </script>
 </body>
 </html>
