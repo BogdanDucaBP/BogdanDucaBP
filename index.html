@@ -257,6 +257,21 @@
                 <p>Loading develop reports...</p>
             </div>
         </div>
+
+        <div class="pipeline-section">
+            <h2>RolesTesting Reports</h2>
+            <div id="rolestesting-stats" class="pipeline-stats">
+                <div>
+                    <span class="pipeline-total-run">0</span> Total run |
+                    <span class="pipeline-total-passed">0</span> Total Passed |
+                    <span class="pipeline-total-failed">0</span> Total Failed |
+                    <span class="pipeline-total-time">0h:00m:00s</span> Total Execution Time |
+                </div>
+            </div>
+            <div id="rolestesting-reports-container" class="reports-container">
+                <p>Loading roles testing reports...</p>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -370,17 +385,18 @@
         async function loadAllPipelines() {
             console.log("--- Loading all pipeline reports ---");
 
-            // Fetch both pipelines in parallel from the same 'reports' folder, filtered by filename prefix
-            const [qualityStats, developStats] = await Promise.all([
+            // Fetch all three pipelines in parallel from the same 'reports' folder, filtered by filename prefix
+            const [qualityStats, developStats, rolesTestingStats] = await Promise.all([
                 fetchReportsFromGitHub('Quality', 'reports', 'QUALITY_', 'quality-reports-container', 'quality-stats'),
-                fetchReportsFromGitHub('Develop', 'reports', 'DEVELOP_', 'develop-reports-container', 'develop-stats')
+                fetchReportsFromGitHub('Develop', 'reports', 'DEVELOP_', 'develop-reports-container', 'develop-stats'),
+                fetchReportsFromGitHub('RolesTesting', 'reports', 'RolesTesting_', 'rolestesting-reports-container', 'rolestesting-stats')
             ]);
 
-            // Calculate grand totals across both pipelines
-            const grandTotalRun = qualityStats.totalRun + developStats.totalRun;
-            const grandTotalPassed = qualityStats.totalPassed + developStats.totalPassed;
-            const grandTotalFailed = qualityStats.totalFailed + developStats.totalFailed;
-            const grandTotalTime = qualityStats.grandTotalExecutionTimeSeconds + developStats.grandTotalExecutionTimeSeconds;
+            // Calculate grand totals across all three pipelines
+            const grandTotalRun = qualityStats.totalRun + developStats.totalRun + rolesTestingStats.totalRun;
+            const grandTotalPassed = qualityStats.totalPassed + developStats.totalPassed + rolesTestingStats.totalPassed;
+            const grandTotalFailed = qualityStats.totalFailed + developStats.totalFailed + rolesTestingStats.totalFailed;
+            const grandTotalTime = qualityStats.grandTotalExecutionTimeSeconds + developStats.grandTotalExecutionTimeSeconds + rolesTestingStats.grandTotalExecutionTimeSeconds;
 
             // Update overall stats
             document.getElementById('total-run').textContent = grandTotalRun;
@@ -598,16 +614,16 @@
         console.log('>>> PAGE LOAD: Initializing pipeline data load...');
         loadAllPipelines();
 
-        // Auto-refresh every 1 minute (60000 milliseconds)
-        console.log('>>> PAGE LOAD: Setting up auto-refresh (60 seconds)...');
-        const refreshInterval = setInterval(() => {
-            const now = new Date().toLocaleTimeString();
-            console.log(`\n========================================`);
-            console.log(`AUTO-REFRESH TRIGGERED at ${now}`);
-            console.log(`========================================`);
-            loadAllPipelines();
-        }, 60000); // 1 minute
-        console.log('>>> PAGE LOAD: Auto-refresh interval created with ID:', refreshInterval);
+        // Auto-refresh every 1 minute (60000 milliseconds) - COMMENTED OUT
+        // console.log('>>> PAGE LOAD: Setting up auto-refresh (60 seconds)...');
+        // const refreshInterval = setInterval(() => {
+        //     const now = new Date().toLocaleTimeString();
+        //     console.log(`\n========================================`);
+        //     console.log(`AUTO-REFRESH TRIGGERED at ${now}`);
+        //     console.log(`========================================`);
+        //     loadAllPipelines();
+        // }, 60000); // 1 minute
+        // console.log('>>> PAGE LOAD: Auto-refresh interval created with ID:', refreshInterval);
     </script>
 </body>
 </html>
