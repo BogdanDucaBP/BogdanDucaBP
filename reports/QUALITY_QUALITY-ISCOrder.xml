@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="1" failures="1" errors="1" skipped="0">
-  <testsuite timestamp="2026-04-14T16:33:10" time="160.61" tests="1" failures="1" errors="1" skipped="0">
+<testsuites tests="2" failures="0" errors="0" skipped="0">
+  <testsuite timestamp="2026-04-15T16:33:48" time="21.304" tests="2" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
       <property name="suiteName" value="Check QaLive System is up, or stop pipeline"/>
-      <property name="capabilities" value="chrome.146_0_7680_178.windows"/>
+      <property name="capabilities" value="chrome.147_0_7727_56.windows"/>
       <property name="file" value="file:///D:/a/1/s/test/specs/TECH/check-QaLive-up.spec.js"/>
     </properties>
-    <testcase classname="chrome.146_0_7680_178.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="before all hook for Check QaLive System is up or stop pipeline" time="160.606">
-      <failure/>
-      <error message="waitUntil condition timed out after 150000ms"/>
-      <system-err><![CDATA[
-Error: waitUntil condition timed out after 150000ms
-]]></system-err>
+    <testcase classname="chrome.147_0_7727_56.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check for visible error message controls and stop pipeline if found" time="5.785">
+      <system-out><![CDATA[
+COMMAND: POST /session/d00cf31b6dac7ef2099901ca56666766/refresh - {}
+RESULT: {}
+COMMAND: GET /session/d00cf31b6dac7ef2099901ca56666766/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/d00cf31b6dac7ef2099901ca56666766/elements - {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
+RESULT: {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
+COMMAND: POST /session/d00cf31b6dac7ef2099901ca56666766/elements - {"using":"css selector","value":"div.sapMMsgBoxText"}
+RESULT: {"using":"css selector","value":"div.sapMMsgBoxText"}
+COMMAND: POST /session/d00cf31b6dac7ef2099901ca56666766/elements - {"using":"css selector","value":"div.sapMMessageToast"}
+RESULT: {"using":"css selector","value":"div.sapMMessageToast"}
+COMMAND: POST /session/d00cf31b6dac7ef2099901ca56666766/elements - {"using":"css selector","value":"div[role=\"alert\"]"}
+RESULT: {"using":"css selector","value":"div[role=\"alert\"]"}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.147_0_7727_56.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check if the number in the specified element is greater than 0" time="0.025">
+      <system-out><![CDATA[
+COMMAND: POST /session/d00cf31b6dac7ef2099901ca56666766/element - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: GET /session/d00cf31b6dac7ef2099901ca56666766/element/f.67BC47E5544C52F76470D359DDFAFE29.d.699BEDD2ADAB01552AEC2395FCBD7B7E.e.779/text - {}
+RESULT: {}
+COMMAND: DELETE /session/d00cf31b6dac7ef2099901ca56666766 - {}
+RESULT: {}
+]]></system-out>
     </testcase>
   </testsuite>
 </testsuites>
