@@ -1,681 +1,997 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="2" failures="1" errors="1" skipped="0">
-  <testsuite timestamp="2026-05-11T08:04:48" time="173.732" tests="2" failures="1" errors="1" skipped="0">
+<testsuites tests="19" failures="0" errors="0" skipped="0">
+  <testsuite timestamp="2026-05-12T08:06:40" time="9.75" tests="3" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
-      <property name="suiteName" value="Check QaLive System is up, or stop pipeline"/>
+      <property name="suiteName" value="System config functions needed for tests to run correctly in current setup"/>
       <property name="capabilities" value="chrome.147_0_7727_117.windows"/>
-      <property name="file" value="file:///D:/a/1/s/test/specs/TECH/check-QaLive-up.spec.js"/>
+      <property name="file" value="file:///D:/a/1/s/test/utils/system-config-setup-for-tests.spec.js"/>
     </properties>
-    <testcase classname="chrome.147_0_7727_117.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check for visible error message controls and stop pipeline if found" time="6.055">
+    <testcase classname="chrome.147_0_7727_117.windows.System_config_functions_needed_for_tests_to_run_correctly_in_current_setup" name="Should edit the billing job URL from SystemConfiguration through API if it isnt the expected URL" time="0.38">
       <system-out><![CDATA[
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/refresh - {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/window/fullscreen - {}
 RESULT: {}
-COMMAND: GET /session/6c358cc1d819d302553765e787caadb6/screenshot - {}
-RESULT: {}
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-RESULT: undefined
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
-RESULT: {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapMMsgBoxText"}
-RESULT: {"using":"css selector","value":"div.sapMMsgBoxText"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapMMessageToast"}
-RESULT: {"using":"css selector","value":"div.sapMMessageToast"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div[role=\"alert\"]"}
-RESULT: {"using":"css selector","value":"div[role=\"alert\"]"}
 ]]></system-out>
     </testcase>
-    <testcase classname="chrome.147_0_7727_117.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check if the number in the specified element is greater than 0" time="150.196">
-      <failure/>
-      <error message="Can't call getText on element with selector &quot;div.sapSuiteStackedMCBarLabel&quot; because element wasn't found"/>
+    <testcase classname="chrome.147_0_7727_117.windows.System_config_functions_needed_for_tests_to_run_correctly_in_current_setup" name="Should delete the flag HANDOVER SYNC INFO AFTER ISSUE flag in SystemConfiguration through API if it exists" time="0.13"/>
+    <testcase classname="chrome.147_0_7727_117.windows.System_config_functions_needed_for_tests_to_run_correctly_in_current_setup" name="Should set system config of COST ASSIGNMENT CONTRACT ITEM back to default with split mandatory false with API" time="0.26">
       <system-out><![CDATA[
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/element - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: POST /session/6c358cc1d819d302553765e787caadb6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: GET /session/6c358cc1d819d302553765e787caadb6/screenshot - {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"css selector","value":"#j_username"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/url - {"url":"https://develop-testing.cfapps.eu10-004.hana.ondemand.com/"}
+RESULT: {"url":"https://develop-testing.cfapps.eu10-004.hana.ondemand.com/"}
+RESULT: undefined
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"using":"css selector","value":"#j_username"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"css selector","value":"#j_username"}
 RESULT: {}
-COMMAND: GET /session/6c358cc1d819d302553765e787caadb6/screenshot - {}
-COMMAND: GET /session/6c358cc1d819d302553765e787caadb6/screenshot - {}
+RESULT: {"using":"css selector","value":"#j_username"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.BF4CE3EC2459C07E23FD375DA2C8683E.e.166","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.BF4CE3EC2459C07E23FD375DA2C8683E.e.166"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.BF4CE3EC2459C07E23FD375DA2C8683E.e.166","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.BF4CE3EC2459C07E23FD375DA2C8683E.e.166"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.BF4CE3EC2459C07E23FD375DA2C8683E.e.166","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.BF4CE3EC2459C07E23FD375DA2C8683E.e.166"}]}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.BF4CE3EC2459C07E23FD375DA2C8683E.e.166","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.BF4CE3EC2459C07E23FD375DA2C8683E.e.166"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.BF4CE3EC2459C07E23FD375DA2C8683E.e.166","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.BF4CE3EC2459C07E23FD375DA2C8683E.e.166"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.BF4CE3EC2459C07E23FD375DA2C8683E.e.166","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.BF4CE3EC2459C07E23FD375DA2C8683E.e.166"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.BF4CE3EC2459C07E23FD375DA2C8683E.e.166/click - {}
 RESULT: {}
 RESULT: {}
-COMMAND: DELETE /session/6c358cc1d819d302553765e787caadb6 - {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//h1[contains(text(),\"biometric authentication device\")]"}
+RESULT: {"using":"xpath","value":"//h1[contains(text(),\"biometric authentication device\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"xpath","value":"//h1[contains(text(),\"biometric authentication device\")]"}
+RESULT: {"using":"xpath","value":"//h1[contains(text(),\"biometric authentication device\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [20 bytes]","args":[]}
+RESULT: {"script":"<script> [20 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [20 bytes]","args":[]}
+RESULT: {"script":"<script> [20 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/timeouts - {"script":"<script> [8 bytes]"}
+RESULT: {"script":"<script> [8 bytes]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/timeouts - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [21 bytes]","args":[]}
+RESULT: {"script":"<script> [21 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [21 bytes]","args":[{"protocol":"http","hostname":"127.0.0.1","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","prefs":{"profile.password_manager_leak_detection":false},"args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"protocol":"http","hostname":"127.0.0.1","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","prefs":{"profile.password_manager_leak_detection":false},"args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [22 bytes]","args":[35000]}
+RESULT: {"script":"<script> [22 bytes]","args":[35000]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [21 bytes]","args":[{"selector":{"id":"shell-header","interaction":{"idSuffix":"icon"}},"wdio_ui5_key":"shellheader"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"selector":{"id":"shell-header","interaction":{"idSuffix":"icon"}},"wdio_ui5_key":"shellheader"}]}
+RESULT: undefined
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [21 bytes]","args":[{"selector":{"controlType":"sap.m.Title","i18NText":{"propertyName":"text","key":"dataCollectionAgreement"},"searchOpenDialogs":true},"wdio_ui5_key":"sapm.Title{\"propertyName\":\"text\",\"key\":\"dataCollectionAgreement\"}"}]}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"selector":{"controlType":"sap.m.Title","i18NText":{"propertyName":"text","key":"dataCollectionAgreement"},"searchOpenDialogs":true},"wdio_ui5_key":"sapm.Title{\"propertyName\":\"text\",\"key\":\"dataCollectionAgreement\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/refresh - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: undefined
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/refresh - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/window/fullscreen - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [20 bytes]","args":[]}
+RESULT: {"script":"<script> [20 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [20 bytes]","args":[]}
+RESULT: {"script":"<script> [20 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/timeouts - {"script":"<script> [8 bytes]"}
+RESULT: {"script":"<script> [8 bytes]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/timeouts - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [21 bytes]","args":[]}
+RESULT: {"script":"<script> [21 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [21 bytes]","args":[{"protocol":"http","hostname":"127.0.0.1","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","prefs":{"profile.password_manager_leak_detection":false},"args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"protocol":"http","hostname":"127.0.0.1","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","prefs":{"profile.password_manager_leak_detection":false},"args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [22 bytes]","args":[35000]}
+RESULT: {"script":"<script> [22 bytes]","args":[35000]}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-05-12T08:06:50" time="133.486" tests="4" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Test for adding the counter for working hours in case it doesnt exist in env US------"/>
+      <property name="capabilities" value="chrome.147_0_7727_117.windows"/>
+      <property name="file" value="file:///D:/a/1/s/test/utils/system-config-setup-for-tests.spec.js"/>
+    </properties>
+    <testcase classname="chrome.147_0_7727_117.windows.Test_for_adding_the_counter_for_working_hours_in_case_it_doesnt_exist_in_env_US------" name="Should create the working hours counter if it doesnt already exist" time="0.204"/>
+    <testcase classname="chrome.147_0_7727_117.windows.Test_for_adding_the_counter_for_working_hours_in_case_it_doesnt_exist_in_env_US------" name="Should create the working hours billing conditions tied to the counter we added earlier if it doesnt already exist" time="0.098"/>
+    <testcase classname="chrome.147_0_7727_117.windows.Test_for_adding_the_counter_for_working_hours_in_case_it_doesnt_exist_in_env_US------" name="Should create the working hours pricing procedure steps if they dont already exist" time="0.092"/>
+    <testcase classname="chrome.147_0_7727_117.windows.Test_for_adding_the_counter_for_working_hours_in_case_it_doesnt_exist_in_env_US------" name="Should generate pricing procedures from the setup page" time="83.656">
+      <system-out><![CDATA[
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"xpath","value":"//button[.//bdi[text()='Close' or text()='OK' or text()='Cancel'] or @title='Close']"}
+RESULT: {"using":"xpath","value":"//button[.//bdi[text()='Close' or text()='OK' or text()='Cancel'] or @title='Close']"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.900","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.900"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.900","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.900"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.900/click - {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [21 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Configure System"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Configure System\"}"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Configure System"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Configure System\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1148"},"getProperty",["header"]]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1148"},"getProperty",["header"]]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1148"},"getVisible",[]]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1148"},"getVisible",[]]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//*[@id=\"__tile116\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile116\"]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1148/click - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1290","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1290"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1290","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1290"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1290","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1290"}]}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1290","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1290"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1291","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1291"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1291","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1291"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//span[contains(@id,\"anchor-inner\")]//span//bdi[contains(text(),\"Generate pricing procedures\")]"}
+RESULT: {"using":"xpath","value":"//span[contains(@id,\"anchor-inner\")]//span//bdi[contains(text(),\"Generate pricing procedures\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1310/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//button//bdi[text()=\"Generate\"]"}
+RESULT: {"using":"xpath","value":"//button//bdi[text()=\"Generate\"]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1335/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.1337/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.60D5F31623AB0C3DF6C0B0345D4345B4.e.900/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/window/fullscreen - {}
 RESULT: {}
 ]]></system-out>
-      <system-err><![CDATA[
-Error: Can't call getText on element with selector "div.sapSuiteStackedMCBarLabel" because element wasn't found
-    at async Context.<anonymous> (D:\a\1\s\test\specs\TECH\check-QaLive-up.spec.js:56:22)
-]]></system-err>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-05-12T08:09:03" time="265.749" tests="6" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Tests for DXCW CAE environment, including specific login to the system US"/>
+      <property name="capabilities" value="chrome.147_0_7727_117.windows"/>
+      <property name="file" value="file:///D:/a/1/s/test/utils/test-data-creation-universal.spec.js"/>
+    </properties>
+    <testcase classname="chrome.147_0_7727_117.windows.Tests_for_DXCW_CAE_environment,_including_specific_login_to_the_system_US" name="Prereq Should login to the DXCW CAE env" time="17.365">
+      <system-out><![CDATA[
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/window/fullscreen - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/url - {"url":"https://qa-testing-00-develop-dxcw-portal.cfapps.eu10-004.hana.ondemand.com/"}
+RESULT: {"url":"https://qa-testing-00-develop-dxcw-portal.cfapps.eu10-004.hana.ondemand.com/"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//input[@id = \"j_username\"]"}
+RESULT: {"using":"xpath","value":"//input[@id = \"j_username\"]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//input[@id = \"j_username\"]"}
+RESULT: {"using":"xpath","value":"//input[@id = \"j_username\"]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//a[contains(@aria-label,\"Migration Service\")]"}
+RESULT: {"using":"xpath","value":"//a[contains(@aria-label,\"Migration Service\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1379","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1379"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1379","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1379"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1379","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1379"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1379","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1379"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/window/fullscreen - {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [20 bytes]","args":[]}
+RESULT: {}
+RESULT: {"script":"<script> [20 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [20 bytes]","args":[]}
+RESULT: {"script":"<script> [20 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/timeouts - {"script":"<script> [8 bytes]"}
+RESULT: {"script":"<script> [8 bytes]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/timeouts - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [21 bytes]","args":[]}
+RESULT: {"script":"<script> [21 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [21 bytes]","args":[{"protocol":"http","hostname":"127.0.0.1","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","prefs":{"profile.password_manager_leak_detection":false},"args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"protocol":"http","hostname":"127.0.0.1","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","prefs":{"profile.password_manager_leak_detection":false},"args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [22 bytes]","args":[35000]}
+RESULT: {"script":"<script> [22 bytes]","args":[35000]}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.147_0_7727_117.windows.Tests_for_DXCW_CAE_environment,_including_specific_login_to_the_system_US" name="Should upload address file entry used for later tests as master data" time="75.728">
+      <system-out><![CDATA[
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"xpath","value":"//button[.//bdi[text()='Close' or text()='OK' or text()='Cancel'] or @title='Close']"}
+RESULT: {"using":"xpath","value":"//button[.//bdi[text()='Close' or text()='OK' or text()='Cancel'] or @title='Close']"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1362","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1362"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1362","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1362"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1362/click - {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [21 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Migration Service"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Migration Service\"}"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Migration Service"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Migration Service\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1379"},"getProperty",["header"]]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1379"},"getProperty",["header"]]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/async - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1379"},"getVisible",[]]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1379"},"getVisible",[]]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//*[@id=\"__tile25\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile25\"]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1379/click - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441"}]}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1441"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: undefined
+RESULT: undefined
+RESULT: undefined
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//div[contains(@aria-label, \"Migration Service\")]//div[contains(@class,\"sapMGTHdrContent\")]"}
+RESULT: {"using":"xpath","value":"//div[contains(@aria-label, \"Migration Service\")]//div[contains(@class,\"sapMGTHdrContent\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1471/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//button//bdi[contains(text(), \"Create new Draft\")]"}
+RESULT: {"using":"xpath","value":"//button//bdi[contains(text(), \"Create new Draft\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/elements - {"using":"xpath","value":"//button//bdi[contains(text(), \"Create new Draft\")]"}
+RESULT: {"using":"xpath","value":"//button//bdi[contains(text(), \"Create new Draft\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1520","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1520"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1520","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1520"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1520/enabled - {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1520","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1520"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1520","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1520"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1520","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1520"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1520","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1520"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1520/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//li[.//div[text()=\"Address\"]]"}
+RESULT: {"using":"xpath","value":"//li[.//div[text()=\"Address\"]]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1717/rect - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[]}
+RESULT: {"script":"<script> [19 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/actions - {"actions":[{"id":"action1","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1717"}}]}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"actions":[{"id":"action1","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1717"}}]}]}
+COMMAND: DELETE /session/c63b4b19311a5ca9df65b6df89da1fb5/actions - {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1717/click - {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/file - {"file":"[base64] 10072 bytes"}
+RESULT: {}
+RESULT: {}
+RESULT: {"file":"[base64] 10072 bytes"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-10-0-1-uploader-fu\")]"}
+RESULT: {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-10-0-1-uploader-fu\")]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1731/rect - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[]}
+RESULT: {"script":"<script> [19 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/actions - {"actions":[{"id":"action2","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":1540,"y":-250,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1731"}}]}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"actions":[{"id":"action2","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":1540,"y":-250,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1731"}}]}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1731","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1731"},{"block":"center","inline":"center"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1731","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1731"},{"block":"center","inline":"center"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1731/clear - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1731/value - {"text":"C:\\Windows\\SystemTemp\\scoped_dir3352_1638024063\\upload3352_1118034220\\Address.xlsx"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"text":"C:\\Windows\\SystemTemp\\scoped_dir3352_1638024063\\upload3352_1118034220\\Address.xlsx"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1748/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+RESULT: {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1749/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1560/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+RESULT: {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1756/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2104","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2104"}]}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2104","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2104"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2105","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2105"}]}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2105","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2105"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2104","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2104"}]}
+RESULT: {}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2104","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2104"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2108","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2108"}]}
+RESULT: {}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2108","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2108"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+RESULT: {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2535/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.147_0_7727_117.windows.Tests_for_DXCW_CAE_environment,_including_specific_login_to_the_system_US" name="Should upload yard file entry used for later tests as master data US156291" time="41.573">
+      <system-out><![CDATA[
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2539/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//li[.//div[text()=\"Yards\"]]"}
+RESULT: {"using":"xpath","value":"//li[.//div[text()=\"Yards\"]]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1725/rect - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[]}
+RESULT: {"script":"<script> [19 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/actions - {"actions":[{"id":"action3","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1725"}}]}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"actions":[{"id":"action3","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1725"}}]}]}
+COMMAND: DELETE /session/c63b4b19311a5ca9df65b6df89da1fb5/actions - {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1725/click - {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/file - {"file":"[base64] 11732 bytes"}
+RESULT: {}
+RESULT: {"file":"[base64] 11732 bytes"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-14-0-1-uploader-fu\")]"}
+RESULT: {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-14-0-1-uploader-fu\")]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2699/rect - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[]}
+RESULT: {"script":"<script> [19 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/actions - {"actions":[{"id":"action4","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":1540,"y":-250,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2699"}}]}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"actions":[{"id":"action4","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":1540,"y":-250,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2699"}}]}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2699","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2699"},{"block":"center","inline":"center"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2699","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2699"},{"block":"center","inline":"center"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2699/clear - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2699/value - {"text":"C:\\Windows\\SystemTemp\\scoped_dir3352_1638024063\\upload3352_1607868353\\Yards.xlsx"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"text":"C:\\Windows\\SystemTemp\\scoped_dir3352_1638024063\\upload3352_1607868353\\Yards.xlsx"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2708/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+RESULT: {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2709/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1560/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+RESULT: {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2717/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3040","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3040"}]}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3040","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3040"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3041","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3041"}]}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3041","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3041"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3040","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3040"}]}
+RESULT: {}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3040","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3040"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3044","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3044"}]}
+RESULT: {}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3044","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3044"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+RESULT: {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2535/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.147_0_7727_117.windows.Tests_for_DXCW_CAE_environment,_including_specific_login_to_the_system_US" name="Should upload partner files entry used for later tests as master data" time="41.968">
+      <system-out><![CDATA[
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3472/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//li[.//div[text()=\"Partners\"]]"}
+RESULT: {"using":"xpath","value":"//li[.//div[text()=\"Partners\"]]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1705/rect - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[]}
+RESULT: {"script":"<script> [19 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/actions - {"actions":[{"id":"action5","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1705"}}]}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"actions":[{"id":"action5","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1705"}}]}]}
+COMMAND: DELETE /session/c63b4b19311a5ca9df65b6df89da1fb5/actions - {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1705/click - {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/file - {"file":"[base64] 11196 bytes"}
+RESULT: {}
+RESULT: {}
+RESULT: {"file":"[base64] 11196 bytes"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-4-0-1-uploader-fu\")]"}
+RESULT: {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-4-0-1-uploader-fu\")]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3628/rect - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[]}
+RESULT: {"script":"<script> [19 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/actions - {"actions":[{"id":"action6","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":1540,"y":-250,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3628"}}]}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"actions":[{"id":"action6","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":1540,"y":-250,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3628"}}]}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3628","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3628"},{"block":"center","inline":"center"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3628","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3628"},{"block":"center","inline":"center"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3628/clear - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3628/value - {"text":"C:\\Windows\\SystemTemp\\scoped_dir3352_1638024063\\upload3352_1833868550\\Partners.xlsx"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"text":"C:\\Windows\\SystemTemp\\scoped_dir3352_1638024063\\upload3352_1833868550\\Partners.xlsx"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3638/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+RESULT: {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3639/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1560/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+RESULT: {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.3646/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4009","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4009"}]}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4009","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4009"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4010","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4010"}]}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4010","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4010"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4009","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4009"}]}
+RESULT: {}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4009","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4009"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4013","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4013"}]}
+RESULT: {}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4013","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4013"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+RESULT: {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2535/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.147_0_7727_117.windows.Tests_for_DXCW_CAE_environment,_including_specific_login_to_the_system_US" name="Should upload just the YardsPartners separately" time="41.735">
+      <system-out><![CDATA[
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4441/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//li[.//div[text()=\"Partners\"]]"}
+RESULT: {"using":"xpath","value":"//li[.//div[text()=\"Partners\"]]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1705/rect - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[]}
+RESULT: {"script":"<script> [19 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/actions - {"actions":[{"id":"action7","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1705"}}]}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"actions":[{"id":"action7","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1705"}}]}]}
+COMMAND: DELETE /session/c63b4b19311a5ca9df65b6df89da1fb5/actions - {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1705/click - {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/file - {"file":"[base64] 11840 bytes"}
+RESULT: {}
+RESULT: {}
+RESULT: {"file":"[base64] 11840 bytes"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-4-1-1-uploader-fu\")]"}
+RESULT: {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-4-1-1-uploader-fu\")]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4594/rect - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[]}
+RESULT: {"script":"<script> [19 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/actions - {"actions":[{"id":"action8","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":1540,"y":-250,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4594"}}]}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"actions":[{"id":"action8","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":1540,"y":-250,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4594"}}]}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4594","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4594"},{"block":"center","inline":"center"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4594","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4594"},{"block":"center","inline":"center"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4594/clear - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4594/value - {"text":"C:\\Windows\\SystemTemp\\scoped_dir3352_1638024063\\upload3352_972152452\\YardsPartners.xlsx"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"text":"C:\\Windows\\SystemTemp\\scoped_dir3352_1638024063\\upload3352_972152452\\YardsPartners.xlsx"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4604/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+RESULT: {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4605/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1560/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+RESULT: {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4614/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4963","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4963"}]}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4963","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4963"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4964","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4964"}]}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4964","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4964"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4963","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4963"}]}
+RESULT: {}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4963","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4963"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4967","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4967"}]}
+RESULT: {}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4967","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.4967"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+RESULT: {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2535/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.147_0_7727_117.windows.Tests_for_DXCW_CAE_environment,_including_specific_login_to_the_system_US" name="Should upload site file entry used for later tests as master data" time="47.367">
+      <system-out><![CDATA[
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5395/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//li[.//div[text()=\"Sites\"]]"}
+RESULT: {"using":"xpath","value":"//li[.//div[text()=\"Sites\"]]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1715/rect - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[]}
+RESULT: {"script":"<script> [19 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/actions - {"actions":[{"id":"action9","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1715"}}]}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"actions":[{"id":"action9","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1715"}}]}]}
+COMMAND: DELETE /session/c63b4b19311a5ca9df65b6df89da1fb5/actions - {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1715/click - {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/file - {"file":"[base64] 10244 bytes"}
+RESULT: {}
+RESULT: {}
+RESULT: {"file":"[base64] 10244 bytes"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-9-0-1-uploader-fu\")]"}
+RESULT: {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-9-0-1-uploader-fu\")]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5556/rect - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[]}
+RESULT: {"script":"<script> [19 bytes]","args":[]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/actions - {"actions":[{"id":"action10","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":1540,"y":-250,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5556"}}]}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"actions":[{"id":"action10","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":1540,"y":-250,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5556"}}]}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5556","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5556"},{"block":"center","inline":"center"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5556","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5556"},{"block":"center","inline":"center"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5556/clear - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5556/value - {"text":"C:\\Windows\\SystemTemp\\scoped_dir3352_1638024063\\upload3352_1958063879\\Sites.xlsx"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"text":"C:\\Windows\\SystemTemp\\scoped_dir3352_1638024063\\upload3352_1958063879\\Sites.xlsx"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5568/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+RESULT: {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5569/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1560/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+RESULT: {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5576/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5911","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5911"}]}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5911","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5911"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5912","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5912"}]}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5912","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5912"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5911","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5911"}]}
+RESULT: {}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5911","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5911"}]}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5915","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5915"}]}
+RESULT: {}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5915","ELEMENT":"f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.5915"}]}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+RESULT: {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.2535/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/c63b4b19311a5ca9df65b6df89da1fb5/element/f.317FD84EE9DC4451F256E5060F621887.d.25F9C36613822C79E6AA4A7CD6678ECC.e.1362/click - {}
+RESULT: {}
+COMMAND: GET /session/c63b4b19311a5ca9df65b6df89da1fb5/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-05-12T08:13:29" time="11.82" tests="6" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Backup module for creating data for addresses, yards, partners &amp; sites via API"/>
+      <property name="capabilities" value="chrome.147_0_7727_117.windows"/>
+      <property name="file" value="file:///D:/a/1/s/test/utils/backup-solution-data-creation.spec.js"/>
+    </properties>
+    <testcase classname="chrome.147_0_7727_117.windows.Backup_module_for_creating_data_for_addresses,_yards,_partners_&amp;_sites_via_API" name="Should read the IDs of the files you sent and store them in a map of values" time="0.089"/>
+    <testcase classname="chrome.147_0_7727_117.windows.Backup_module_for_creating_data_for_addresses,_yards,_partners_&amp;_sites_via_API" name="Should verify and create addresses via API if they do not exist" time="1.358"/>
+    <testcase classname="chrome.147_0_7727_117.windows.Backup_module_for_creating_data_for_addresses,_yards,_partners_&amp;_sites_via_API" name="Should verify and create yards via API if they do not exist" time="2.583"/>
+    <testcase classname="chrome.147_0_7727_117.windows.Backup_module_for_creating_data_for_addresses,_yards,_partners_&amp;_sites_via_API" name="Should verify and create partners via API if they do not exist" time="3.513"/>
+    <testcase classname="chrome.147_0_7727_117.windows.Backup_module_for_creating_data_for_addresses,_yards,_partners_&amp;_sites_via_API" name="Should verify and create yards partners assignments via API if they do not exist" time="2.146"/>
+    <testcase classname="chrome.147_0_7727_117.windows.Backup_module_for_creating_data_for_addresses,_yards,_partners_&amp;_sites_via_API" name="Should verify and create sites via API if they do not exist" time="1.871">
+      <system-out><![CDATA[
+COMMAND: DELETE /session/c63b4b19311a5ca9df65b6df89da1fb5 - {}
+RESULT: {}
+]]></system-out>
     </testcase>
   </testsuite>
 </testsuites>
