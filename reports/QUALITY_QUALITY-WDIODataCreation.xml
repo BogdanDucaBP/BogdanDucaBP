@@ -1,35 +1,960 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="2" failures="0" errors="0" skipped="0">
-  <testsuite timestamp="2026-05-14T05:04:28" time="23.484" tests="2" failures="0" errors="0" skipped="0">
+<testsuites tests="19" failures="0" errors="0" skipped="0">
+  <testsuite timestamp="2026-05-15T05:05:57" time="19.495" tests="3" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
-      <property name="suiteName" value="Check QaLive System is up, or stop pipeline"/>
-      <property name="capabilities" value="chrome.147_0_7727_117.windows"/>
-      <property name="file" value="file:///D:/a/1/s/test/specs/TECH/check-QaLive-up.spec.js"/>
+      <property name="suiteName" value="System config functions needed for tests to run correctly in current setup"/>
+      <property name="capabilities" value="chrome.148_0_7778_97.windows"/>
+      <property name="file" value="file:///D:/a/1/s/test/utils/system-config-setup-for-tests.spec.js"/>
     </properties>
-    <testcase classname="chrome.147_0_7727_117.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check for visible error message controls and stop pipeline if found" time="5.917">
+    <testcase classname="chrome.148_0_7778_97.windows.System_config_functions_needed_for_tests_to_run_correctly_in_current_setup" name="Should edit the billing job URL from SystemConfiguration through API if it isnt the expected URL" time="0.872">
       <system-out><![CDATA[
-COMMAND: POST /session/41cf76ec5fbf9df8501bf7a08e780dae/refresh - {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/window/fullscreen - {}
 RESULT: {}
-COMMAND: GET /session/41cf76ec5fbf9df8501bf7a08e780dae/screenshot - {}
-RESULT: {}
-COMMAND: POST /session/41cf76ec5fbf9df8501bf7a08e780dae/elements - {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
-RESULT: {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
-COMMAND: POST /session/41cf76ec5fbf9df8501bf7a08e780dae/elements - {"using":"css selector","value":"div.sapMMsgBoxText"}
-RESULT: {"using":"css selector","value":"div.sapMMsgBoxText"}
-COMMAND: POST /session/41cf76ec5fbf9df8501bf7a08e780dae/elements - {"using":"css selector","value":"div.sapMMessageToast"}
-RESULT: {"using":"css selector","value":"div.sapMMessageToast"}
-COMMAND: POST /session/41cf76ec5fbf9df8501bf7a08e780dae/elements - {"using":"css selector","value":"div[role=\"alert\"]"}
-RESULT: {"using":"css selector","value":"div[role=\"alert\"]"}
 ]]></system-out>
     </testcase>
-    <testcase classname="chrome.147_0_7727_117.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check if the number in the specified element is greater than 0" time="0.039">
+    <testcase classname="chrome.148_0_7778_97.windows.System_config_functions_needed_for_tests_to_run_correctly_in_current_setup" name="Should delete the flag HANDOVER SYNC INFO AFTER ISSUE flag in SystemConfiguration through API if it exists" time="0.091"/>
+    <testcase classname="chrome.148_0_7778_97.windows.System_config_functions_needed_for_tests_to_run_correctly_in_current_setup" name="Should set system config of COST ASSIGNMENT CONTRACT ITEM back to default with split mandatory false with API" time="0.102">
       <system-out><![CDATA[
-COMMAND: POST /session/41cf76ec5fbf9df8501bf7a08e780dae/element - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: GET /session/41cf76ec5fbf9df8501bf7a08e780dae/element/f.F95CBDA7040E4B7D40653A502200416A.d.766A2012D0A95CBC1CF1A65F67E8D5DA.e.791/text - {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"css selector","value":"#j_username"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/url - {"url":"https://quality-testing.cfapps.eu10-004.hana.ondemand.com/"}
+RESULT: {"using":"css selector","value":"#j_username"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"css selector","value":"#j_username"}
+RESULT: {"url":"https://quality-testing.cfapps.eu10-004.hana.ondemand.com/"}
+RESULT: undefined
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"using":"css selector","value":"#j_username"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"css selector","value":"#shell-header-logo"}
 RESULT: {}
-COMMAND: DELETE /session/41cf76ec5fbf9df8501bf7a08e780dae - {}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.1056B1284CCC95CDC0B0E771EC908B31.e.505","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.1056B1284CCC95CDC0B0E771EC908B31.e.505"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.1056B1284CCC95CDC0B0E771EC908B31.e.505","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.1056B1284CCC95CDC0B0E771EC908B31.e.505"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.1056B1284CCC95CDC0B0E771EC908B31.e.505","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.1056B1284CCC95CDC0B0E771EC908B31.e.505"}]}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.1056B1284CCC95CDC0B0E771EC908B31.e.505","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.1056B1284CCC95CDC0B0E771EC908B31.e.505"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.1056B1284CCC95CDC0B0E771EC908B31.e.505","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.1056B1284CCC95CDC0B0E771EC908B31.e.505"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.1056B1284CCC95CDC0B0E771EC908B31.e.505","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.1056B1284CCC95CDC0B0E771EC908B31.e.505"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.1056B1284CCC95CDC0B0E771EC908B31.e.505/click - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//h1[contains(text(),\"biometric authentication device\")]"}
+RESULT: {"using":"xpath","value":"//h1[contains(text(),\"biometric authentication device\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"xpath","value":"//h1[contains(text(),\"biometric authentication device\")]"}
+RESULT: {"using":"xpath","value":"//h1[contains(text(),\"biometric authentication device\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [189 bytes]","args":[]}
+RESULT: {"script":"<script> [189 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [123 bytes]","args":[]}
+RESULT: {"script":"<script> [123 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/timeouts - {"script":"<number>"}
+RESULT: {"script":"<number>"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/timeouts - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [2676 bytes]","args":[]}
+RESULT: {"script":"<script> [2676 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [2342 bytes]","args":[{"protocol":"http","hostname":"0.0.0.0","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+RESULT: {"script":"<script> [2342 bytes]","args":[{"protocol":"http","hostname":"0.0.0.0","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [21126 bytes]","args":[35000]}
+RESULT: {"script":"<script> [21126 bytes]","args":[35000]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"shell-header","interaction":{"idSuffix":"icon"}},"wdio_ui5_key":"shellheader"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"shell-header","interaction":{"idSuffix":"icon"}},"wdio_ui5_key":"shellheader"}]}
+RESULT: undefined
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.Title","i18NText":{"propertyName":"text","key":"dataCollectionAgreement"},"searchOpenDialogs":true},"wdio_ui5_key":"sapm.Title{\"propertyName\":\"text\",\"key\":\"dataCollectionAgreement\"}"}]}
+RESULT: {}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.Title","i18NText":{"propertyName":"text","key":"dataCollectionAgreement"},"searchOpenDialogs":true},"wdio_ui5_key":"sapm.Title{\"propertyName\":\"text\",\"key\":\"dataCollectionAgreement\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/refresh - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/refresh - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/window/fullscreen - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [189 bytes]","args":[]}
+RESULT: {"script":"<script> [189 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [123 bytes]","args":[]}
+RESULT: {"script":"<script> [123 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/timeouts - {"script":"<number>"}
+RESULT: {"script":"<number>"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/timeouts - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [2676 bytes]","args":[]}
+RESULT: {"script":"<script> [2676 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [2342 bytes]","args":[{"protocol":"http","hostname":"0.0.0.0","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+RESULT: {"script":"<script> [2342 bytes]","args":[{"protocol":"http","hostname":"0.0.0.0","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [21126 bytes]","args":[35000]}
+RESULT: {"script":"<script> [21126 bytes]","args":[35000]}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-05-15T05:06:17" time="133.476" tests="4" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Test for adding the counter for working hours in case it doesnt exist in env US------"/>
+      <property name="capabilities" value="chrome.148_0_7778_97.windows"/>
+      <property name="file" value="file:///D:/a/1/s/test/utils/system-config-setup-for-tests.spec.js"/>
+    </properties>
+    <testcase classname="chrome.148_0_7778_97.windows.Test_for_adding_the_counter_for_working_hours_in_case_it_doesnt_exist_in_env_US------" name="Should create the working hours counter if it doesnt already exist" time="0.472"/>
+    <testcase classname="chrome.148_0_7778_97.windows.Test_for_adding_the_counter_for_working_hours_in_case_it_doesnt_exist_in_env_US------" name="Should create the working hours billing conditions tied to the counter we added earlier if it doesnt already exist" time="0.31"/>
+    <testcase classname="chrome.148_0_7778_97.windows.Test_for_adding_the_counter_for_working_hours_in_case_it_doesnt_exist_in_env_US------" name="Should create the working hours pricing procedure steps if they dont already exist" time="0.293"/>
+    <testcase classname="chrome.148_0_7778_97.windows.Test_for_adding_the_counter_for_working_hours_in_case_it_doesnt_exist_in_env_US------" name="Should generate pricing procedures from the setup page" time="83.792">
+      <system-out><![CDATA[
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"xpath","value":"//button[.//bdi[text()='Close' or text()='OK' or text()='Cancel'] or @title='Close']"}
+RESULT: {"using":"xpath","value":"//button[.//bdi[text()='Close' or text()='OK' or text()='Cancel'] or @title='Close']"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1244","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1244"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1244","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1244"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1244/click - {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Configure System"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Configure System\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Configure System"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Configure System\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1516"},"getProperty",["header"]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1516"},"getProperty",["header"]]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1516"},"getVisible",[]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1516"},"getVisible",[]]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//*[@id=\"__tile118\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile118\"]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1516/click - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1627","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1627"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1627","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1627"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1627","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1627"}]}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1627","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1627"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1627","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1627"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1627","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1627"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//span[contains(@id,\"anchor-inner\")]//span//bdi[contains(text(),\"Generate pricing procedures\")]"}
+RESULT: {"using":"xpath","value":"//span[contains(@id,\"anchor-inner\")]//span//bdi[contains(text(),\"Generate pricing procedures\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1649/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//button//bdi[text()=\"Generate\"]"}
+RESULT: {"using":"xpath","value":"//button//bdi[text()=\"Generate\"]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1674/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1677/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.E783597BB5075E198A906977203BE816.e.1244/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/window/fullscreen - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-05-15T05:08:30" time="268.719" tests="6" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Tests for DXCW CAE environment, including specific login to the system US"/>
+      <property name="capabilities" value="chrome.148_0_7778_97.windows"/>
+      <property name="file" value="file:///D:/a/1/s/test/utils/test-data-creation-universal.spec.js"/>
+    </properties>
+    <testcase classname="chrome.148_0_7778_97.windows.Tests_for_DXCW_CAE_environment,_including_specific_login_to_the_system_US" name="Prereq Should login to the DXCW CAE env" time="17.173">
+      <system-out><![CDATA[
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/window/fullscreen - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/url - {"url":"https://qa-testing-01-quality-dxcw-portal.cfapps.eu10-004.hana.ondemand.com/"}
+RESULT: {"url":"https://qa-testing-01-quality-dxcw-portal.cfapps.eu10-004.hana.ondemand.com/"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//input[@id = \"j_username\"]"}
+RESULT: {"using":"xpath","value":"//input[@id = \"j_username\"]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//input[@id = \"j_username\"]"}
+RESULT: {"using":"xpath","value":"//input[@id = \"j_username\"]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//a[contains(@aria-label,\"Migration Service\")]"}
+RESULT: {"using":"xpath","value":"//a[contains(@aria-label,\"Migration Service\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1728","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1728"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1728","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1728"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1728","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1728"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1728","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1728"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/window/fullscreen - {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [189 bytes]","args":[]}
+RESULT: {"script":"<script> [189 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [123 bytes]","args":[]}
+RESULT: {"script":"<script> [123 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/timeouts - {"script":"<number>"}
+RESULT: {"script":"<number>"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/timeouts - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [2676 bytes]","args":[]}
+RESULT: {"script":"<script> [2676 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [2342 bytes]","args":[{"protocol":"http","hostname":"0.0.0.0","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+RESULT: {"script":"<script> [2342 bytes]","args":[{"protocol":"http","hostname":"0.0.0.0","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [21126 bytes]","args":[35000]}
+RESULT: {"script":"<script> [21126 bytes]","args":[35000]}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.148_0_7778_97.windows.Tests_for_DXCW_CAE_environment,_including_specific_login_to_the_system_US" name="Should upload address file entry used for later tests as master data" time="75.943">
+      <system-out><![CDATA[
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"xpath","value":"//button[.//bdi[text()='Close' or text()='OK' or text()='Cancel'] or @title='Close']"}
+RESULT: {"using":"xpath","value":"//button[.//bdi[text()='Close' or text()='OK' or text()='Cancel'] or @title='Close']"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1711","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1711"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1711","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1711"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1711/click - {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Migration Service"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Migration Service\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Migration Service"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Migration Service\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1728"},"getProperty",["header"]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1728"},"getProperty",["header"]]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1728"},"getVisible",[]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1728"},"getVisible",[]]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//*[@id=\"__tile25\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile25\"]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1728/click - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791"}]}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1791"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: undefined
+RESULT: undefined
+RESULT: undefined
+RESULT: undefined
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//div[contains(@aria-label, \"Migration Service\")]//div[contains(@class,\"sapMGTHdrContent\")]"}
+RESULT: {"using":"xpath","value":"//div[contains(@aria-label, \"Migration Service\")]//div[contains(@class,\"sapMGTHdrContent\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1823/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//button//bdi[contains(text(), \"Create new Draft\")]"}
+RESULT: {"using":"xpath","value":"//button//bdi[contains(text(), \"Create new Draft\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/elements - {"using":"xpath","value":"//button//bdi[contains(text(), \"Create new Draft\")]"}
+RESULT: {"using":"xpath","value":"//button//bdi[contains(text(), \"Create new Draft\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1871","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1871"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1871","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1871"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1871/enabled - {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1871","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1871"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1871","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1871"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1871","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1871"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1871","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1871"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1871/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//li[.//div[text()=\"Address\"]]"}
+RESULT: {"using":"xpath","value":"//li[.//div[text()=\"Address\"]]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2070/rect - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [92 bytes]","args":[]}
+RESULT: {"script":"<script> [92 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/actions - {"actions":[{"id":"action1","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2070"}}]}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"actions":[{"id":"action1","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2070"}}]}]}
+COMMAND: DELETE /session/c9263ec2933223380c10f0eaa4ba97db/actions - {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2070/click - {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/file - {"file":"[base64] 10072 bytes"}
+RESULT: {}
+RESULT: {}
+RESULT: {"file":"[base64] 10072 bytes"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-10-0-1-uploader-fu\")]"}
+RESULT: {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-10-0-1-uploader-fu\")]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2086/rect - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [92 bytes]","args":[]}
+RESULT: {"script":"<script> [92 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/actions - {"actions":[{"id":"action2","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":1540,"y":-250,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2086"}}]}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2086","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2086"},{"block":"center","inline":"center"}]}
+RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2086","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2086"},{"block":"center","inline":"center"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2086/clear - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2086/value - {"text":"C:\\Windows\\SystemTemp\\scoped_dir3344_1473609394\\upload3344_1148453142\\Address.xlsx"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"text":"C:\\Windows\\SystemTemp\\scoped_dir3344_1473609394\\upload3344_1148453142\\Address.xlsx"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2103/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+RESULT: {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2104/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1912/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+RESULT: {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2112/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2459","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2459"}]}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2459","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2459"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2460","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2460"}]}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2460","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2460"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2459","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2459"}]}
+RESULT: {}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2459","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2459"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2463","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2463"}]}
+RESULT: {}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2463","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2463"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+RESULT: {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2890/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.148_0_7778_97.windows.Tests_for_DXCW_CAE_environment,_including_specific_login_to_the_system_US" name="Should upload yard file entry used for later tests as master data US156291" time="42.305">
+      <system-out><![CDATA[
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2894/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//li[.//div[text()=\"Yards\"]]"}
+RESULT: {"using":"xpath","value":"//li[.//div[text()=\"Yards\"]]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2078/rect - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [92 bytes]","args":[]}
+RESULT: {"script":"<script> [92 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/actions - {"actions":[{"id":"action3","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2078"}}]}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"actions":[{"id":"action3","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2078"}}]}]}
+COMMAND: DELETE /session/c9263ec2933223380c10f0eaa4ba97db/actions - {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2078/click - {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/file - {"file":"[base64] 11732 bytes"}
+RESULT: {}
+RESULT: {}
+RESULT: {"file":"[base64] 11732 bytes"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-14-0-1-uploader-fu\")]"}
+RESULT: {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-14-0-1-uploader-fu\")]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3054/rect - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [92 bytes]","args":[]}
+RESULT: {"script":"<script> [92 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/actions - {"actions":[{"id":"action4","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":1540,"y":-250,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3054"}}]}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3054","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3054"},{"block":"center","inline":"center"}]}
+RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3054","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3054"},{"block":"center","inline":"center"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3054/clear - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3054/value - {"text":"C:\\Windows\\SystemTemp\\scoped_dir3344_1473609394\\upload3344_548902143\\Yards.xlsx"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"text":"C:\\Windows\\SystemTemp\\scoped_dir3344_1473609394\\upload3344_548902143\\Yards.xlsx"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3063/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+RESULT: {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3064/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1912/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+RESULT: {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3072/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3430","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3430"}]}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3430","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3430"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3431","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3431"}]}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3431","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3431"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3430","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3430"}]}
+RESULT: {}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3430","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3430"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3434","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3434"}]}
+RESULT: {}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3434","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3434"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+RESULT: {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2890/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.148_0_7778_97.windows.Tests_for_DXCW_CAE_environment,_including_specific_login_to_the_system_US" name="Should upload partner files entry used for later tests as master data" time="41.748">
+      <system-out><![CDATA[
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.3862/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//li[.//div[text()=\"Partners\"]]"}
+RESULT: {"using":"xpath","value":"//li[.//div[text()=\"Partners\"]]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2058/rect - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [92 bytes]","args":[]}
+RESULT: {"script":"<script> [92 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/actions - {"actions":[{"id":"action5","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2058"}}]}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"actions":[{"id":"action5","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2058"}}]}]}
+COMMAND: DELETE /session/c9263ec2933223380c10f0eaa4ba97db/actions - {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2058/click - {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/file - {"file":"[base64] 11196 bytes"}
+RESULT: {}
+RESULT: {}
+RESULT: {"file":"[base64] 11196 bytes"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-4-0-1-uploader-fu\")]"}
+RESULT: {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-4-0-1-uploader-fu\")]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4018/rect - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [92 bytes]","args":[]}
+RESULT: {"script":"<script> [92 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/actions - {"actions":[{"id":"action6","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":1540,"y":-250,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4018"}}]}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4018","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4018"},{"block":"center","inline":"center"}]}
+RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4018","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4018"},{"block":"center","inline":"center"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4018/clear - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4018/value - {"text":"C:\\Windows\\SystemTemp\\scoped_dir3344_1473609394\\upload3344_1048092706\\Partners.xlsx"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"text":"C:\\Windows\\SystemTemp\\scoped_dir3344_1473609394\\upload3344_1048092706\\Partners.xlsx"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4029/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+RESULT: {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4030/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1912/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+RESULT: {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4038/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4397","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4397"}]}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4397","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4397"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4398","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4398"}]}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4398","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4398"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4397","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4397"}]}
+RESULT: {}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4397","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4397"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4401","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4401"}]}
+RESULT: {}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4401","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4401"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+RESULT: {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2890/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.148_0_7778_97.windows.Tests_for_DXCW_CAE_environment,_including_specific_login_to_the_system_US" name="Should upload just the YardsPartners separately" time="42.649">
+      <system-out><![CDATA[
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4829/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//li[.//div[text()=\"Partners\"]]"}
+RESULT: {"using":"xpath","value":"//li[.//div[text()=\"Partners\"]]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2058/rect - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [92 bytes]","args":[]}
+RESULT: {"script":"<script> [92 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/actions - {"actions":[{"id":"action7","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2058"}}]}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"actions":[{"id":"action7","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2058"}}]}]}
+COMMAND: DELETE /session/c9263ec2933223380c10f0eaa4ba97db/actions - {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2058/click - {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/file - {"file":"[base64] 11840 bytes"}
+RESULT: {}
+RESULT: {}
+RESULT: {"file":"[base64] 11840 bytes"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-4-1-1-uploader-fu\")]"}
+RESULT: {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-4-1-1-uploader-fu\")]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4982/rect - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [92 bytes]","args":[]}
+RESULT: {"script":"<script> [92 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/actions - {"actions":[{"id":"action8","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":1540,"y":-250,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4982"}}]}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4982","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4982"},{"block":"center","inline":"center"}]}
+RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4982","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4982"},{"block":"center","inline":"center"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4982/clear - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4982/value - {"text":"C:\\Windows\\SystemTemp\\scoped_dir3344_1473609394\\upload3344_1720670752\\YardsPartners.xlsx"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"text":"C:\\Windows\\SystemTemp\\scoped_dir3344_1473609394\\upload3344_1720670752\\YardsPartners.xlsx"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4992/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+RESULT: {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.4993/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1912/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+RESULT: {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5001/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5367","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5367"}]}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5367","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5367"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5368","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5368"}]}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5368","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5368"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5367","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5367"}]}
+RESULT: {}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5367","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5367"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5371","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5371"}]}
+RESULT: {}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5371","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5371"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+RESULT: {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2890/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.148_0_7778_97.windows.Tests_for_DXCW_CAE_environment,_including_specific_login_to_the_system_US" name="Should upload site file entry used for later tests as master data" time="48.889">
+      <system-out><![CDATA[
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Create new Draft\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5799/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//li[.//div[text()=\"Sites\"]]"}
+RESULT: {"using":"xpath","value":"//li[.//div[text()=\"Sites\"]]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2068/rect - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [92 bytes]","args":[]}
+RESULT: {"script":"<script> [92 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/actions - {"actions":[{"id":"action9","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2068"}}]}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"actions":[{"id":"action9","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1245,"y":-73,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2068"}}]}]}
+COMMAND: DELETE /session/c9263ec2933223380c10f0eaa4ba97db/actions - {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2068/click - {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/file - {"file":"[base64] 10244 bytes"}
+RESULT: {}
+RESULT: {}
+RESULT: {"file":"[base64] 10244 bytes"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-9-0-1-uploader-fu\")]"}
+RESULT: {"using":"xpath","value":"//input[(@type=\"file\") and contains(@id,\"BOList-9-0-1-uploader-fu\")]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5958/rect - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [92 bytes]","args":[]}
+RESULT: {"script":"<script> [92 bytes]","args":[]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/actions - {"actions":[{"id":"action10","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":1540,"y":-250,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5958"}}]}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5958","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5958"},{"block":"center","inline":"center"}]}
+RESULT: {"script":"<script> [79 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5958","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5958"},{"block":"center","inline":"center"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5958/clear - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5958/value - {"text":"C:\\Windows\\SystemTemp\\scoped_dir3344_1473609394\\upload3344_1548311945\\Sites.xlsx"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"text":"C:\\Windows\\SystemTemp\\scoped_dir3344_1473609394\\upload3344_1548311945\\Sites.xlsx"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+RESULT: {"using":"xpath","value":"//bdi[contains(text(), \"Match by name\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5967/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+RESULT: {"using":"xpath","value":"//bdi[text() = \"OK\"]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5968/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"uploadBtn\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1912/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+RESULT: {"using":"xpath","value":"//button[.//bdi[contains(text(),\"Refresh Logs\")]]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.5975/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.6338","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.6338"}]}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.6338","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.6338"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[4]/span"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.6339","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.6339"}]}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.6339","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.6339"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[7]/div/span[2]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.6338","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.6338"}]}
+RESULT: {}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.6338","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.6338"}]}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"customHandoversTable-listUl\")]/tbody/tr[1]/td[8]/div/span[2]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/execute/sync - {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.6342","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.6342"}]}
+RESULT: {}
+RESULT: {"script":"<script> [56 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.6342","ELEMENT":"f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.6342"}]}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+RESULT: {"using":"xpath","value":"//div[contains(@id,\"iconTabBar\")]//span[contains(text(),\"Drafts\")]"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.2890/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/c9263ec2933223380c10f0eaa4ba97db/element/f.1CF101DF63CCA3DC3149C044B052B3C7.d.63C0D0A4F59DBB77F00ED9073DB6DD48.e.1711/click - {}
+RESULT: {}
+COMMAND: GET /session/c9263ec2933223380c10f0eaa4ba97db/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-05-15T05:12:59" time="14.799" tests="6" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Backup module for creating data for addresses, yards, partners &amp; sites via API"/>
+      <property name="capabilities" value="chrome.148_0_7778_97.windows"/>
+      <property name="file" value="file:///D:/a/1/s/test/utils/backup-solution-data-creation.spec.js"/>
+    </properties>
+    <testcase classname="chrome.148_0_7778_97.windows.Backup_module_for_creating_data_for_addresses,_yards,_partners_&amp;_sites_via_API" name="Should read the IDs of the files you sent and store them in a map of values" time="0.094"/>
+    <testcase classname="chrome.148_0_7778_97.windows.Backup_module_for_creating_data_for_addresses,_yards,_partners_&amp;_sites_via_API" name="Should verify and create addresses via API if they do not exist" time="1.453"/>
+    <testcase classname="chrome.148_0_7778_97.windows.Backup_module_for_creating_data_for_addresses,_yards,_partners_&amp;_sites_via_API" name="Should verify and create yards via API if they do not exist" time="2.885"/>
+    <testcase classname="chrome.148_0_7778_97.windows.Backup_module_for_creating_data_for_addresses,_yards,_partners_&amp;_sites_via_API" name="Should verify and create partners via API if they do not exist" time="4.316"/>
+    <testcase classname="chrome.148_0_7778_97.windows.Backup_module_for_creating_data_for_addresses,_yards,_partners_&amp;_sites_via_API" name="Should verify and create yards partners assignments via API if they do not exist" time="3.502"/>
+    <testcase classname="chrome.148_0_7778_97.windows.Backup_module_for_creating_data_for_addresses,_yards,_partners_&amp;_sites_via_API" name="Should verify and create sites via API if they do not exist" time="2.342">
+      <system-out><![CDATA[
+COMMAND: DELETE /session/c9263ec2933223380c10f0eaa4ba97db - {}
 RESULT: {}
 ]]></system-out>
     </testcase>
