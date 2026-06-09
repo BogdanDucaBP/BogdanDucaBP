@@ -1,49 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="2" failures="1" errors="1" skipped="0">
-  <testsuite timestamp="2026-06-08T19:03:21" time="31.035" tests="2" failures="1" errors="1" skipped="0">
+<testsuites tests="2" failures="0" errors="0" skipped="0">
+  <testsuite timestamp="2026-06-09T19:03:41" time="30.325" tests="2" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
       <property name="suiteName" value="Check QaLive System is up, or stop pipeline"/>
       <property name="capabilities" value="chrome.148_0_7778_179.windows"/>
       <property name="file" value="file:///D:/a/1/s/test/specs/TECH/check-QaLive-up.spec.js"/>
     </properties>
-    <testcase classname="chrome.148_0_7778_179.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check for visible error message controls and stop pipeline if found" time="8.042">
+    <testcase classname="chrome.148_0_7778_179.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check for visible error message controls and stop pipeline if found" time="7.868">
       <system-out><![CDATA[
-COMMAND: POST /session/fe0621ddb9af92e7f030ab544c0b0cfd/refresh - {}
+COMMAND: POST /session/ba92918e3160db9d3bfd4591e435666f/refresh - {}
 RESULT: {}
-COMMAND: GET /session/fe0621ddb9af92e7f030ab544c0b0cfd/screenshot - {}
+COMMAND: GET /session/ba92918e3160db9d3bfd4591e435666f/screenshot - {}
 RESULT: {}
-COMMAND: POST /session/fe0621ddb9af92e7f030ab544c0b0cfd/elements - {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
+COMMAND: POST /session/ba92918e3160db9d3bfd4591e435666f/elements - {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
 RESULT: {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
-COMMAND: POST /session/fe0621ddb9af92e7f030ab544c0b0cfd/elements - {"using":"css selector","value":"div.sapMMsgBoxText"}
+COMMAND: POST /session/ba92918e3160db9d3bfd4591e435666f/elements - {"using":"css selector","value":"div.sapMMsgBoxText"}
 RESULT: {"using":"css selector","value":"div.sapMMsgBoxText"}
-COMMAND: POST /session/fe0621ddb9af92e7f030ab544c0b0cfd/elements - {"using":"css selector","value":"div.sapMMessageToast"}
+COMMAND: POST /session/ba92918e3160db9d3bfd4591e435666f/elements - {"using":"css selector","value":"div.sapMMessageToast"}
 RESULT: {"using":"css selector","value":"div.sapMMessageToast"}
-COMMAND: POST /session/fe0621ddb9af92e7f030ab544c0b0cfd/elements - {"using":"css selector","value":"div[role=\"alert\"]"}
+COMMAND: POST /session/ba92918e3160db9d3bfd4591e435666f/elements - {"using":"css selector","value":"div[role=\"alert\"]"}
 RESULT: {"using":"css selector","value":"div[role=\"alert\"]"}
 ]]></system-out>
     </testcase>
-    <testcase classname="chrome.148_0_7778_179.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check if the number in the specified element is greater than 0" time="0.168">
-      <failure/>
-      <error message="The number in the element is not greater than 0. Failing the test to stop pipeline."/>
+    <testcase classname="chrome.148_0_7778_179.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check if the number in the specified element is greater than 0" time="0.856">
       <system-out><![CDATA[
-COMMAND: POST /session/fe0621ddb9af92e7f030ab544c0b0cfd/element - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/ba92918e3160db9d3bfd4591e435666f/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
 RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
-COMMAND: GET /session/fe0621ddb9af92e7f030ab544c0b0cfd/element/f.2DFF6ADA00D5860777F442112BF1EC1F.d.42CC6756845CA7F34482ADA51BFB1F83.e.787/text - {}
+COMMAND: GET /session/ba92918e3160db9d3bfd4591e435666f/element/f.47A15AC128386D96F848DBBFBD4C4257.d.47EB0710DAF56678D88A837B1C056A77.e.781/text - {}
 RESULT: {}
-COMMAND: GET /session/fe0621ddb9af92e7f030ab544c0b0cfd/screenshot - {}
+COMMAND: GET /session/ba92918e3160db9d3bfd4591e435666f/element/f.47A15AC128386D96F848DBBFBD4C4257.d.47EB0710DAF56678D88A837B1C056A77.e.782/text - {}
 RESULT: {}
-COMMAND: GET /session/fe0621ddb9af92e7f030ab544c0b0cfd/screenshot - {}
-COMMAND: GET /session/fe0621ddb9af92e7f030ab544c0b0cfd/screenshot - {}
+COMMAND: GET /session/ba92918e3160db9d3bfd4591e435666f/element/f.47A15AC128386D96F848DBBFBD4C4257.d.47EB0710DAF56678D88A837B1C056A77.e.783/text - {}
 RESULT: {}
-RESULT: {}
-COMMAND: DELETE /session/fe0621ddb9af92e7f030ab544c0b0cfd - {}
+COMMAND: DELETE /session/ba92918e3160db9d3bfd4591e435666f - {}
 RESULT: {}
 ]]></system-out>
-      <system-err><![CDATA[
-Error: The number in the element is not greater than 0. Failing the test to stop pipeline.
-    at Context.<anonymous> (D:\a\1\s\test\specs\TECH\check-QaLive-up.spec.js:63:19)
-]]></system-err>
     </testcase>
   </testsuite>
 </testsuites>
