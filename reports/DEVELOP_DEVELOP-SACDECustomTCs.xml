@@ -1,26 +1,969 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="2" failures="1" errors="1" skipped="0">
-  <testsuite timestamp="2026-06-10T08:03:46" time="30.772" tests="2" failures="1" errors="1" skipped="0">
+<testsuites tests="50" failures="28" errors="28" skipped="0">
+  <testsuite timestamp="2026-06-11T08:05:49" time="0.947" tests="2" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0" />
-      <property name="suiteName" value="Check QaLive System is up, or stop pipeline" />
-      <property name="capabilities" value="chrome.149_0_7827_54.windows" />
-      <property name="file" value="file:///D:/a/1/s/test/specs/TECH/check-QaLive-up.spec.js" />
+      <property name="suiteName" value="SACDE - Setup for SYSTEM_CONFIGS US185808" />
+      <property name="capabilities" value="chrome.148_0_7778_179.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/api-tests/customer-SACDE/setup-system-config.spec.js" />
     </properties>
-    <testcase classname="chrome.149_0_7827_54.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check for visible error message controls and stop pipeline if found" time="8.27">
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE_-_Setup_for_SYSTEM_CONFIGS_US185808" name="Should create the BILLING UTC OFFSET of 3 system config if it does not exist update it if it does" time="0.603" />
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE_-_Setup_for_SYSTEM_CONFIGS_US185808" name="Should set system config of COST ASSIGNMENT CONTRACT ITEM to simple cost object" time="0.146" />
+  </testsuite>
+  <testsuite timestamp="2026-06-11T08:05:50" time="778.331" tests="22" failures="16" errors="16" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="SACDE - Adding custom counters specific to performance counters &amp; states US------" />
+      <property name="capabilities" value="chrome.148_0_7778_179.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/api-tests/customer-SACDE/custom-counters-addition.spec.js" />
+    </properties>
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE_-_Adding_custom_counters_specific_to_performance_counters_&amp;_states_US------" name="Should create the custom counters we desire update them if they exist" time="0.303" />
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE_-_Adding_custom_counters_specific_to_performance_counters_&amp;_states_US------" name="Should create the new billing conditions tied to the counters we added earlier or update them if they exist" time="0.266" />
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE_-_Adding_custom_counters_specific_to_performance_counters_&amp;_states_US------" name="Should create pricing procedure steps for our counters update them if they exist" time="0.412" />
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE_-_Adding_custom_counters_specific_to_performance_counters_&amp;_states_US------" name="Should generate pricing procedures from the setup page" time="137.345">
       <system-out><![CDATA[
-COMMAND: POST /session/25317ee74cc537fa999f4faed03f87ad/refresh - {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"css selector","value":"#j_username"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/url - {"url":"https://develop-testing.cfapps.eu10-004.hana.ondemand.com/"}
+RESULT: {"using":"css selector","value":"#j_username"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.D8FDCCD625DB44C4A344E1EA12A16BF6.e.6","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.D8FDCCD625DB44C4A344E1EA12A16BF6.e.6"}]}
+RESULT: {"url":"https://develop-testing.cfapps.eu10-004.hana.ondemand.com/"}
+RESULT: undefined
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.D8FDCCD625DB44C4A344E1EA12A16BF6.e.6","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.D8FDCCD625DB44C4A344E1EA12A16BF6.e.6"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"css selector","value":"#j_username"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
 RESULT: {}
-COMMAND: GET /session/25317ee74cc537fa999f4faed03f87ad/screenshot - {}
+RESULT: {"using":"css selector","value":"#j_username"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.58","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.58"}]}
 RESULT: {}
-COMMAND: POST /session/25317ee74cc537fa999f4faed03f87ad/elements - {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
-RESULT: {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
-COMMAND: POST /session/25317ee74cc537fa999f4faed03f87ad/elements - {"using":"css selector","value":"div.sapMMsgBoxText"}
-RESULT: {"using":"css selector","value":"div.sapMMsgBoxText"}
-COMMAND: POST /session/25317ee74cc537fa999f4faed03f87ad/elements - {"using":"css selector","value":"div.sapMMessageToast"}
-RESULT: {"using":"css selector","value":"div.sapMMessageToast"}
-COMMAND: POST /session/25317ee74cc537fa999f4faed03f87ad/elements - {"using":"css selector","value":"div[role=\"alert\"]"}
-RESULT: {"using":"css selector","value":"div[role=\"alert\"]"}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.58","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.58"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"css selector","value":"#j_username"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"using":"css selector","value":"#j_username"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.58/clear - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.58/value - {"text":"test1etm@bearingpoint.com"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"text":"test1etm@bearingpoint.com"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//div[contains(@class, \"fn-button__text\") and text()=\"Continue\"]"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {"using":"xpath","value":"//div[contains(@class, \"fn-button__text\") and text()=\"Continue\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.89","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.89"}]}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.89","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.89"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//div[contains(@class, \"fn-button__text\") and text()=\"Continue\"]"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"using":"xpath","value":"//div[contains(@class, \"fn-button__text\") and text()=\"Continue\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.89","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.89"}]}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.89","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.89"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//div[contains(@class, \"fn-button__text\") and text()=\"Continue\"]"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"using":"xpath","value":"//div[contains(@class, \"fn-button__text\") and text()=\"Continue\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.89","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.89"}]}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.89","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.89"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.89","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.89"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.89","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.89"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//div[contains(@class, \"fn-button__text\") and text()=\"Continue\"]"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {"using":"xpath","value":"//div[contains(@class, \"fn-button__text\") and text()=\"Continue\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.ADC0022FCE9F018A8AAF03D15E3A9DE6.e.89/click - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"css selector","value":"#j_password"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"using":"css selector","value":"#j_password"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.92","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.92"}]}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.92","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.92"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"css selector","value":"#j_password"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"using":"css selector","value":"#j_password"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.92/clear - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.92/value - {"text":"ETM.next2024"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"text":"ETM.next2024"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"css selector","value":"button[id=\"logOnFormSubmit\"]"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {"using":"css selector","value":"button[id=\"logOnFormSubmit\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.115","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.115"}]}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.115","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.115"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"css selector","value":"button[id=\"logOnFormSubmit\"]"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"using":"css selector","value":"button[id=\"logOnFormSubmit\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.115","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.115"}]}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.115","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.115"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.115","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.115"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.115","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.115"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"css selector","value":"button[id=\"logOnFormSubmit\"]"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {"using":"css selector","value":"button[id=\"logOnFormSubmit\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.24972435F973C7E75AFC1887D25FA22A.e.115/click - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//h1[contains(text(),\"biometric authentication device\")]"}
+RESULT: {"using":"xpath","value":"//h1[contains(text(),\"biometric authentication device\")]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"xpath","value":"//h1[contains(text(),\"biometric authentication device\")]"}
+RESULT: {"using":"xpath","value":"//h1[contains(text(),\"biometric authentication device\")]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [20 bytes]","args":[]}
+RESULT: {"script":"<script> [20 bytes]","args":[]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [20 bytes]","args":[]}
+RESULT: {"script":"<script> [20 bytes]","args":[]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/timeouts - {"script":"<script> [8 bytes]"}
+RESULT: {"script":"<script> [8 bytes]"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/timeouts - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [19 bytes]","args":[]}
+RESULT: {"script":"<script> [19 bytes]","args":[]}
+RESULT: undefined
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [21 bytes]","args":[]}
+RESULT: {"script":"<script> [21 bytes]","args":[]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [21 bytes]","args":[{"protocol":"http","hostname":"127.0.0.1","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","prefs":{"profile.password_manager_leak_detection":false},"args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"protocol":"http","hostname":"127.0.0.1","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","prefs":{"profile.password_manager_leak_detection":false},"args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [22 bytes]","args":[35000]}
+RESULT: {"script":"<script> [22 bytes]","args":[35000]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [21 bytes]","args":[{"selector":{"id":"shell-header","interaction":{"idSuffix":"icon"}},"wdio_ui5_key":"shellheader"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"selector":{"id":"shell-header","interaction":{"idSuffix":"icon"}},"wdio_ui5_key":"shellheader"}]}
+RESULT: undefined
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [21 bytes]","args":[{"selector":{"controlType":"sap.m.Title","i18NText":{"propertyName":"text","key":"dataCollectionAgreement"},"searchOpenDialogs":true},"wdio_ui5_key":"sapm.Title{\"propertyName\":\"text\",\"key\":\"dataCollectionAgreement\"}"}]}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"selector":{"controlType":"sap.m.Title","i18NText":{"propertyName":"text","key":"dataCollectionAgreement"},"searchOpenDialogs":true},"wdio_ui5_key":"sapm.Title{\"propertyName\":\"text\",\"key\":\"dataCollectionAgreement\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/refresh - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/refresh - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: undefined
+RESULT: undefined
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/window/fullscreen - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [20 bytes]","args":[]}
+RESULT: {"script":"<script> [20 bytes]","args":[]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [20 bytes]","args":[]}
+RESULT: {"script":"<script> [20 bytes]","args":[]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/timeouts - {"script":"<script> [8 bytes]"}
+RESULT: {"script":"<script> [8 bytes]"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/timeouts - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [21 bytes]","args":[]}
+RESULT: {"script":"<script> [21 bytes]","args":[]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [21 bytes]","args":[{"protocol":"http","hostname":"127.0.0.1","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","prefs":{"profile.password_manager_leak_detection":false},"args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"protocol":"http","hostname":"127.0.0.1","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","prefs":{"profile.password_manager_leak_detection":false},"args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [22 bytes]","args":[35000]}
+RESULT: {"script":"<script> [22 bytes]","args":[35000]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"xpath","value":"//button[.//bdi[text()='Close' or text()='OK' or text()='Cancel'] or @title='Close']"}
+RESULT: {"using":"xpath","value":"//button[.//bdi[text()='Close' or text()='OK' or text()='Cancel'] or @title='Close']"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.799","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.799"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.799","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.799"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.799/click - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [21 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Configure System"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Configure System\"}"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Configure System"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Configure System\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1070"},"getProperty",["header"]]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1070"},"getProperty",["header"]]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1070"},"getVisible",[]]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1070"},"getVisible",[]]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//*[@id=\"__tile116\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile116\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1070/click - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189"}]}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1189"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//span[contains(@id,\"anchor-inner\")]//span//bdi[contains(text(),\"Generate pricing procedures\")]"}
+RESULT: {"using":"xpath","value":"//span[contains(@id,\"anchor-inner\")]//span//bdi[contains(text(),\"Generate pricing procedures\")]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1212/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//button//bdi[text()=\"Generate\"]"}
+RESULT: {"using":"xpath","value":"//button//bdi[text()=\"Generate\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1216/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1219/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.799/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE_-_Adding_custom_counters_specific_to_performance_counters_&amp;_states_US------" name="Should do prerequisite steps add equipment" time="149.492">
+      <system-out><![CDATA[
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"xpath","value":"//button[.//bdi[text()='Close' or text()='OK' or text()='Cancel'] or @title='Close']"}
+RESULT: {"using":"xpath","value":"//button[.//bdi[text()='Close' or text()='OK' or text()='Cancel'] or @title='Close']"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1222","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1222"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1222","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1222"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1222/click - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [21 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Resources"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Resources\"}"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Resources"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Resources\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.859"},"getProperty",["header"]]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.859"},"getProperty",["header"]]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.859"},"getVisible",[]]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.859"},"getVisible",[]]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//*[@id=\"__tile39\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile39\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.859/click - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1231","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1231"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1231","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1231"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1231","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1231"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1231","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1231"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1231","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1231"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1231","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1231"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1231","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1231"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1231","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1231"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1210"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: undefined
+RESULT: undefined
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1268","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1268"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1268","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1268"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1268/enabled - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1268","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1268"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1268","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1268"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1268","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1268"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1268","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1268"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addNewRUOverflowToolbarButton\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1268/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--TYPE-arrow\"]"}
+RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--TYPE-arrow\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3049/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--TYPE-popup-list-listUl\")]//li//span[text()=\"Equipment\"]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--TYPE-popup-list-listUl\")]//li//span[text()=\"Equipment\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3053/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--ID-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--ID-inner\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--ID-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--ID-inner\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3166/clear - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3166/value - {"text":"6BxUjm9H9d"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"text":"6BxUjm9H9d"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--SHORT_TEXT-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--SHORT_TEXT-inner\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3064/clear - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3064/value - {"text":"Equipment WDIO"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"text":"Equipment WDIO"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--BASE_UNIT_OF_MEASURE-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--BASE_UNIT_OF_MEASURE-inner\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3067/clear - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3067/value - {"text":"Piece"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"text":"Piece"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--WEIGHT_UNIT-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--WEIGHT_UNIT-inner\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3072/clear - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3072/value - {"text":"Gram"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"text":"Gram"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--DIMENSION_UNIT-inner\"]"}
+RESULT: {"using":"xpath","value":"//input[@id=\"application-manageresources-display-component---newResourceUnit--DIMENSION_UNIT-inner\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3077/clear - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3077/value - {"text":"Meter"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"text":"Meter"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--control-anchor\"]"}
+RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--control-anchor\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3242/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--PLANNING_GROUP-arrow\"]"}
+RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--PLANNING_GROUP-arrow\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3249/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--PLANNING_GROUP-popup-list-listUl\")]//li//span[contains(text(),\"Heavy Equi\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--PLANNING_GROUP-popup-list-listUl\")]//li//span[contains(text(),\"Heavy Equi\")]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3253/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--ITEM_TYPE-arrow\"]"}
+RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--ITEM_TYPE-arrow\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3254/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--ITEM_TYPE-popup-list-listUl\")]//li//span[text()=\"Resource Unit\"]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--ITEM_TYPE-popup-list-listUl\")]//li//span[text()=\"Resource Unit\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3255/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--btnAddTimeSegment\"]"}
+RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--btnAddTimeSegment\"]"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3316/rect - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [19 bytes]","args":[]}
+RESULT: {"script":"<script> [19 bytes]","args":[]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/actions - {"actions":[{"id":"action1","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1888,"y":-32,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3316"}}]}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"actions":[{"id":"action1","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-1888,"y":-32,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3316"}}]}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3316","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3316"},{"block":"start","inline":"nearest"}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [19 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3316","ELEMENT":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3316"},{"block":"start","inline":"nearest"}]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3316/click - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--idRuTSAdmin-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\"]"}
+RESULT: {"using":"xpath","value":"//span[@id=\"application-manageresources-display-component---newResourceUnit--idRuTSAdmin-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-arrow\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3329/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--idRuTSAdmin-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"DATAWD-Y-BTIA\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"newResourceUnit--idRuTSAdmin-application-manageresources-display-component---newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"DATAWD-Y-BTIA\")]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3333/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"xpath","value":"//table[contains(@id,\"newResourceUnit--RUTimeSegment-listUl\")]//thead//th"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"newResourceUnit--RUTimeSegment-listUl\")]//thead//th"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3334/text - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3335/text - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3336/text - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3337/text - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3338/text - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3339/text - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3340/text - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3341/text - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3342/text - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"xpath","value":"//table[contains(@id,\"newResourceUnit--RUTimeSegment-listUl\")]//thead//th"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"newResourceUnit--RUTimeSegment-listUl\")]//thead//th"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3334/text - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3335/text - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3336/text - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3337/text - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3338/text - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3339/text - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3340/text - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3341/text - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3342/text - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3343/text - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//table[contains(@id,\"-newResourceUnit--RUTimeSegment-listUl\")]//tbody//tr[1]//td[9]//*[contains(@id,\"-arrow\")]"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"-newResourceUnit--RUTimeSegment-listUl\")]//tbody//tr[1]//td[9]//*[contains(@id,\"-arrow\")]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3347/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//ul[contains(@id,\"-newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"PM Order\")]"}
+RESULT: {"using":"xpath","value":"//ul[contains(@id,\"-newResourceUnit--RUTimeSegment-0-popup-list-listUl\")]//li//span[contains(text(),\"PM Order\")]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3350/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//table[contains(@id,\"-newResourceUnit--RUTimeSegment-listUl\")]//tbody//tr[1]//td[10]//*[contains(@id,\"-vhi\")]"}
+RESULT: {"using":"xpath","value":"//table[contains(@id,\"-newResourceUnit--RUTimeSegment-listUl\")]//tbody//tr[1]//td[10]//*[contains(@id,\"-vhi\")]"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3354/rect - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/window/rect - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/sync - {"script":"<script> [19 bytes]","args":[]}
+RESULT: {"script":"<script> [19 bytes]","args":[]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/actions - {"actions":[{"id":"action2","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-869,"y":-24,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3354"}}]}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"actions":[{"id":"action2","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":-869,"y":-24,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3354"}}]}]}
+COMMAND: DELETE /session/228fa5708f42d9a2c67489a46d5047bb/actions - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3354/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//div[contains(@id,\"dialog\")]//input"}
+RESULT: {"using":"xpath","value":"//div[contains(@id,\"dialog\")]//input"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3359/clear - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3359/value - {"text":"4000360"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {"text":"4000360"}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//button[contains(@id,\"btnGo\")]"}
+RESULT: {"using":"xpath","value":"//button[contains(@id,\"btnGo\")]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/actions - {"actions":[{"id":"action3","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"x":0,"y":0,"duration":100,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3363"}},{"type":"pointerDown","button":0},{"type":"pointerUp","button":0},{"type":"pause","duration":10},{"type":"pointerDown","button":0},{"type":"pointerUp","button":0}]}]}
+RESULT: {"actions":[{"id":"action3","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"x":0,"y":0,"duration":100,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3363"}},{"type":"pointerDown","button":0},{"type":"pointerUp","button":0},{"type":"pause","duration":10},{"type":"pointerDown","button":0},{"type":"pointerUp","button":0}]}]}
+COMMAND: DELETE /session/228fa5708f42d9a2c67489a46d5047bb/actions - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"(//div[contains(@id,\"dialog\")]//table//tr//td//span[text()=\"4000360\"])[1]"}
+RESULT: {"using":"xpath","value":"(//div[contains(@id,\"dialog\")]//table//tr//td//span[text()=\"4000360\"])[1]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3376/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"OK\")])[last()]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3378/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--resource-anchor\"]"}
+RESULT: {"using":"xpath","value":"//button[@id=\"application-manageresources-display-component---newResourceUnit--newRRUPage-anchBar-application-manageresources-display-component---newResourceUnit--resource-anchor\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3381/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [21 bytes]","args":[{"selector":{"id":"application-manageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE"}]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"selector":{"id":"application-manageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE","interaction":{"idSuffix":"inner"}},"wdio_ui5_key":"applicationmanageresources-display-component---newResourceUnit--PLANNED_DELIVERY_DATE"}]}
+RESULT: undefined
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/execute/async - {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3104"},"setValue",["06/11/26"]]}
+RESULT: {"script":"<script> [21 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3104"},"setValue",["06/11/26"]]}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/actions - {"actions":[{"id":"action4","type":"key","parameters":{},"actions":[{"type":"keyDown","value":"î€‡"},{"type":"pause","duration":10},{"type":"keyUp","value":"î€‡"}]}]}
+RESULT: {"actions":[{"id":"action4","type":"key","parameters":{},"actions":[{"type":"keyDown","value":"î€‡"},{"type":"pause","duration":10},{"type":"keyUp","value":"î€‡"}]}]}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//label[contains(@class, \"sapMLabelRequired\") and .//bdi[contains(text(), \"Planned Retirement\")]]"}
+RESULT: {"using":"xpath","value":"//label[contains(@class, \"sapMLabelRequired\") and .//bdi[contains(text(), \"Planned Retirement\")]]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/elements - {"using":"xpath","value":"//label[contains(@class, \"sapMLabelRequired\") and .//bdi[contains(text(), \"Planned Retirement\")]]"}
+RESULT: {"using":"xpath","value":"//label[contains(@class, \"sapMLabelRequired\") and .//bdi[contains(text(), \"Planned Retirement\")]]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//button[@data-kt=\"resourceUnitSaveButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"resourceUnitSaveButton\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3044/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Close\")])[last()]"}
+RESULT: {"using":"xpath","value":"(//footer[contains(@class,\"sapMDialogFooter\")]//button//bdi[contains(text(),\"Close\")])[last()]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3390/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//button[substring(@id, string-length(@id) - string-length('actionsToolbar-overflowButton') + 1) = 'actionsToolbar-overflowButton']"}
+RESULT: {"using":"xpath","value":"//button[substring(@id, string-length(@id) - string-length('actionsToolbar-overflowButton') + 1) = 'actionsToolbar-overflowButton']"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3860/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"xpath","value":"//button[@data-kt=\"priceInfoButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"priceInfoButton\"]"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.3862/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/element/f.B989EAEA79E8A2E014CE588F735CEFBF.d.B43BEF7683C4BFFEF89D87F38A679951.e.1222/click - {}
+RESULT: {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE_-_Adding_custom_counters_specific_to_performance_counters_&amp;_states_US------" name="Should add two performance documents for our 2nd equipment with APIs" time="2.757">
+      <system-out><![CDATA[
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-06-11T08:18:48" time="1471.244" tests="0" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="SACDE's monthly billing tests, all start from 1st of the month and end 1st of next month and should always have 30+1 days billed" />
+      <property name="capabilities" value="chrome.148_0_7778_179.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/api-tests/customer-SACDE/monthly-billing.spec.js" />
+    </properties>
+  </testsuite>
+  <testsuite timestamp="2026-06-11T08:19:31" time="113.262" tests="2" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="Month: January" />
+      <property name="capabilities" value="chrome.148_0_7778_179.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/api-tests/customer-SACDE/monthly-billing.spec.js" />
+    </properties>
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE's_monthly_billing_tests,_all_start_from_1st_of_the_month_and_end_1st_of_next_month_and_should_always_have_30+1_days_billed.Month:_January" name="Should setup billing case with eq timed 0002 available on month of January and ends in provide to site" time="37.414">
+      <system-out><![CDATA[
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/window/fullscreen - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-06-11T08:21:24" time="118.122" tests="2" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="Month: February" />
+      <property name="capabilities" value="chrome.148_0_7778_179.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/api-tests/customer-SACDE/monthly-billing.spec.js" />
+    </properties>
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE's_monthly_billing_tests,_all_start_from_1st_of_the_month_and_end_1st_of_next_month_and_should_always_have_30+1_days_billed.Month:_February" name="Should setup billing case with eq timed 0002 available on month of February and ends in provide to site" time="33.924">
+      <system-out><![CDATA[
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/window/fullscreen - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-06-11T08:23:22" time="121.033" tests="2" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="Month: March" />
+      <property name="capabilities" value="chrome.148_0_7778_179.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/api-tests/customer-SACDE/monthly-billing.spec.js" />
+    </properties>
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE's_monthly_billing_tests,_all_start_from_1st_of_the_month_and_end_1st_of_next_month_and_should_always_have_30+1_days_billed.Month:_March" name="Should setup billing case with eq timed 0002 available on month of March and ends in provide to site" time="35.911">
+      <system-out><![CDATA[
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/window/fullscreen - {}
+RESULT: {}
+RESULT: {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-06-11T08:25:23" time="114.899" tests="2" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="Month: April" />
+      <property name="capabilities" value="chrome.148_0_7778_179.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/api-tests/customer-SACDE/monthly-billing.spec.js" />
+    </properties>
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE's_monthly_billing_tests,_all_start_from_1st_of_the_month_and_end_1st_of_next_month_and_should_always_have_30+1_days_billed.Month:_April" name="Should setup billing case with eq timed 0002 available on month of April and ends in provide to site" time="34.659">
+      <system-out><![CDATA[
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/window/fullscreen - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-06-11T08:27:18" time="119.912" tests="2" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="Month: May" />
+      <property name="capabilities" value="chrome.148_0_7778_179.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/api-tests/customer-SACDE/monthly-billing.spec.js" />
+    </properties>
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE's_monthly_billing_tests,_all_start_from_1st_of_the_month_and_end_1st_of_next_month_and_should_always_have_30+1_days_billed.Month:_May" name="Should setup billing case with eq timed 0002 available on month of May and ends in provide to site" time="33.352">
+      <system-out><![CDATA[
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/window/fullscreen - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-06-11T08:29:18" time="120.042" tests="2" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="Month: June" />
+      <property name="capabilities" value="chrome.148_0_7778_179.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/api-tests/customer-SACDE/monthly-billing.spec.js" />
+    </properties>
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE's_monthly_billing_tests,_all_start_from_1st_of_the_month_and_end_1st_of_next_month_and_should_always_have_30+1_days_billed.Month:_June" name="Should setup billing case with eq timed 0002 available on month of June and ends in provide to site" time="34.405">
+      <system-out><![CDATA[
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/window/fullscreen - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-06-11T08:31:18" time="119.463" tests="2" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="Month: July" />
+      <property name="capabilities" value="chrome.148_0_7778_179.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/api-tests/customer-SACDE/monthly-billing.spec.js" />
+    </properties>
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE's_monthly_billing_tests,_all_start_from_1st_of_the_month_and_end_1st_of_next_month_and_should_always_have_30+1_days_billed.Month:_July" name="Should setup billing case with eq timed 0002 available on month of July and ends in provide to site" time="33.47">
+      <system-out><![CDATA[
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/window/fullscreen - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-06-11T08:33:18" time="119.62" tests="2" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="Month: August" />
+      <property name="capabilities" value="chrome.148_0_7778_179.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/api-tests/customer-SACDE/monthly-billing.spec.js" />
+    </properties>
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE's_monthly_billing_tests,_all_start_from_1st_of_the_month_and_end_1st_of_next_month_and_should_always_have_30+1_days_billed.Month:_August" name="Should setup billing case with eq timed 0002 available on month of August and ends in provide to site" time="33.556">
+      <system-out><![CDATA[
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/window/fullscreen - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-06-11T08:35:17" time="124.346" tests="2" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="Month: September" />
+      <property name="capabilities" value="chrome.148_0_7778_179.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/api-tests/customer-SACDE/monthly-billing.spec.js" />
+    </properties>
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE's_monthly_billing_tests,_all_start_from_1st_of_the_month_and_end_1st_of_next_month_and_should_always_have_30+1_days_billed.Month:_September" name="Should setup billing case with eq timed 0002 available on month of September and ends in provide to site" time="34.945">
+      <system-out><![CDATA[
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/window/fullscreen - {}
+RESULT: {}
+RESULT: {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-06-11T08:37:22" time="116.831" tests="2" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="Month: October" />
+      <property name="capabilities" value="chrome.148_0_7778_179.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/api-tests/customer-SACDE/monthly-billing.spec.js" />
+    </properties>
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE's_monthly_billing_tests,_all_start_from_1st_of_the_month_and_end_1st_of_next_month_and_should_always_have_30+1_days_billed.Month:_October" name="Should setup billing case with eq timed 0002 available on month of October and ends in provide to site" time="36.192">
+      <system-out><![CDATA[
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/window/fullscreen - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-06-11T08:39:18" time="122.202" tests="2" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="Month: November" />
+      <property name="capabilities" value="chrome.148_0_7778_179.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/api-tests/customer-SACDE/monthly-billing.spec.js" />
+    </properties>
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE's_monthly_billing_tests,_all_start_from_1st_of_the_month_and_end_1st_of_next_month_and_should_always_have_30+1_days_billed.Month:_November" name="Should setup billing case with eq timed 0002 available on month of November and ends in provide to site" time="36.85">
+      <system-out><![CDATA[
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/window/fullscreen - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-06-11T08:41:21" time="118.434" tests="2" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="Month: December" />
+      <property name="capabilities" value="chrome.148_0_7778_179.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/api-tests/customer-SACDE/monthly-billing.spec.js" />
+    </properties>
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE's_monthly_billing_tests,_all_start_from_1st_of_the_month_and_end_1st_of_next_month_and_should_always_have_30+1_days_billed.Month:_December" name="Should setup billing case with eq timed 0002 available on month of December and ends in provide to site" time="33.269">
+      <system-out><![CDATA[
+COMMAND: POST /session/228fa5708f42d9a2c67489a46d5047bb/window/fullscreen - {}
+COMMAND: GET /session/228fa5708f42d9a2c67489a46d5047bb/screenshot - {}
+RESULT: {}
+RESULT: {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-06-11T08:43:19" time="0.697" tests="2" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="SACDE - Resetting the cost assignment to default one &amp; deleting the UTC_OFFSET US------" />
+      <property name="capabilities" value="chrome.148_0_7778_179.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/api-tests/customer-SACDE/reset-system-config.spec.js" />
+    </properties>
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE_-_Resetting_the_cost_assignment_to_default_one_&amp;_deleting_the_UTC_OFFSET_US------" name="Should delete the BILLING UTC OFFSET system config if it exists" time="0.352">
+      <system-out><![CDATA[
+RESULT: {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.148_0_7778_179.windows.SACDE_-_Resetting_the_cost_assignment_to_default_one_&amp;_deleting_the_UTC_OFFSET_US------" name="Should set system config of COST ASSIGNMENT CONTRACT ITEM back to default" time="0.152">
+      <system-out><![CDATA[
+COMMAND: DELETE /session/228fa5708f42d9a2c67489a46d5047bb - {}
+RESULT: {}
 ]]></system-out>
     </testcase>
   </testsuite>
