@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="2" errors="2" skipped="0">
+  <testsuite timestamp="2026-10-12T15:30:11" time="202.854" tests="4" failures="2" errors="2" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="Create masterdata for Yard Overview - trigger provide US130988" />
+      <property name="capabilities" value="chrome.154_0_8037_98.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/specs/HTR/yard-overview-trigger.spec.js" />
+    </properties>
+    <testcase classname="chrome.154_0_8037_98.windows.Create_masterdata_for_Yard_Overview_-_trigger_provide_US130988" name="Prereq Should create a new material with API stock increase it if we dont already have it through central container" time="1.037">
+      <failure />
+      <error message="Request failed with status code 400" />
+      <system-out><![CDATA[
+COMMAND: POST /session/89d1f2dd6c9d8b54003e2de90daa1218/window/fullscreen - {}
+RESULT: {}
+COMMAND: GET /session/89d1f2dd6c9d8b54003e2de90daa1218/screenshot - {}
+COMMAND: GET /session/89d1f2dd6c9d8b54003e2de90daa1218/screenshot - {}
+RESULT: {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+AxiosError: Request failed with status code 400
+    at settle (D:\a\1\s\node_modules\axios\dist\node\axios.cjs:1966:12)
+    at IncomingMessage.handleStreamEnd (D:\a\1\s\node_modules\axios\dist\node\axios.cjs:3065:11)
+    at IncomingMessage.emit (node:events:536:35)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at Axios.request (D:\a\1\s\node_modules\axios\dist\node\axios.cjs:3876:41)
+    at async resourceCreationAPI (D:\a\1\s\test\api-tests\utils-api.js:922:20)
+    at async Context.<anonymous> (D:\a\1\s\test\specs\HTR\yard-overview-trigger.spec.js:57:47)
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.154_0_8037_98.windows.Create_masterdata_for_Yard_Overview_-_trigger_provide_US130988" name="Prereq Should create a blank calendar with API if not already provided by central container" time="0.002">
+      <system-out><![CDATA[
+COMMAND: GET /session/89d1f2dd6c9d8b54003e2de90daa1218/screenshot - {}
+COMMAND: GET /session/89d1f2dd6c9d8b54003e2de90daa1218/screenshot - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.154_0_8037_98.windows.Create_masterdata_for_Yard_Overview_-_trigger_provide_US130988" name="Prereq Should create a new contract with API if not already provided by central container" time="0.705">
+      <failure />
+      <error message="Request failed with status code 400" />
+      <system-out><![CDATA[
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/89d1f2dd6c9d8b54003e2de90daa1218/screenshot - {}
+COMMAND: GET /session/89d1f2dd6c9d8b54003e2de90daa1218/screenshot - {}
+RESULT: {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+AxiosError: Request failed with status code 400
+    at settle (D:\a\1\s\node_modules\axios\dist\node\axios.cjs:1966:12)
+    at IncomingMessage.handleStreamEnd (D:\a\1\s\node_modules\axios\dist\node\axios.cjs:3065:11)
+    at IncomingMessage.emit (node:events:536:35)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at Axios.request (D:\a\1\s\node_modules\axios\dist\node\axios.cjs:3876:41)
+    at async contractCreationAPI (D:\a\1\s\test\api-tests\utils-api.js:1018:20)
+    at async Context.<anonymous> (D:\a\1\s\test\specs\HTR\yard-overview-trigger.spec.js:139:47)
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.154_0_8037_98.windows.Create_masterdata_for_Yard_Overview_-_trigger_provide_US130988" name="Prereq Should add created material to contract with API if we created the contract in this run" time="0.001">
+      <system-out><![CDATA[
+COMMAND: GET /session/89d1f2dd6c9d8b54003e2de90daa1218/screenshot - {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-10-12T15:33:34" time="189.046" tests="0" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="Create masterdata for Yard Overview - trigger provide US130988" />
+      <property name="capabilities" value="chrome.154_0_8037_98.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/specs/HTR/site-overview-return.spec.js" />
+    </properties>
+  </testsuite>
+</testsuites>
