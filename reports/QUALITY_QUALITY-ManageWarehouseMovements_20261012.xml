@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="6" failures="5" errors="5" skipped="0">
+  <testsuite timestamp="2026-10-12T16:34:09" time="103.259" tests="4" failures="3" errors="3" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="Manage Warehouse Movements - Removal on Yard US130987 &amp; Central Container US------" />
+      <property name="capabilities" value="chrome.154_0_8037_98.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/specs/HTR/mwm-removal-yard.spec.js" />
+    </properties>
+    <testcase classname="chrome.154_0_8037_98.windows.Manage_Warehouse_Movements_-_Removal_on_Yard_US130987_&amp;_Central_Container_US------" name="Prereq Have the bundles be ready for handover by updating the item type to BUND" time="0.687">
+      <system-out><![CDATA[
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.154_0_8037_98.windows.Manage_Warehouse_Movements_-_Removal_on_Yard_US130987_&amp;_Central_Container_US------" name="Prereq Should check that we have prerequisite data create all the resources needed for provide of contract" time="0.437">
+      <failure />
+      <error message="Request failed with status code 400" />
+      <system-out><![CDATA[
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/window/fullscreen - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+AxiosError: Request failed with status code 400
+    at settle (D:\a\1\s\node_modules\axios\dist\node\axios.cjs:1966:12)
+    at IncomingMessage.handleStreamEnd (D:\a\1\s\node_modules\axios\dist\node\axios.cjs:3065:11)
+    at IncomingMessage.emit (node:events:536:35)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at Axios.request (D:\a\1\s\node_modules\axios\dist\node\axios.cjs:3876:41)
+    at async resourceCreationAPI (D:\a\1\s\test\api-tests\utils-api.js:922:20)
+    at async Context.<anonymous> (D:\a\1\s\test\specs\HTR\mwm-removal-yard.spec.js:118:23)
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.154_0_8037_98.windows.Manage_Warehouse_Movements_-_Removal_on_Yard_US130987_&amp;_Central_Container_US------" name="Prereq Should do the provide to site with all the resources set up earlier through API" time="33.597">
+      <failure />
+      <error message="The setValue/addValue command only take string or number values. If you like to use special characters, use the &quot;keys&quot; command." />
+      <system-out><![CDATA[
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"xpath","value":"//button[.//bdi[text()='Close' or text()='OK' or text()='Cancel'] or @title='Close']"}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+RESULT: {"using":"xpath","value":"//button[.//bdi[text()='Close' or text()='OK' or text()='Cancel'] or @title='Close']"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.422","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.422"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.422","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.422"}]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element/f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.422/click - {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Contracts"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Contracts\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Contracts"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Contracts\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.496"},"getProperty",["header"]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.496"},"getProperty",["header"]]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.496"},"getVisible",[]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.496"},"getVisible",[]]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element - {"using":"xpath","value":"//*[@id=\"__tile158\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile158\"]"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element/f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.496/click - {}
+RESULT: {}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.870","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.870"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.870","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.870"}]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.870","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.870"}]}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.870","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.870"}]}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: undefined
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element - {"using":"xpath","value":"//button[@data-kt=\"addButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addButton\"]"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"xpath","value":"//button[@data-kt=\"addButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"addButton\"]"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.909","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.909"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.909","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.909"}]}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/element/f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.909/enabled - {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.909","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.909"}]}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.909","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.909"}]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.909","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.909"}]}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.909","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.909"}]}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element - {"using":"xpath","value":"//input[contains(@id,\"smartContractFilterBar-btnBasicSearch-I\")]"}
+RESULT: {"using":"xpath","value":"//input[contains(@id,\"smartContractFilterBar-btnBasicSearch-I\")]"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element/f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.886/clear - {}
+RESULT: {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+Error: The setValue/addValue command only take string or number values. If you like to use special characters, use the "keys" command.
+    at async Context.<anonymous> (D:\a\1\s\test\specs\HTR\mwm-removal-yard.spec.js:558:9)
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.154_0_8037_98.windows.Manage_Warehouse_Movements_-_Removal_on_Yard_US130987_&amp;_Central_Container_US------" name="Should do a handover execution warehouse removal on yard US130897" time="16.555">
+      <failure />
+      <error message="The setValue/addValue command only take string or number values. If you like to use special characters, use the &quot;keys&quot; command." />
+      <system-out><![CDATA[
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"xpath","value":"//button[.//bdi[text()='Close' or text()='OK' or text()='Cancel'] or @title='Close']"}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+RESULT: {"using":"xpath","value":"//button[.//bdi[text()='Close' or text()='OK' or text()='Cancel'] or @title='Close']"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.422","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.422"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.422","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.422"}]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element/f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.422/click - {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Handovers"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Handovers\"}"}]}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.GenericTile","properties":{"header":"Manage Handovers"}},"wdio_ui5_key":"sapm.GenericTile{\"header\":\"Manage Handovers\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.536"},"getProperty",["header"]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.536"},"getProperty",["header"]]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/async - {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.536"},"getVisible",[]]}
+RESULT: {"script":"<script> [6424 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.536"},"getVisible",[]]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element - {"using":"xpath","value":"//*[@id=\"__tile161\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"__tile161\"]"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element/f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.536/click - {}
+RESULT: {}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+RESULT: {"using":"css selector","value":"\n            .sapUiLocalBusyIndicator,\n            .sapUiLocalBusyIndicatorAnimation,\n            .sapUiLocalBusyIndicatorAnimStandard,\n            .sapMBusyIndicator,\n            .sapUiBusy,\n            #sap-ui-blocklayer-popup\n        "}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"xpath","value":"//span[text()='Error']"}
+RESULT: {"using":"xpath","value":"//span[text()='Error']"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element - {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+RESULT: {"using":"xpath","value":"//button[@data-kt=\"masterHOAddButton\"]"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.995","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.995"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.995","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.995"}]}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/element/f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.995/enabled - {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.995","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.995"}]}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.995","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.995"}]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.995","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.995"}]}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.995","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.995"}]}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element - {"using":"xpath","value":"//input[contains(@id ,\"smartFilterBar-btnBasicSearch-I\")]"}
+RESULT: {"using":"xpath","value":"//input[contains(@id ,\"smartFilterBar-btnBasicSearch-I\")]"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element/f.DE640205D8DCF662B3A79433F1BB9D04.d.A0F8C97DF0920CCA0660D2DC1D732F70.e.974/clear - {}
+RESULT: {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element - {"using":"css selector","value":"#j_username"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/url - {"url":"https://quality-testing.cfapps.eu10-004.hana.ondemand.com/"}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+RESULT: {"using":"css selector","value":"#j_username"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element - {"using":"css selector","value":"#j_username"}
+RESULT: {"url":"https://quality-testing.cfapps.eu10-004.hana.ondemand.com/"}
+RESULT: undefined
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+RESULT: undefined
+RESULT: undefined
+RESULT: {}
+RESULT: {"using":"css selector","value":"#j_username"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element - {"using":"css selector","value":"#shell-header-logo"}
+RESULT: {}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.E484376B476709211A66703C0326F1CE.e.1035","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.E484376B476709211A66703C0326F1CE.e.1035"}]}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.E484376B476709211A66703C0326F1CE.e.1035","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.E484376B476709211A66703C0326F1CE.e.1035"}]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element - {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/sync - {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.E484376B476709211A66703C0326F1CE.e.1035","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.E484376B476709211A66703C0326F1CE.e.1035"}]}
+RESULT: {}
+RESULT: {"script":"<script> [8489 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.E484376B476709211A66703C0326F1CE.e.1035","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.E484376B476709211A66703C0326F1CE.e.1035"}]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/sync - {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.E484376B476709211A66703C0326F1CE.e.1035","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.E484376B476709211A66703C0326F1CE.e.1035"}]}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {"script":"<script> [5351 bytes]","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.DE640205D8DCF662B3A79433F1BB9D04.d.E484376B476709211A66703C0326F1CE.e.1035","ELEMENT":"f.DE640205D8DCF662B3A79433F1BB9D04.d.E484376B476709211A66703C0326F1CE.e.1035"}]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element - {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+RESULT: {"using":"css selector","value":"#shell-header-logo"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element/f.DE640205D8DCF662B3A79433F1BB9D04.d.E484376B476709211A66703C0326F1CE.e.1035/click - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/element - {"using":"xpath","value":"//h1[contains(text(),\"biometric authentication device\")]"}
+RESULT: {"using":"xpath","value":"//h1[contains(text(),\"biometric authentication device\")]"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/elements - {"using":"xpath","value":"//h1[contains(text(),\"biometric authentication device\")]"}
+RESULT: {"using":"xpath","value":"//h1[contains(text(),\"biometric authentication device\")]"}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/async - {"script":"<script> [189 bytes]","args":[]}
+RESULT: {"script":"<script> [189 bytes]","args":[]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/async - {"script":"<script> [123 bytes]","args":[]}
+RESULT: {"script":"<script> [123 bytes]","args":[]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/timeouts - {"script":"<number>"}
+RESULT: {"script":"<number>"}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/timeouts - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/async - {"script":"<script> [2676 bytes]","args":[]}
+RESULT: {"script":"<script> [2676 bytes]","args":[]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/async - {"script":"<script> [2342 bytes]","args":[{"protocol":"http","hostname":"0.0.0.0","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+RESULT: {"script":"<script> [2342 bytes]","args":[{"protocol":"http","hostname":"0.0.0.0","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/async - {"script":"<script> [21126 bytes]","args":[35000]}
+RESULT: {"script":"<script> [21126 bytes]","args":[35000]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"shell-header","interaction":{"idSuffix":"icon"}},"wdio_ui5_key":"shellheader"}]}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"id":"shell-header","interaction":{"idSuffix":"icon"}},"wdio_ui5_key":"shellheader"}]}
+RESULT: undefined
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/async - {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.Title","i18NText":{"propertyName":"text","key":"dataCollectionAgreement"},"searchOpenDialogs":true},"wdio_ui5_key":"sapm.Title{\"propertyName\":\"text\",\"key\":\"dataCollectionAgreement\"}"}]}
+RESULT: {}
+RESULT: {"script":"<script> [1562 bytes]","args":[{"selector":{"controlType":"sap.m.Title","i18NText":{"propertyName":"text","key":"dataCollectionAgreement"},"searchOpenDialogs":true},"wdio_ui5_key":"sapm.Title{\"propertyName\":\"text\",\"key\":\"dataCollectionAgreement\"}"}]}
+RESULT: undefined
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/refresh - {}
+RESULT: {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/refresh - {}
+RESULT: {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/window/fullscreen - {}
+RESULT: {}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/async - {"script":"<script> [189 bytes]","args":[]}
+RESULT: {"script":"<script> [189 bytes]","args":[]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/async - {"script":"<script> [123 bytes]","args":[]}
+RESULT: {"script":"<script> [123 bytes]","args":[]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/timeouts - {"script":"<number>"}
+RESULT: {"script":"<number>"}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/timeouts - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/async - {"script":"<script> [2676 bytes]","args":[]}
+RESULT: {"script":"<script> [2676 bytes]","args":[]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/async - {"script":"<script> [2342 bytes]","args":[{"protocol":"http","hostname":"0.0.0.0","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+RESULT: {"script":"<script> [2342 bytes]","args":[{"protocol":"http","hostname":"0.0.0.0","path":"/","capabilities":{"browserName":"chrome","goog:chromeOptions":{"binary":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe","args":["--start-maximized"]}},"logLevel":"warn","connectionRetryTimeout":120000,"connectionRetryCount":3,"logLevels":{},"enableDirectConnect":true,"strictSSL":true,"_":"65 more keys: [\"cacheDir\",\"port\",\"requestedCapabilities\",\"automationProtocol\",\"baseUrl\",\"waitforInterval\",\"waitforTimeout\",\"onReload\",\"beforeCommand\",\"afterCommand\",\"rootDir\",\"specs\",\"suites\",\"exclude\",\"groupLogsByTestSpec\",\"excludeDriverLogs\",\"bail\",\"framework\",\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"injectGlobals\",\"filesToWatch\",\"execArgv\",\"runnerEnv\",\"runner\",\"shard\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"beforeAssertion\",\"afterAssertion\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"_\",\"suite\",\"$0\",\"ignoredWorkerServices\",\"wdi5\"]"}]}
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/execute/async - {"script":"<script> [21126 bytes]","args":[35000]}
+RESULT: {"script":"<script> [21126 bytes]","args":[35000]}
+]]></system-out>
+      <system-err><![CDATA[
+Error: The setValue/addValue command only take string or number values. If you like to use special characters, use the "keys" command.
+    at async ManageHandoversUtils.handoverExecution (D:\a\1\s\test\utils\pages\ManageHandovers\managehandovers-utils.js:1668:9)
+    at async Context.<anonymous> (D:\a\1\s\test\specs\HTR\mwm-removal-yard.spec.js:742:9)
+]]></system-err>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-10-12T16:35:53" time="234.813" tests="1" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="Manage Warehouse Movements - Putaway on Yard US130984 &amp; Central Container US------" />
+      <property name="capabilities" value="chrome.154_0_8037_98.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/specs/HTR/mwm-putaway-yard.spec.js" />
+    </properties>
+    <testcase classname="chrome.154_0_8037_98.windows.Manage_Warehouse_Movements_-_Putaway_on_Yard_US130984_&amp;_Central_Container_US------" name="Prereq Should check that we have prerequisite data create all the resources needed" time="0.51">
+      <failure />
+      <error message="Request failed with status code 400" />
+      <system-out><![CDATA[
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/window/fullscreen - {}
+RESULT: {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+AxiosError: Request failed with status code 400
+    at settle (D:\a\1\s\node_modules\axios\dist\node\axios.cjs:1966:12)
+    at IncomingMessage.handleStreamEnd (D:\a\1\s\node_modules\axios\dist\node\axios.cjs:3065:11)
+    at IncomingMessage.emit (node:events:536:35)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at Axios.request (D:\a\1\s\node_modules\axios\dist\node\axios.cjs:3876:41)
+    at async resourceCreationAPI (D:\a\1\s\test\api-tests\utils-api.js:922:20)
+    at async Context.<anonymous> (D:\a\1\s\test\specs\HTR\mwm-putaway-yard.spec.js:112:23)
+]]></system-err>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-10-12T16:39:48" time="233.233" tests="1" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0" />
+      <property name="suiteName" value="Manage Warehouse Movements - Transfer on Yard US207636 &amp; Central Container US------" />
+      <property name="capabilities" value="chrome.154_0_8037_98.windows" />
+      <property name="file" value="file:///D:/a/1/s/test/specs/HTR/mwm-transfer-yard.spec.js" />
+    </properties>
+    <testcase classname="chrome.154_0_8037_98.windows.Manage_Warehouse_Movements_-_Transfer_on_Yard_US207636_&amp;_Central_Container_US------" name="Prereq Should check that we have prerequisite data create all the resources needed" time="0.528">
+      <failure />
+      <error message="Request failed with status code 400" />
+      <system-out><![CDATA[
+COMMAND: POST /session/aa8aace0cc6fa103574ef017d3d0a8d9/window/fullscreen - {}
+RESULT: {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/aa8aace0cc6fa103574ef017d3d0a8d9/screenshot - {}
+]]></system-out>
+      <system-err><![CDATA[
+AxiosError: Request failed with status code 400
+    at settle (D:\a\1\s\node_modules\axios\dist\node\axios.cjs:1966:12)
+    at IncomingMessage.handleStreamEnd (D:\a\1\s\node_modules\axios\dist\node\axios.cjs:3065:11)
+    at IncomingMessage.emit (node:events:536:35)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at Axios.request (D:\a\1\s\node_modules\axios\dist\node\axios.cjs:3876:41)
+    at async resourceCreationAPI (D:\a\1\s\test\api-tests\utils-api.js:922:20)
+    at async Context.<anonymous> (D:\a\1\s\test\specs\HTR\mwm-transfer-yard.spec.js:112:23)
+]]></system-err>
+    </testcase>
+  </testsuite>
+</testsuites>
