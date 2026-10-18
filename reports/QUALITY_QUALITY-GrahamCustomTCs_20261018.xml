@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="2" failures="0" errors="0" skipped="0">
+  <testsuite timestamp="2026-10-18T02:53:02" time="31.588" tests="2" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Check QaLive System is up, or stop pipeline"/>
+      <property name="capabilities" value="chrome.155_0_8059_40.windows"/>
+      <property name="file" value="file:///D:/a/1/s/test/specs/TECH/check-QaLive-up.spec.js"/>
+    </properties>
+    <testcase classname="chrome.155_0_8059_40.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check for visible error message controls and stop pipeline if found" time="8.99">
+      <system-out><![CDATA[
+COMMAND: POST /session/9a3f6eefd22b452c46ef64cd3cfcbac6/refresh - {}
+RESULT: {}
+COMMAND: GET /session/9a3f6eefd22b452c46ef64cd3cfcbac6/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/9a3f6eefd22b452c46ef64cd3cfcbac6/elements - {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
+RESULT: {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
+COMMAND: POST /session/9a3f6eefd22b452c46ef64cd3cfcbac6/elements - {"using":"css selector","value":"div.sapMMsgBoxText"}
+RESULT: {"using":"css selector","value":"div.sapMMsgBoxText"}
+COMMAND: POST /session/9a3f6eefd22b452c46ef64cd3cfcbac6/elements - {"using":"css selector","value":"div.sapMMessageToast"}
+RESULT: {"using":"css selector","value":"div.sapMMessageToast"}
+COMMAND: POST /session/9a3f6eefd22b452c46ef64cd3cfcbac6/elements - {"using":"css selector","value":"div[role=\"alert\"]"}
+RESULT: {"using":"css selector","value":"div[role=\"alert\"]"}
+COMMAND: GET /session/9a3f6eefd22b452c46ef64cd3cfcbac6/screenshot - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.155_0_8059_40.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check if the number in the specified element is greater than 0" time="0.382">
+      <system-out><![CDATA[
+COMMAND: POST /session/9a3f6eefd22b452c46ef64cd3cfcbac6/element - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/9a3f6eefd22b452c46ef64cd3cfcbac6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/9a3f6eefd22b452c46ef64cd3cfcbac6/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: GET /session/9a3f6eefd22b452c46ef64cd3cfcbac6/element/f.0D0A57D974FF7753C6DAE8E77E205B3C.d.8097F15EF26467EAB55C2C8FFA8A2336.e.682/text - {}
+RESULT: {}
+COMMAND: GET /session/9a3f6eefd22b452c46ef64cd3cfcbac6/screenshot - {}
+RESULT: {}
+COMMAND: DELETE /session/9a3f6eefd22b452c46ef64cd3cfcbac6 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
