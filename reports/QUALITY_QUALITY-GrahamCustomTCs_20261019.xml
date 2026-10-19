@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="2" failures="0" errors="0" skipped="0">
+  <testsuite timestamp="2026-10-19T02:53:12" time="37.321" tests="2" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Check QaLive System is up, or stop pipeline"/>
+      <property name="capabilities" value="chrome.155_0_8059_40.windows"/>
+      <property name="file" value="file:///D:/a/1/s/test/specs/TECH/check-QaLive-up.spec.js"/>
+    </properties>
+    <testcase classname="chrome.155_0_8059_40.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check for visible error message controls and stop pipeline if found" time="10.602">
+      <system-out><![CDATA[
+COMMAND: POST /session/e5ecdb525ca0f760c89905beee92ddf0/refresh - {}
+RESULT: {}
+COMMAND: GET /session/e5ecdb525ca0f760c89905beee92ddf0/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/e5ecdb525ca0f760c89905beee92ddf0/elements - {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
+RESULT: {"using":"css selector","value":"span.sapMText.sapMTextBreakWord.sapMTextMaxWidth.sapUiNegativeText"}
+COMMAND: POST /session/e5ecdb525ca0f760c89905beee92ddf0/elements - {"using":"css selector","value":"div.sapMMsgBoxText"}
+RESULT: {"using":"css selector","value":"div.sapMMsgBoxText"}
+COMMAND: POST /session/e5ecdb525ca0f760c89905beee92ddf0/elements - {"using":"css selector","value":"div.sapMMessageToast"}
+RESULT: {"using":"css selector","value":"div.sapMMessageToast"}
+COMMAND: POST /session/e5ecdb525ca0f760c89905beee92ddf0/elements - {"using":"css selector","value":"div[role=\"alert\"]"}
+RESULT: {"using":"css selector","value":"div[role=\"alert\"]"}
+COMMAND: GET /session/e5ecdb525ca0f760c89905beee92ddf0/screenshot - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.155_0_8059_40.windows.Check_QaLive_System_is_up,_or_stop_pipeline" name="should check if the number in the specified element is greater than 0" time="0.221">
+      <system-out><![CDATA[
+COMMAND: POST /session/e5ecdb525ca0f760c89905beee92ddf0/element - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/e5ecdb525ca0f760c89905beee92ddf0/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: POST /session/e5ecdb525ca0f760c89905beee92ddf0/elements - {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+RESULT: {"using":"css selector","value":"div.sapSuiteStackedMCBarLabel"}
+COMMAND: GET /session/e5ecdb525ca0f760c89905beee92ddf0/element/f.62589C0720B81A9AD80A19EF42EEFF83.d.22C1468C840F191EB94794E4FC27C60E.e.410/text - {}
+RESULT: {}
+COMMAND: GET /session/e5ecdb525ca0f760c89905beee92ddf0/screenshot - {}
+RESULT: {}
+COMMAND: DELETE /session/e5ecdb525ca0f760c89905beee92ddf0 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
