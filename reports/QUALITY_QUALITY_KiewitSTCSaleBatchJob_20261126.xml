@@ -1,2 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="0" failures="0" errors="0" skipped="0"/>
+<testsuites tests="16" failures="2" errors="2" skipped="0">
+  <testsuite timestamp="2026-11-26T13:59:19" time="3" tests="6" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="KIEWIT STC - data creation (#208483 / #232963 precondition)"/>
+      <property name="capabilities" value="chrome.158_0_8127_89.windows"/>
+      <property name="file" value="file:///D:/a/1/s/test/specs/Customer/Kiewit/kiewit-data-create.spec.js"/>
+    </properties>
+    <testcase classname="chrome.158_0_8127_89.windows.KIEWIT_STC_-_data_creation_(#208483_/_#232963_precondition)" name="Step 1 Resolve an STCID for this run and confirm it is unused so the proof cannot be contaminated by old data" time="0.277">
+      <system-out><![CDATA[
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.158_0_8127_89.windows.KIEWIT_STC_-_data_creation_(#208483_/_#232963_precondition)" name="Step 2 Create the FIRST handover delivering yard A stamped with the shared STCID" time="1.204">
+      <system-out><![CDATA[
+RESULT: {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.158_0_8127_89.windows.KIEWIT_STC_-_data_creation_(#208483_/_#232963_precondition)" name="Step 3 Create the SECOND handover delivering yard B under the SAME STCID this is the defect precondition" time="0.557">
+      <failure/>
+      <error message="handoverA is not defined"/>
+      <system-out><![CDATA[
+RESULT: {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/url - {}
+RESULT: {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+]]></system-out>
+      <system-err><![CDATA[
+ReferenceError: handoverA is not defined
+    at Context.<anonymous> (D:\a\1\s\test\specs\Customer\Kiewit\kiewit-data-create.spec.js:134:39)
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.158_0_8127_89.windows.KIEWIT_STC_-_data_creation_(#208483_/_#232963_precondition)" name="Step 4 Read the STCID back through the API and confirm it resolves to exactly TWO handovers" time="0.18">
+      <system-out><![CDATA[
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+RESULT: {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.158_0_8127_89.windows.KIEWIT_STC_-_data_creation_(#208483_/_#232963_precondition)" name="Step 5 Stage the S4 side of the STC StgHistoryEvents so the job has a sale document to process" time="0.527">
+      <system-out><![CDATA[
+RESULT: {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.158_0_8127_89.windows.KIEWIT_STC_-_data_creation_(#208483_/_#232963_precondition)" name="Step 6 Hand the created data over to the rest of the suite in one readable summary" time="0.004">
+      <system-out><![CDATA[
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-11-26T13:59:22" time="3.001" tests="5" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="KIEWIT STC - #208483 cannot read HO_HISTORY_CRTD_DATE (multi-handover STCID)"/>
+      <property name="capabilities" value="chrome.158_0_8127_89.windows"/>
+      <property name="file" value="file:///D:/a/1/s/test/specs/Customer/Kiewit/kiewit-create-new-time-sequences.spec.js"/>
+    </properties>
+    <testcase classname="chrome.158_0_8127_89.windows.KIEWIT_STC_-_#208483_cannot_read_HO_HISTORY_CRTD_DATE_(multi-handover_STCID)" name="Step 1 Confirm the defect precondition is still in place one STCID two handovers" time="0.2">
+      <system-out><![CDATA[
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.158_0_8127_89.windows.KIEWIT_STC_-_#208483_cannot_read_HO_HISTORY_CRTD_DATE_(multi-handover_STCID)" name="Step 2 Read EVERY handover under the STCID and prove each one has a resolvable creation date the field that was undefined" time="0.334">
+      <failure/>
+      <error message="expect(received).toBeGreaterThan(expected)&#xA;&#xA;Expected: > 0&#xA;Received:   0"/>
+      <system-out><![CDATA[
+RESULT: {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/url - {}
+RESULT: {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+]]></system-out>
+      <system-err><![CDATA[
+Error: expect(received).toBeGreaterThan(expected)
+
+Expected: > 0
+Received:   0
+    at Context.<anonymous> (D:\a\1\s\test\specs\Customer\Kiewit\kiewit-create-new-time-sequences.spec.js:105:50)
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.158_0_8127_89.windows.KIEWIT_STC_-_#208483_cannot_read_HO_HISTORY_CRTD_DATE_(multi-handover_STCID)" name="Step 3 Drive the STC aware execute action over both handovers and prove it does not raise the undefined date crash" time="1.433">
+      <system-out><![CDATA[
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.158_0_8127_89.windows.KIEWIT_STC_-_#208483_cannot_read_HO_HISTORY_CRTD_DATE_(multi-handover_STCID)" name="Step 4 Prove a single handover STCID still processes cleanly so the fix did not break the normal case" time="0.836">
+      <system-out><![CDATA[
+RESULT: {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.158_0_8127_89.windows.KIEWIT_STC_-_#208483_cannot_read_HO_HISTORY_CRTD_DATE_(multi-handover_STCID)" name="Step 5 Summarise the 208483 verdict stating exactly what was and was not exercised" time="0.003">
+      <system-out><![CDATA[
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite timestamp="2026-11-26T13:59:25" time="1.584" tests="5" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="KIEWIT STC - #232963 STC Sale/Transfer batch job fails on multiple handovers"/>
+      <property name="capabilities" value="chrome.158_0_8127_89.windows"/>
+      <property name="file" value="file:///D:/a/1/s/test/specs/Customer/Kiewit/kiewit-STC-Sale-Batch-Job.spec.js"/>
+    </properties>
+    <testcase classname="chrome.158_0_8127_89.windows.KIEWIT_STC_-_#232963_STC_Sale/Transfer_batch_job_fails_on_multiple_handovers" name="Step 1 Prove the STC SALE shape is reproducible two units sold under ONE STCID but shipped from DIFFERENT yards" time="0.199">
+      <system-out><![CDATA[
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.158_0_8127_89.windows.KIEWIT_STC_-_#232963_STC_Sale/Transfer_batch_job_fails_on_multiple_handovers" name="Step 2 Prove the STC TRANSFER shape is reproducible two locations for one STCID" time="0.974">
+      <system-out><![CDATA[
+RESULT: {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.158_0_8127_89.windows.KIEWIT_STC_-_#232963_STC_Sale/Transfer_batch_job_fails_on_multiple_handovers" name="Step 3 Prove this spec would actually RECOGNISE the guard if it appeared" time="0.004">
+      <system-out><![CDATA[
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.158_0_8127_89.windows.KIEWIT_STC_-_#232963_STC_Sale/Transfer_batch_job_fails_on_multiple_handovers" name="Step 4 Show the asymmetry being reported the OData execution path does NOT refuse the multi handover STCID" time="0.236">
+      <system-out><![CDATA[
+RESULT: {}
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.158_0_8127_89.windows.KIEWIT_STC_-_#232963_STC_Sale/Transfer_batch_job_fails_on_multiple_handovers" name="Step 5 Report the job level verdict for 232963 or state plainly that it was not exercised" time="0.003">
+      <system-out><![CDATA[
+COMMAND: GET /session/4abe188cf2b435488aa77e59fe5b7a30/screenshot - {}
+RESULT: {}
+RESULT: {}
+RESULT: {}
+COMMAND: DELETE /session/4abe188cf2b435488aa77e59fe5b7a30 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
